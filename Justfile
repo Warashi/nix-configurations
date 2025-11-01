@@ -25,10 +25,10 @@ switch:
   just switch-for {{host}}
 
 build-for HOST:
-  just {{ if os() == "macos" { "darwin-rebuild-for" } else { "nixos-rebuild-for" } }} {{HOST}}
+  just {{ if os() == "macos" { "_darwin-rebuild-for" } else { "_nixos-rebuild-for" } }} {{HOST}}
 
 switch-for HOST:
-  just {{ if os() == "macos" { "darwin-rebuild-switch-for" } else { "nixos-rebuild-switch-for" } }} {{HOST}}
+  just {{ if os() == "macos" { "_darwin-rebuild-switch-for" } else { "_nixos-rebuild-switch-for" } }} {{HOST}}
 
 _darwin-rebuild-for HOST:
   {{nix}} build --impure --keep-going --no-link --show-trace --system {{system}} \
