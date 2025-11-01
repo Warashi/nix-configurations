@@ -83,8 +83,6 @@
         nixpkgs.follows = "nixpkgs";
         neovim-src.follows = "neovim-src";
         flake-parts.follows = "flake-parts";
-        treefmt-nix.follows = "treefmt-nix";
-        git-hooks.follows = "git-hooks";
       };
     };
     neovim-src = {
@@ -223,10 +221,6 @@
         lima = {
           system = "aarch64-linux";
         };
-        # nixos-container
-        container = {
-          system = "aarch64-linux";
-        };
         # macbook for work
         work = {
           system = "aarch64-darwin";
@@ -295,6 +289,7 @@
               packages = with pkgs; [
                 # keep-sorted start
                 age
+                just
                 nix-fast-build
                 node2nix
                 sops
