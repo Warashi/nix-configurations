@@ -112,6 +112,10 @@
     nixos-hardware = {
       url = "github:NixOS/nixos-hardware";
     };
+    nixos-lima = {
+      url = "github:nixos-lima/nixos-lima";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     nixpkgs = {
       url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     };
@@ -225,8 +229,12 @@
         workbench = {
           system = "aarch64-linux";
         };
+        # lima VM
         lima = {
           system = "aarch64-linux";
+          modules = [
+            inputs.nixos-lima.nixosModules.default
+          ];
         };
         # macbook for work
         work = {
