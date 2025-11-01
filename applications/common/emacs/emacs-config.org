@@ -244,14 +244,6 @@ emacs-overlay によってこのファイルは .emacs.d とは別のところ�
     :ensure t)
 #+end_src
 
-* aidermacs
-#+begin_src emacs-lisp
-  (leaf aidermacs
-    :ensure t
-    :bind (("C-c a" . aidermacs-transient-menu))
-    :custom ((aidermacs-backend 'vterm)))
-#+end_src
-
 * envrc
 #+begin_src emacs-lisp
   (leaf envrc
@@ -350,78 +342,11 @@ emacs-overlay によってこのファイルは .emacs.d とは別のところ�
     :hook ((after-init-hook . age-file-enable)))
 #+end_src
 
-* ellama
+* ddskk
 #+begin_src emacs-lisp
-  (leaf ellama
+  (leaf ddskk
     :ensure t
-    :bind (("C-c e" . ellama))
-    :hook ((org-ctrl-c-ctrl-c-final-hook . ellama-chat-send-last-message))
-    :global-minor-mode (ellama-context-header-line-global-mode
-                        ellama-session-header-line-global-mode)
-    :config
-    ;; ellama-translateで翻訳する言語
-    (setopt ellama-language "Japanese")
-    ;; ellama-ask-selection などで生成されるファイルのネーミングルール
-    (setopt ellama-naming-scheme 'ellama-generate-name-by-llm)
-    ;; set providers
-    (require 'llm-ollama)
-    (setopt ellama-provider
-            (make-llm-ollama
-             :chat-model "granite3.3:2b"
-             :embedding-model "nomic-embed-text"))
-    (setopt ellama-coding-provider
-            (make-llm-ollama
-             :chat-model "deepcoder:1.5b"
-             :embedding-model "nomic-embed-text")))
-#+end_src
-
-* languages
-** Go
-#+begin_src emacs-lisp
-  (leaf go-mode
-    :ensure t
-    :hook ((go-mode-hook . eglot-ensure)
-           (go-ts-mode-hook . eglot-ensure)))
-#+end_src
-
-** F#
-#+begin_src emacs-lisp
-  (leaf fsharp-mode
-    :ensure t)
-#+end_src
-
-** nix
-#+begin_src emacs-lisp
-  (leaf nix-mode
-    :ensure t)
-#+end_src
-
-** yaml
-#+begin_src emacs-lisp
-  (leaf yaml-mode
-    :ensure t)
-#+end_src
-
-** web-mode and astro
-#+begin_src emacs-lisp
-  (leaf web-mode
-    :ensure t
-    :init
-    (define-derived-mode astro-mode web-mode "astro")
-    (setq auto-mode-alist
-  	(append '((".*\\.astro\\'" . astro-mode))
-  		auto-mode-alist))
-    (add-hook 'astro-mode-hook 'eglot-ensure)
-    (add-hook 'typescript-ts-mode-hook 'eglot-ensure))
-
-  (leaf eglot
-    :defer-config
-    (add-to-list 'eglot-server-programs
-  	       '(astro-mode . ("astro-ls" "--stdio"
-  			       :initializationOptions
-  			       (:typescript (:tsdk "./node_modules/typescript/lib")))))
-    (add-to-list 'eglot-server-programs
-  	       '(typescript-ts-mode . ("tsgo" "lsp" "--stdio"))))
+    :bind (("C-c j" . skk-mode)))
 #+end_src
 
 * performance tuning / after loading main contents
