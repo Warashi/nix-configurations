@@ -3,9 +3,6 @@
   pkgs,
   ...
 }:
-let
-  nodePkgs = pkgs.callPackage ./node2nix { };
-in
 {
   programs.tmux = {
     enable = true;
@@ -42,7 +39,6 @@ in
       };
     };
     packages = [
-      nodePkgs.editprompt
       pkgs.gitmux
       # inputs.tmux-mvr.packages.${pkgs.stdenv.hostPlatform.system}.default
     ];
