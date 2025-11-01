@@ -1,0 +1,15 @@
+{
+  # Bootloader.
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
+
+  boot.tmp = {
+    useTmpfs = false;
+  };
+
+  networking.hostName = "workbench";
+
+  # Enable networking
+  networking.networkmanager.enable = true;
+  systemd.network.wait-online.enable = false; # to avoid corruption between networkmanager and systemd-networkd
+}
