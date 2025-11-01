@@ -7,7 +7,7 @@
 {
   programs = {
     home-manager.enable = true;
-    # warashi.emacs.enable = true;
+    warashi.emacs.enable = true;
   };
 
   warashi = {
