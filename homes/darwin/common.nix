@@ -8,7 +8,9 @@ let
   inherit (specialArgs) username;
 in
 {
-  imports = [ inputs.home-manager.darwinModules.home-manager ];
+  imports = [
+    inputs.home-manager.darwinModules.home-manager
+  ];
 
   home-manager = {
     useGlobalPkgs = true;
@@ -17,6 +19,8 @@ in
       imports = [
         ../common.nix
         ../../modules/nix
+
+        inputs.mac-app-util.homeManagerModules.default
       ];
 
       home = {

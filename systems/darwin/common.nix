@@ -19,6 +19,7 @@ in
     ../../modules/darwin
     ../common.nix
     inputs.sops-nix.darwinModules.sops
+    inputs.mac-app-util.darwinModules.default
   ];
 
   sops = {
