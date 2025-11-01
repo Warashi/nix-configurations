@@ -1,4 +1,4 @@
-import { BaseConfig, ConfigArguments } from "jsr:@shougo/ddc-vim@9.5.0/config";
+import { BaseConfig, ConfigArguments } from "jsr:@shougo/ddc-vim@10.1.0/config";
 
 export class Config extends BaseConfig {
   override async config(args: ConfigArguments): Promise<void> {
