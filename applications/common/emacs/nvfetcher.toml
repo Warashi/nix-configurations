@@ -1,0 +1,3 @@
+[emacs-term-title]
+src.git = "https://github.com/CyberShadow/term-title.git"
+fetch.github = "CyberShadow/term-title"

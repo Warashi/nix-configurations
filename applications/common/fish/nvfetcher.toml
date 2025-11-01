@@ -1,0 +1,7 @@
+[fish-fzf-bd]
+src.git = "https://github.com/yuys13/fish-fzf-bd.git"
+fetch.github = "yuys13/fish-fzf-bd"
+
+[fish-ghq-fzf]
+src.git = "https://github.com/yuys13/fish-ghq-fzf.git"
+fetch.github = "yuys13/fish-ghq-fzf"

@@ -1,0 +1,158 @@
+{ inputs, pkgs, ... }:
+{
+  warashi.cage = {
+    enable = true;
+    package = inputs.cage.packages.${pkgs.stdenv.hostPlatform.system}.default;
+
+    wrappedPackages = with inputs.nix-ai-tools.packages.${pkgs.stdenv.hostPlatform.system}; [
+      claude-code
+      codex
+      gemini-cli
+    ];
+
+    config = {
+      auto-presets = [
+        {
+          command = "codex";
+          presets = [
+            "codex"
+
+            "general"
+            "kiro"
+            "go"
+            "cargo"
+            "yarn"
+          ];
+        }
+        {
+          command = "gemini";
+          presets = [
+            "gemini"
+
+            "general"
+            "kiro"
+            "go"
+            "cargo"
+            "yarn"
+          ];
+        }
+        {
+          command = "claude";
+          presets = [
+            "claude-code"
+            "awscli" # for bedrock auth
+
+            "general"
+            "kiro"
+            "go"
+            "cargo"
+            "yarn"
+          ];
+        }
+        {
+          command = "codex";
+          presets = [
+            "codex"
+            "go"
+            "cargo"
+          ];
+        }
+      ];
+      presets = {
+        # general
+        general = {
+          allow = [
+            {
+              path = ".warashi";
+              eval-symlinks = true;
+            }
+            {
+              path = "/tmp";
+              eval-symlinks = true;
+            }
+          ];
+        };
+
+        # coding agent
+        ## kiro or cc-sdd
+        kiro = {
+          allow = [
+            {
+              path = ".kiro";
+              eval-symlinks = true;
+            }
+          ];
+        };
+        claude-code = {
+          allow = [
+            "."
+            "$HOME/.claude"
+            "$HOME/.claude.json"
+            "$HOME/.claude.json.backup"
+            "$HOME/.claude.json.lock"
+            "$HOME/.claude.lock"
+            {
+              path = ".claude";
+              eval-symlinks = true;
+            }
+            {
+              path = "CLAUDE.md";
+              eval-symlinks = true;
+            }
+          ];
+          allow-keychain = true;
+          allow-git = true;
+        };
+        gemini = {
+          allow = [
+            "."
+            "/dev"
+            "$HOME/.gemini"
+          ];
+          allow-keychain = true;
+          allow-git = true;
+        };
+        codex = {
+          allow = [
+            "."
+            "$HOME/.codex"
+          ];
+          allow-keychain = true;
+          allow-git = true;
+        };
+
+        # language-specific
+        yarn = {
+          allow = [
+            "node_modules"
+            "$HOME/.yarnrc"
+            "$HOME/.cache/yarn"
+            "$HOME/Library/Caches/yarn"
+          ];
+        };
+        go = {
+          allow = [
+            "$HOME/go"
+            "$HOME/.cache/go-build"
+            "$HOME/Library/Caches/go-build"
+          ];
+        };
+        cargo = {
+          allow = [
+            "$HOME/.cargo"
+            "$HOME/.rustup"
+            "$HOME/.cache/sccache"
+            "$HOME/Library/Caches/sccache"
+          ];
+        };
+
+        # other tools
+        awscli = {
+          allow = [
+            "$HOME/.aws"
+          ];
+        };
+      };
+    };
+  };
+}

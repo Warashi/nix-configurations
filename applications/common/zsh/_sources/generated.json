@@ -1,0 +1,128 @@
+{
+    "Warashi-denovo-abbrev": {
+        "cargoLocks": null,
+        "date": "2023-09-19",
+        "extract": null,
+        "name": "Warashi-denovo-abbrev",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "Warashi",
+            "repo": "denovo-abbrev",
+            "rev": "20cff921d2fa9690ee7c83883529cd1928ac1850",
+            "sha256": "sha256-W3wlEmN5uVGizbF5sAueuFR0CQz5NVGqpyJJtAOOXIo=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "20cff921d2fa9690ee7c83883529cd1928ac1850"
+    },
+    "Warashi-denovo-complete": {
+        "cargoLocks": null,
+        "date": "2024-02-23",
+        "extract": null,
+        "name": "Warashi-denovo-complete",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "Warashi",
+            "repo": "denovo-complete",
+            "rev": "b822fd0ae0ddd7e787de74f8f1630733730e3ea3",
+            "sha256": "sha256-Jw/HTlLx1pGbbatcvvdxbMj9qzVr03KAh2Ga4R9zeT4=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "b822fd0ae0ddd7e787de74f8f1630733730e3ea3"
+    },
+    "Warashi-denovo-fzf": {
+        "cargoLocks": null,
+        "date": "2023-07-02",
+        "extract": null,
+        "name": "Warashi-denovo-fzf",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "Warashi",
+            "repo": "denovo-fzf",
+            "rev": "5d9d2d681cd30bb233373a3969f790e34fe94db7",
+            "sha256": "sha256-YcCK2H+FoYXRWrVFehOOxe4FokJqMZ3DWU2tcajszHg=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "5d9d2d681cd30bb233373a3969f790e34fe94db7"
+    },
+    "Warashi-denovo-rootmake": {
+        "cargoLocks": null,
+        "date": "2025-05-31",
+        "extract": null,
+        "name": "Warashi-denovo-rootmake",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "Warashi",
+            "repo": "denovo-rootmake",
+            "rev": "9e4bf7c051cc99e4ada185959966f12bcdf47db3",
+            "sha256": "sha256-izHR+B1BzHPA3Ky5QfQThSjtSG3x3a9V308IzLsgaLo=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "9e4bf7c051cc99e4ada185959966f12bcdf47db3"
+    },
+    "Warashi-denovo-zsh": {
+        "cargoLocks": null,
+        "date": "2025-01-26",
+        "extract": null,
+        "name": "Warashi-denovo-zsh",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "Warashi",
+            "repo": "denovo.zsh",
+            "rev": "bd71f344ab5450a9b33b7ddb65dc4b8bda2310b5",
+            "sha256": "sha256-F3c+7OQDLbr56FX5GC+b6oVLpp8R7xHoh0MQkxf25xw=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "bd71f344ab5450a9b33b7ddb65dc4b8bda2310b5"
+    },
+    "trystan2k-zsh-tab-title": {
+        "cargoLocks": null,
+        "date": "2024-05-29",
+        "extract": null,
+        "name": "trystan2k-zsh-tab-title",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "trystan2k",
+            "repo": "zsh-tab-title",
+            "rev": "9c36ac968fe675edcc181a41b0b8959024a8b6c1",
+            "sha256": "sha256-ZEhbQ+yIfCz+vmua7XYBQ4kSVgwoNR8Y4zJyKNypsz0=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "9c36ac968fe675edcc181a41b0b8959024a8b6c1"
+    }
+}

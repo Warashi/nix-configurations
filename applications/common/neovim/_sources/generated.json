@@ -1,0 +1,380 @@
+{
+    "ddc-filter-converter_remove_overlap": {
+        "cargoLocks": null,
+        "date": "2025-09-02",
+        "extract": null,
+        "name": "ddc-filter-converter_remove_overlap",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "Shougo",
+            "repo": "ddc-filter-converter_remove_overlap",
+            "rev": "965503e08e33c505e54ee132fc4ae623bf78c88d",
+            "sha256": "sha256-dSob16PMRWIn0Qy1C3DCJmR+im+aqBSCR5/P1ZrhODA=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "965503e08e33c505e54ee132fc4ae623bf78c88d"
+    },
+    "ddc-filter-matcher_head": {
+        "cargoLocks": null,
+        "date": "2025-09-02",
+        "extract": null,
+        "name": "ddc-filter-matcher_head",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "Shougo",
+            "repo": "ddc-filter-matcher_head",
+            "rev": "7a955d2f6a44e39687459f8f3a22f4daa063a981",
+            "sha256": "sha256-VYNjVH1OtmSyvBoFxF5WBf150GwoIpjTe0Y0oK8Hp8A=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "7a955d2f6a44e39687459f8f3a22f4daa063a981"
+    },
+    "ddc-filter-matcher_length": {
+        "cargoLocks": null,
+        "date": "2025-09-02",
+        "extract": null,
+        "name": "ddc-filter-matcher_length",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "Shougo",
+            "repo": "ddc-filter-matcher_length",
+            "rev": "0d4f4a6dd657c3394e522910a7bdc2f15f587b52",
+            "sha256": "sha256-rihHC4tqHGId6F9/0vfqSSOHkPAxHT8M7xSHTeFqffM=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "0d4f4a6dd657c3394e522910a7bdc2f15f587b52"
+    },
+    "ddc-filter-matcher_prefix": {
+        "cargoLocks": null,
+        "date": "2025-09-02",
+        "extract": null,
+        "name": "ddc-filter-matcher_prefix",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "Shougo",
+            "repo": "ddc-filter-matcher_prefix",
+            "rev": "76c5b1f0eec7263ad56bc40e4811a88faf1a3874",
+            "sha256": "sha256-l2lHrFI1A5P4p+xno3dgme9kF7KeDU1kdBlrNOakraU=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "76c5b1f0eec7263ad56bc40e4811a88faf1a3874"
+    },
+    "ddc-filter-sorter_head": {
+        "cargoLocks": null,
+        "date": "2025-09-02",
+        "extract": null,
+        "name": "ddc-filter-sorter_head",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "Shougo",
+            "repo": "ddc-filter-sorter_head",
+            "rev": "6e78a3db9fa3334149b9ff62aebdb37de3048865",
+            "sha256": "sha256-8obtf/tJhL1LUYmlQwfosHHWUGLVkKlvZLbju/RvtoU=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "6e78a3db9fa3334149b9ff62aebdb37de3048865"
+    },
+    "ddc-filter-sorter_rank": {
+        "cargoLocks": null,
+        "date": "2025-09-02",
+        "extract": null,
+        "name": "ddc-filter-sorter_rank",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "Shougo",
+            "repo": "ddc-filter-sorter_rank",
+            "rev": "eed3cb33b3ae3f9128257fcfb95e0511d1b13891",
+            "sha256": "sha256-8zoRsX7ZNCNkokku0TW0LNkjXmBL8UCu8h3EAe4KQ+g=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "eed3cb33b3ae3f9128257fcfb95e0511d1b13891"
+    },
+    "ddc-source-around": {
+        "cargoLocks": null,
+        "date": "2025-09-03",
+        "extract": null,
+        "name": "ddc-source-around",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "Shougo",
+            "repo": "ddc-source-around",
+            "rev": "68e679ca0b989cfe3300acac9099b893d0675063",
+            "sha256": "sha256-wLQ9vpKgl4fyjLEWo1XIElw8CbFjpBkvYMFoMPrQTxM=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "68e679ca0b989cfe3300acac9099b893d0675063"
+    },
+    "ddc-source-buffer": {
+        "cargoLocks": null,
+        "date": "2025-09-15",
+        "extract": null,
+        "name": "ddc-source-buffer",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "matsui54",
+            "repo": "ddc-source-buffer",
+            "rev": "bc2416de3629693f88e66870ca11090571f265ec",
+            "sha256": "sha256-snNlvHeIGsi7Iz36AWItf7IsVHopvrsEmDTf0MR8mUw=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "bc2416de3629693f88e66870ca11090571f265ec"
+    },
+    "ddc-source-file": {
+        "cargoLocks": null,
+        "date": "2025-09-03",
+        "extract": null,
+        "name": "ddc-source-file",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "LumaKernel",
+            "repo": "ddc-source-file",
+            "rev": "e2386ed1e6739f48d4f3cfea9cc961fb5785480a",
+            "sha256": "sha256-UndfTc+awrlzJUziPEv5FFwwDjQTSqOVZXheQ/CERpg=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "e2386ed1e6739f48d4f3cfea9cc961fb5785480a"
+    },
+    "ddc-source-lsp": {
+        "cargoLocks": null,
+        "date": "2025-09-13",
+        "extract": null,
+        "name": "ddc-source-lsp",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "Shougo",
+            "repo": "ddc-source-lsp",
+            "rev": "012b42673faaf65c55327d4bd6e38378fcf29030",
+            "sha256": "sha256-L81ttrA1tXB2RPwVyfjtphnJAIYZAC3eHc7PKfAkFQY=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "012b42673faaf65c55327d4bd6e38378fcf29030"
+    },
+    "ddc-ui-pum": {
+        "cargoLocks": null,
+        "date": "2025-08-26",
+        "extract": null,
+        "name": "ddc-ui-pum",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "Shougo",
+            "repo": "ddc-ui-pum",
+            "rev": "f7f334380e18af42297468b3cf696794bbfa2652",
+            "sha256": "sha256-kQ1fK65V0NtObqBy/FhcfACUGeI5Pk4t3Kw0BPpxChw=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "f7f334380e18af42297468b3cf696794bbfa2652"
+    },
+    "ddc-vim": {
+        "cargoLocks": null,
+        "date": "2025-10-12",
+        "extract": null,
+        "name": "ddc-vim",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "Shougo",
+            "repo": "ddc.vim",
+            "rev": "4f553b7f4e968971461820d05d3ff1601f9d7ab4",
+            "sha256": "sha256-3WGlkMTesV60DEPdnTFVW1sLf3NaNK3tRM6C2EJm4pw=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "4f553b7f4e968971461820d05d3ff1601f9d7ab4"
+    },
+    "denops-vim": {
+        "cargoLocks": null,
+        "date": "2025-08-24",
+        "extract": null,
+        "name": "denops-vim",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "vim-denops",
+            "repo": "denops.vim",
+            "rev": "a278b8342459e4687f24d4d575d72ff593326cee",
+            "sha256": "sha256-JIRV9xfOqX6GLqBAeYqOePqaFWSyAr157958hBxmP8w=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "a278b8342459e4687f24d4d575d72ff593326cee"
+    },
+    "nvim-aibo": {
+        "cargoLocks": null,
+        "date": "2025-10-23",
+        "extract": null,
+        "name": "nvim-aibo",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "lambdalisue",
+            "repo": "nvim-aibo",
+            "rev": "9710213fee987964dd3f649a3bb3ea85d4896440",
+            "sha256": "sha256-eA+WKisTdZgb5hsrWd3aIUaVNS/AN13GTqHIGh2Dzn8=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "9710213fee987964dd3f649a3bb3ea85d4896440"
+    },
+    "nvim-lspconfig": {
+        "cargoLocks": null,
+        "date": "2025-10-24",
+        "extract": null,
+        "name": "nvim-lspconfig",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "neovim",
+            "repo": "nvim-lspconfig",
+            "rev": "a9b2fb560c4ab22c10728fd5149dbd7b62aa4f69",
+            "sha256": "sha256-/r9omuuIJnBJcifr8ZvCsq+nxbf+bJWcpOcDlngIibk=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "a9b2fb560c4ab22c10728fd5149dbd7b62aa4f69"
+    },
+    "pum-vim": {
+        "cargoLocks": null,
+        "date": "2025-10-16",
+        "extract": null,
+        "name": "pum-vim",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "Shougo",
+            "repo": "pum.vim",
+            "rev": "08734d52b03c354151dda3bb75a37a0ee39bbe7e",
+            "sha256": "sha256-WuSq5+0Tj0VgmdSYNxnswU1gNG2lSdoePNuVuiNkIOY=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "08734d52b03c354151dda3bb75a37a0ee39bbe7e"
+    },
+    "skk-dict": {
+        "cargoLocks": null,
+        "date": "2024-08-29",
+        "extract": null,
+        "name": "skk-dict",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "skk-dev",
+            "repo": "dict",
+            "rev": "4eb91a3bbfef70bde940668ec60f3beae291e971",
+            "sha256": "sha256-sWz85Q6Bu2WoKsckSp5SlcuPUQN2mcq+BHMqNXQ/aho=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "4eb91a3bbfef70bde940668ec60f3beae291e971"
+    },
+    "skkeleton": {
+        "cargoLocks": null,
+        "date": "2025-10-24",
+        "extract": null,
+        "name": "skkeleton",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "vim-skk",
+            "repo": "skkeleton",
+            "rev": "e441c18f963c6b414aa1f6edcd6cc9917f8d6dc0",
+            "sha256": "sha256-eDVrZvrpiflq+M7Ppk9BFars222GhDacF630ktum+ww=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "e441c18f963c6b414aa1f6edcd6cc9917f8d6dc0"
+    }
+}

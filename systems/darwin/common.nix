@@ -7,6 +7,12 @@ let
   inherit (specialArgs) username;
 in
 {
+  nixpkgs = {
+    config.allowUnfree = true;
+    overlays = [
+      inputs.emacs-overlay.overlays.default
+    ];
+  };
 
   imports = [
     ../../modules/darwin

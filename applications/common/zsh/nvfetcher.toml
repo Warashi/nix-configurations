@@ -1,0 +1,23 @@
+[Warashi-denovo-zsh]
+src.git = "https://github.com/Warashi/denovo.zsh.git"
+fetch.github = "Warashi/denovo.zsh"
+
+[Warashi-denovo-fzf]
+src.git = "https://github.com/Warashi/denovo-fzf.git"
+fetch.github = "Warashi/denovo-fzf"
+
+[Warashi-denovo-abbrev]
+src.git = "https://github.com/Warashi/denovo-abbrev.git"
+fetch.github = "Warashi/denovo-abbrev"
+
+[Warashi-denovo-complete]
+src.git = "https://github.com/Warashi/denovo-complete.git"
+fetch.github = "Warashi/denovo-complete"
+
+[Warashi-denovo-rootmake]
+src.git = "https://github.com/Warashi/denovo-rootmake.git"
+fetch.github = "Warashi/denovo-rootmake"
+
+[trystan2k-zsh-tab-title]
+src.git = "https://github.com/trystan2k/zsh-tab-title.git"
+fetch.github = "trystan2k/zsh-tab-title"

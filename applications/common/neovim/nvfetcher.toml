@@ -1,0 +1,71 @@
+[nvim-lspconfig]
+src.git = "https://github.com/neovim/nvim-lspconfig.git"
+fetch.github = "neovim/nvim-lspconfig"
+
+[denops-vim]
+src.git = "https://github.com/vim-denops/denops.vim.git"
+fetch.github = "vim-denops/denops.vim"
+
+[nvim-aibo]
+src.git = "https://github.com/lambdalisue/nvim-aibo.git"
+fetch.github = "lambdalisue/nvim-aibo"
+
+[skkeleton]
+src.git = "https://github.com/vim-skk/skkeleton.git"
+fetch.github = "vim-skk/skkeleton"
+
+[skk-dict]
+src.git = "https://github.com/skk-dev/dict.git"
+fetch.github = "skk-dev/dict"
+
+[pum-vim]
+src.git = "https://github.com/Shougo/pum.vim.git"
+fetch.github = "Shougo/pum.vim"
+
+[ddc-vim]
+src.git = "https://github.com/Shougo/ddc.vim.git"
+fetch.github = "Shougo/ddc.vim"
+
+[ddc-ui-pum]
+src.git = "https://github.com/Shougo/ddc-ui-pum.git"
+fetch.github = "Shougo/ddc-ui-pum"
+
+[ddc-source-around]
+src.git = "https://github.com/Shougo/ddc-source-around.git"
+fetch.github = "Shougo/ddc-source-around"
+
+[ddc-source-file]
+src.git = "https://github.com/LumaKernel/ddc-source-file.git"
+fetch.github = "LumaKernel/ddc-source-file"
+
+[ddc-source-lsp]
+src.git = "https://github.com/Shougo/ddc-source-lsp.git"
+fetch.github = "Shougo/ddc-source-lsp"
+
+[ddc-source-buffer]
+src.git = "https://github.com/matsui54/ddc-source-buffer.git"
+fetch.github = "matsui54/ddc-source-buffer"
+
+[ddc-filter-matcher_head]
+src.git = "https://github.com/Shougo/ddc-filter-matcher_head.git"
+fetch.github = "Shougo/ddc-filter-matcher_head"
+
+[ddc-filter-matcher_length]
+src.git = "https://github.com/Shougo/ddc-filter-matcher_length.git"
+fetch.github = "Shougo/ddc-filter-matcher_length"
+
+[ddc-filter-matcher_prefix]
+src.git = "https://github.com/Shougo/ddc-filter-matcher_prefix.git"
+fetch.github = "Shougo/ddc-filter-matcher_prefix"
+
+[ddc-filter-sorter_rank]
+src.git = "https://github.com/Shougo/ddc-filter-sorter_rank.git"
+fetch.github = "Shougo/ddc-filter-sorter_rank"
+
+[ddc-filter-sorter_head]
+src.git = "https://github.com/Shougo/ddc-filter-sorter_head.git"
+fetch.github = "Shougo/ddc-filter-sorter_head"
+
+[ddc-filter-converter_remove_overlap]
+src.git = "https://github.com/Shougo/ddc-filter-converter_remove_overlap.git"
+fetch.github = "Shougo/ddc-filter-converter_remove_overlap"

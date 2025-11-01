@@ -1,0 +1,440 @@
+* おまじない
+#+PROPERTY: header-args:emacs-lisp :tangle yes
+#+begin_src emacs-lisp
+  ;; -*- lexical-binding: t; -*-
+#+end_src
+
+* performance monitoring
+
+ref; [[https://zenn.dev/takeokunn/articles/56010618502ccc#%E8%A8%88%E6%B8%AC%E6%96%B9%E6%B3%95][Emacsを世界最速級で起動する方法 #計測方法]]
+
+#+begin_src emacs-lisp :tangle no
+  (require 'profiler)
+  (profiler-start 'cpu)
+
+  (defconst my/before-load-init-time (current-time))
+
+  ;;;###autoload
+  (defun my/load-init-time ()
+    "Loading time of user init files including time for `after-init-hook'."
+    (let ((time1 (float-time
+		  (time-subtract after-init-time my/before-load-init-time)))
+	  (time2 (float-time
+		  (time-subtract (current-time) my/before-load-init-time))))
+      (message (concat "Loading init files: %.0f [msec], "
+		       "of which %.f [msec] for `after-init-hook'.")
+	       (* 1000 time1) (* 1000 (- time2 time1)))))
+  (add-hook 'after-init-hook #'my/load-init-time t)
+
+  (defvar my/tick-previous-time my/before-load-init-time)
+
+  ;;;###autoload
+  (defun my/tick-init-time (msg)
+    "Tick boot sequence at loading MSG."
+    (when my/loading-profile-p
+      (let ((ctime (current-time)))
+	(message "---- %5.2f[ms] %s"
+		 (* 1000 (float-time
+			  (time-subtract ctime my/tick-previous-time)))
+		 msg)
+	(setq my/tick-previous-time ctime))))
+
+  (defun my/emacs-init-time ()
+    "Emacs booting time in msec."
+    (interactive)
+    (message "Emacs booting time: %.0f [msec] = `emacs-init-time'."
+	     (* 1000
+		(float-time (time-subtract
+			     after-init-time
+			     before-init-time)))))
+
+  (add-hook 'after-init-hook #'my/emacs-init-time)
+#+end_src
+
+* performance tuning / before loading main contents
+#+begin_src emacs-lisp
+  (defconst my/saved-file-name-handler-alist file-name-handler-alist)
+  (setq file-name-handler-alist nil)
+#+end_src
+
+* initialize leaf.el
+#+begin_src emacs-lisp
+  (eval-when-compile
+    (require 'leaf)
+
+    (leaf leaf-keywords
+      :ensure t
+      :init
+      (leaf hydra :ensure t)
+      (leaf blackout :ensure t)
+
+      :config
+      (leaf-keywords-init)))
+#+end_src
+
+* emacs -q -lした時に、user-emacs-directoryが変わるように
+emacs-overlay によってこのファイルは .emacs.d とは別のところから読み込まれるので、相性が悪い。
+そのためオフにしておく。
+
+#+begin_src emacs-lisp :tangle no
+  (when load-file-name
+    (setq user-emacs-directory (file-name-directory load-file-name)))
+#+end_src
+
+* M-x customize したときの設定保存場所を変える
+#+begin_src emacs-lisp
+  (setq custom-file (locate-user-emacs-file "customize.el"))
+  (when (file-readable-p custom-file)
+    (load-file custom-file))
+#+end_src
+
+* /site-lisp を load-path に追加
+#+begin_src emacs-lisp
+  (add-to-list 'load-path (locate-user-emacs-file "site-lisp"))
+#+end_src
+
+* basic key bindings
+** C-hをbackspaceにする
+#+begin_src emacs-lisp
+  (define-key key-translation-map (kbd "C-h") (kbd "DEL"))
+  (define-key key-translation-map (kbd "M-h") (kbd "M-DEL"))
+#+end_src
+
+* PATH設定
+#+begin_src emacs-lisp
+  (leaf exec-path-from-shell
+    :ensure t
+    :custom
+    (exec-path-from-shell-variables . '("PATH" "MANPATH" "SSH_AUTH_SOCK" "SSH_AGENT_PID" "GPG_AGENT_INFO" "LANG" "LC_CTYPE" "NIX_SSL_CERT_FILE" "NIX_PATH"))
+    :init
+    (static-if (eq system-type 'darwin)
+	(setopt exec-path-from-shell-arguments '("-l"))
+      (setopt exec-path-from-shell-arguments nil))
+    :config
+    (exec-path-from-shell-initialize))
+#+end_src
+
+* font
+#+begin_src emacs-lisp
+  (add-to-list 'default-frame-alist '(font . "Moralerspace Radon"))
+#+end_src
+
+* catppuccin-theme
+#+begin_src emacs-lisp
+  (leaf catppuccin-theme
+    :ensure t
+    :custom
+    (catppuccin-flavor . 'frappe)
+    :init
+    (load-theme 'catppuccin :no-confirm))
+#+end_src
+
+* tramp
+#+begin_src emacs-lisp
+  (leaf tramp
+    :custom
+    (tramp-default-method . "scpx")
+    :defer-config
+    (add-to-list 'tramp-remote-path 'tramp-own-remote-path))
+#+end_src
+
+* org
+#+begin_src emacs-lisp
+  (leaf org
+    :ensure t)
+  (leaf org-tempo
+    :after org
+    :require t)
+  (leaf ox-hugo
+    :ensure t)
+  (leaf ox-zenn
+    :ensure t)
+  (leaf org-capture
+    :config
+    (require 'uuidgen)
+    :hook ((org-capture-after-finalize-hook . org-roam-db-sync))
+    :bind (("C-c o o" . org-capture)
+  	 ("C-c o g" . (lambda () (interactive) (magit-status (substitute-in-file-name "$HOME/ghq/github.com/Warashi/ubiquitous-goggles/")))))
+    :custom ((org-capture-templates . `(("b" "warashi.dev" entry
+  				       (file+olp ,(substitute-in-file-name "$HOME/ghq/github.com/Warashi/ubiquitous-goggles/cosmos.org.age") "warashi.dev" "Posts")
+  				       "* %?\n:PROPERTIES:\n:EXPORT_DATE: %<%+4Y-%+2m-%+2dT%T%:z>\n:EXPORT_FILE_NAME: %(uuidgen-4)\n:END:\n\n"
+  				       :empty-lines 1
+  				       :prepend t)
+  				      ("t" "#times-warashi" entry
+  				       (file+olp ,(substitute-in-file-name "$HOME/ghq/github.com/Warashi/ubiquitous-goggles/cosmos.org.age") "times.warashi.dev" "Posts")
+  				       "* %<%+4Y-%+2m-%+2dT%T%:z>\n:PROPERTIES:\n:EXPORT_DATE: %<%+4Y-%+2m-%+2dT%T%:z>\n:EXPORT_FILE_NAME: %(uuidgen-4)\n:END:\n\n"
+  				       :empty-lines 1
+  				       :prepend t)
+  				      ("j" "journal" entry
+  				       (file+olp+datetree ,(substitute-in-file-name "$HOME/ghq/github.com/Warashi/ubiquitous-goggles/cosmos.org.age") "journal")
+  				       "* %<%T>\n%?"
+  				       :empty-lines 1
+  				       :prepend nil) ; datetree が append 方向に伸びていくので、prepend しない
+  				      ("f" "fleeting notes" entry
+  				       (file+olp ,(substitute-in-file-name "$HOME/ghq/github.com/Warashi/ubiquitous-goggles/cosmos.org.age") "roam" "Fleeting")
+  				       "* %?\n:PROPERTIES:\n:ID: %(org-id-new)\n:END:\n\n"
+  				       :empty-lines 1
+  				       :prepend t)
+  				      ("s" "structured notes" entry
+  				       (file+olp ,(substitute-in-file-name "$HOME/ghq/github.com/Warashi/ubiquitous-goggles/cosmos.org.age") "roam" "Structured")
+  				       "* %?\n:PROPERTIES:\n:ID: %(org-id-new)\n:END:\n\n"
+  				       :empty-lines 1
+  				       :prepend t)
+  				      ("l" "literature notes" entry
+  				       (file+olp ,(substitute-in-file-name "$HOME/ghq/github.com/Warashi/ubiquitous-goggles/cosmos.org.age") "roam" "Literature")
+  				       "* %?\n:PROPERTIES:\n:ID: %(org-id-new)\n:END:\n\n"
+  				       :empty-lines 1
+  				       :prepend t)
+  				      ("p" "permanent notes" entry
+  				       (file+olp ,(substitute-in-file-name "$HOME/ghq/github.com/Warashi/ubiquitous-goggles/cosmos.org.age") "roam" "Permanent")
+  				       "* %?\n:PROPERTIES:\n:ID: %(org-id-new)\n:END:\n\n"
+  				       :empty-lines 1
+  				       :prepend t)))))
+
+  (leaf org-roam
+    :ensure t
+    :custom ((org-roam-directory . `,(substitute-in-file-name "$HOME/ghq/github.com/Warashi/ubiquitous-goggles")))
+    :bind (("C-c o f" . org-roam-node-find)
+  	 ("C-c o i" . org-roam-node-insert)
+  	 ("C-c o l" . org-roam-buffer-toggle)))
+#+end_src
+
+* tree-sitter
+#+begin_src emacs-lisp
+  (leaf treesit
+    :custom ((treesit-font-lock-level . 4)))
+#+end_src
+
+* magit
+#+begin_src emacs-lisp
+  (leaf magit
+    :ensure t
+    :bind (("C-c g" . magit-status)))
+#+end_src
+
+* term-title
+#+begin_src emacs-lisp
+  (leaf term-title
+    :ensure t
+    :global-minor-mode t)
+#+end_src
+
+* copilot
+#+begin_src emacs-lisp
+  (leaf copilot
+    :ensure t
+    :hook prog-mode-hook
+    :bind (:copilot-completion-map
+           ("TAB" . copilot-accept-completion)
+           ("<tab>" . copilot-accept-completion))
+    :custom ((copilot-indent-offset-warning-disable . t)))
+#+end_src
+
+* mistty
+#+begin_src emacs-lisp
+  (leaf mistty
+    :ensure t
+    :custom ((mistty-shell-command . "fish"))
+    :bind (("C-c s" . mistty)))
+#+end_src
+
+* vterm
+#+begin_src emacs-lisp
+  (leaf vterm
+    :ensure t)
+#+end_src
+
+* aidermacs
+#+begin_src emacs-lisp
+  (leaf aidermacs
+    :ensure t
+    :bind (("C-c a" . aidermacs-transient-menu))
+    :custom ((aidermacs-backend 'vterm)))
+#+end_src
+
+* envrc
+#+begin_src emacs-lisp
+  (leaf envrc
+    :ensure t
+    :hook ((after-init-hook . envrc-global-mode)))
+#+end_src
+
+* uuidgen
+#+begin_src emacs-lisp
+  (leaf uuidgen
+    :ensure t)
+#+end_src
+
+* corfu
+#+begin_src emacs-lisp
+  (leaf corfu
+    :ensure t
+    :custom ((corfu-cycle . t)
+             (corfu-auto . t)
+             (corfu-separator . ?\s)
+             (corfu-scroll-margin . 5))
+    :global-minor-mode global-corfu-mode)
+
+  (leaf emacs
+    :custom ((tab-always-indent . 'complete)
+             (text-mode-ispell-word-completion . nil)
+             (read-extended-command-predicate . #'command-completion-default-include-p)))
+#+end_src
+
+* terminal特有の処理
+#+begin_src emacs-lisp
+  (leaf kkp
+    :ensure t)
+  (leaf corfu-terminal
+    :ensure t)
+
+  (defun my-dwim-terminal-mode ()
+    (interactive)
+    (if (display-graphic-p)
+        (progn
+          (global-kkp-mode -1)
+          (corfu-terminal-mode -1))
+      (progn
+        (global-kkp-mode +1)
+        (corfu-terminal-mode +1))))
+
+  (add-hook 'server-after-make-frame-hook #'my-dwim-terminal-mode)
+  (add-hook 'after-init-hook #'my-dwim-terminal-mode)
+#+end_src
+
+* vertico
+#+begin_src emacs-lisp
+  ;; Enable vertico
+  (leaf vertico
+    :ensure t
+    :custom ((vertico-scroll-margin . 0)
+             (vertico-count . 20)
+             (vertico-resize . t)
+             (vertico-cycle . t))
+    :global-minor-mode vertico-mode)
+
+  (leaf savehist
+    :init
+    (savehist-mode))
+
+  (leaf emacs
+    :custom ((enable-recursive-minibuffers . t)
+             (read-extended-command-predicate . #'command-completion-default-include-p))
+    :init
+    (defun crm-indicator (args)
+      (cons (format "[CRM%s] %s"
+                    (replace-regexp-in-string
+                     "\\`\\[.*?]\\*\\|\\[.*?]\\*\\'" ""
+                     crm-separator)
+                    (car args))
+            (cdr args)))
+    (advice-add #'completing-read-multiple :filter-args #'crm-indicator)
+    (setq minibuffer-prompt-properties
+          '(read-only t cursor-intangible t face minibuffer-prompt))
+    (add-hook 'minibuffer-setup-hook #'cursor-intangible-mode))
+#+end_src
+
+* puni
+#+begin_src emacs-lisp
+  (leaf puni
+    :ensure t
+    :global-minor-mode puni-global-mode)
+#+end_src
+
+* age
+#+begin_src emacs-lisp
+  (leaf age
+    :ensure t
+    :custom ((age-default-identity . "~/.config/age/secret-key")
+  	   (age-default-recipient . '("~/.config/age/public-key")))
+    :hook ((after-init-hook . age-file-enable)))
+#+end_src
+
+* ellama
+#+begin_src emacs-lisp
+  (leaf ellama
+    :ensure t
+    :bind (("C-c e" . ellama))
+    :hook ((org-ctrl-c-ctrl-c-final-hook . ellama-chat-send-last-message))
+    :global-minor-mode (ellama-context-header-line-global-mode
+                        ellama-session-header-line-global-mode)
+    :config
+    ;; ellama-translateで翻訳する言語
+    (setopt ellama-language "Japanese")
+    ;; ellama-ask-selection などで生成されるファイルのネーミングルール
+    (setopt ellama-naming-scheme 'ellama-generate-name-by-llm)
+    ;; set providers
+    (require 'llm-ollama)
+    (setopt ellama-provider
+            (make-llm-ollama
+             :chat-model "granite3.3:2b"
+             :embedding-model "nomic-embed-text"))
+    (setopt ellama-coding-provider
+            (make-llm-ollama
+             :chat-model "deepcoder:1.5b"
+             :embedding-model "nomic-embed-text")))
+#+end_src
+
+* languages
+** Go
+#+begin_src emacs-lisp
+  (leaf go-mode
+    :ensure t
+    :hook ((go-mode-hook . eglot-ensure)
+           (go-ts-mode-hook . eglot-ensure)))
+#+end_src
+
+** F#
+#+begin_src emacs-lisp
+  (leaf fsharp-mode
+    :ensure t)
+#+end_src
+
+** nix
+#+begin_src emacs-lisp
+  (leaf nix-mode
+    :ensure t)
+#+end_src
+
+** yaml
+#+begin_src emacs-lisp
+  (leaf yaml-mode
+    :ensure t)
+#+end_src
+
+** web-mode and astro
+#+begin_src emacs-lisp
+  (leaf web-mode
+    :ensure t
+    :init
+    (define-derived-mode astro-mode web-mode "astro")
+    (setq auto-mode-alist
+  	(append '((".*\\.astro\\'" . astro-mode))
+  		auto-mode-alist))
+    (add-hook 'astro-mode-hook 'eglot-ensure)
+    (add-hook 'typescript-ts-mode-hook 'eglot-ensure))
+
+  (leaf eglot
+    :defer-config
+    (add-to-list 'eglot-server-programs
+  	       '(astro-mode . ("astro-ls" "--stdio"
+  			       :initializationOptions
+  			       (:typescript (:tsdk "./node_modules/typescript/lib")))))
+    (add-to-list 'eglot-server-programs
+  	       '(typescript-ts-mode . ("tsgo" "lsp" "--stdio"))))
+#+end_src
+
+* performance tuning / after loading main contents
+#+begin_src emacs-lisp
+  (setq file-name-handler-alist my/saved-file-name-handler-alist)
+#+end_src
+
+#+begin_src emacs-lisp
+  (setq gc-cons-threshold 16777216) ; 16mb
+#+end_src
+
+* performance monitoring / stop profiler
+#+begin_src emacs-lisp :tangle no
+  (profiler-report)
+  (profiler-stop)
+#+end_src
