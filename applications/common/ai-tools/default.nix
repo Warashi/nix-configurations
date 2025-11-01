@@ -22,6 +22,7 @@
             "go"
             "cargo"
             "yarn"
+            "pre-commit"
           ];
         }
         {
@@ -34,6 +35,7 @@
             "go"
             "cargo"
             "yarn"
+            "pre-commit"
           ];
         }
         {
@@ -47,14 +49,20 @@
             "go"
             "cargo"
             "yarn"
+            "pre-commit"
           ];
         }
         {
           command = "codex";
           presets = [
             "codex"
+
+            "general"
+            "kiro"
             "go"
             "cargo"
+            "yarn"
+            "pre-commit"
           ];
         }
       ];
@@ -150,6 +158,12 @@
         awscli = {
           allow = [
             "$HOME/.aws"
+          ];
+        };
+        pre-commit = {
+          allow = [
+            "$HOME/.cache/pre-commit"
+            "$HOME/Library/Caches/pre-commit"
           ];
         };
       };
