@@ -205,36 +205,13 @@
       ];
 
       hosts = {
-        # main desktop (m1 mac mini)
-        warashi = {
-          system = "aarch64-darwin";
-          username = "sawada";
-        };
         # main laptop (m4 macbook air)
         athena = {
           system = "aarch64-darwin";
         };
-        # linux laptop (intel laptop)
-        duna = {
-          system = "x86_64-linux";
-        };
-        # home server (Raspberry Pi 4)
-        pi = {
-          system = "aarch64-linux";
-          modules = [
-            inputs.nixos-hardware.nixosModules.raspberry-pi-4
-          ];
-        };
         # remote workbench (OCI A1 Flex)
         workbench = {
           system = "aarch64-linux";
-        };
-        # lima VM
-        lima = {
-          system = "aarch64-linux";
-          modules = [
-            inputs.nixos-lima.nixosModules.default
-          ];
         };
         # macbook for work
         work = {
