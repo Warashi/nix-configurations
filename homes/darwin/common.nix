@@ -23,13 +23,14 @@ in
         inputs.mac-app-util.homeManagerModules.default
       ];
 
-      home = {
+      home = rec {
         homeDirectory = "/Users/${username}";
         packages = with pkgs; [
           # without this, the older builtin `less` would be used
           less
         ];
         sessionPath = [
+          "${homeDirectory}/.mint/bin"
           "/opt/homebrew/bin"
         ];
       };
