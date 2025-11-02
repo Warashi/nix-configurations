@@ -144,8 +144,9 @@ in
           allow = [
             "$HOME/.swiftpm"
             "$HOME/Library/Developer/Xcode/DerivedData"
-            "$HOME/Library/Caches/org.swift.swiftpm"
+            "$HOME/Library/Caches/SwiftLint"
             "$HOME/Library/Caches/com.charcoaldesign.swiftformat"
+            "$HOME/Library/Caches/org.swift.swiftpm"
           ];
         };
 
