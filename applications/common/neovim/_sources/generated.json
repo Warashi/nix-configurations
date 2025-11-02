@@ -253,7 +253,7 @@
     },
     "denops-vim": {
         "cargoLocks": null,
-        "date": "2025-08-24",
+        "date": "2025-10-26",
         "extract": null,
         "name": "denops-vim",
         "passthru": null,
@@ -265,12 +265,12 @@
             "name": null,
             "owner": "vim-denops",
             "repo": "denops.vim",
-            "rev": "a278b8342459e4687f24d4d575d72ff593326cee",
-            "sha256": "sha256-JIRV9xfOqX6GLqBAeYqOePqaFWSyAr157958hBxmP8w=",
+            "rev": "5cfca39988a36e42d81b925264fc846077a727e3",
+            "sha256": "sha256-4AACZ3h6uAqiXW24gUF1+uq7dnWA0w/PcxAeO4yxitc=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "a278b8342459e4687f24d4d575d72ff593326cee"
+        "version": "5cfca39988a36e42d81b925264fc846077a727e3"
     },
     "nvim-aibo": {
         "cargoLocks": null,
@@ -295,7 +295,7 @@
     },
     "nvim-lspconfig": {
         "cargoLocks": null,
-        "date": "2025-10-24",
+        "date": "2025-11-01",
         "extract": null,
         "name": "nvim-lspconfig",
         "passthru": null,
@@ -307,12 +307,12 @@
             "name": null,
             "owner": "neovim",
             "repo": "nvim-lspconfig",
-            "rev": "a9b2fb560c4ab22c10728fd5149dbd7b62aa4f69",
-            "sha256": "sha256-/r9omuuIJnBJcifr8ZvCsq+nxbf+bJWcpOcDlngIibk=",
+            "rev": "a89bfcfd0e44f898341ac8a80ba83ccf6218bef3",
+            "sha256": "sha256-ZRxIfoWC+F/fVGKTRacGvotEfXq9fClcY2B57n5cZdU=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "a9b2fb560c4ab22c10728fd5149dbd7b62aa4f69"
+        "version": "a89bfcfd0e44f898341ac8a80ba83ccf6218bef3"
     },
     "pum-vim": {
         "cargoLocks": null,
@@ -358,7 +358,7 @@
     },
     "skkeleton": {
         "cargoLocks": null,
-        "date": "2025-10-24",
+        "date": "2025-10-27",
         "extract": null,
         "name": "skkeleton",
         "passthru": null,
@@ -370,11 +370,11 @@
             "name": null,
             "owner": "vim-skk",
             "repo": "skkeleton",
-            "rev": "e441c18f963c6b414aa1f6edcd6cc9917f8d6dc0",
-            "sha256": "sha256-eDVrZvrpiflq+M7Ppk9BFars222GhDacF630ktum+ww=",
+            "rev": "71178b6debd9f1b3bb00abfd865ca642e82e24c7",
+            "sha256": "sha256-833WpBi0X6MhblLda1cp6dFU2zu+TYBgimlsBX+3rQo=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "e441c18f963c6b414aa1f6edcd6cc9917f8d6dc0"
+        "version": "71178b6debd9f1b3bb00abfd865ca642e82e24c7"
     }
 }

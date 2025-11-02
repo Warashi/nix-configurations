@@ -147,15 +147,15 @@
   };
   denops-vim = {
     pname = "denops-vim";
-    version = "a278b8342459e4687f24d4d575d72ff593326cee";
+    version = "5cfca39988a36e42d81b925264fc846077a727e3";
     src = fetchFromGitHub {
       owner = "vim-denops";
       repo = "denops.vim";
-      rev = "a278b8342459e4687f24d4d575d72ff593326cee";
+      rev = "5cfca39988a36e42d81b925264fc846077a727e3";
       fetchSubmodules = false;
-      sha256 = "sha256-JIRV9xfOqX6GLqBAeYqOePqaFWSyAr157958hBxmP8w=";
+      sha256 = "sha256-4AACZ3h6uAqiXW24gUF1+uq7dnWA0w/PcxAeO4yxitc=";
     };
-    date = "2025-08-24";
+    date = "2025-10-26";
   };
   nvim-aibo = {
     pname = "nvim-aibo";
@@ -171,15 +171,15 @@
   };
   nvim-lspconfig = {
     pname = "nvim-lspconfig";
-    version = "a9b2fb560c4ab22c10728fd5149dbd7b62aa4f69";
+    version = "a89bfcfd0e44f898341ac8a80ba83ccf6218bef3";
     src = fetchFromGitHub {
       owner = "neovim";
       repo = "nvim-lspconfig";
-      rev = "a9b2fb560c4ab22c10728fd5149dbd7b62aa4f69";
+      rev = "a89bfcfd0e44f898341ac8a80ba83ccf6218bef3";
       fetchSubmodules = false;
-      sha256 = "sha256-/r9omuuIJnBJcifr8ZvCsq+nxbf+bJWcpOcDlngIibk=";
+      sha256 = "sha256-ZRxIfoWC+F/fVGKTRacGvotEfXq9fClcY2B57n5cZdU=";
     };
-    date = "2025-10-24";
+    date = "2025-11-01";
   };
   pum-vim = {
     pname = "pum-vim";
@@ -207,14 +207,14 @@
   };
   skkeleton = {
     pname = "skkeleton";
-    version = "e441c18f963c6b414aa1f6edcd6cc9917f8d6dc0";
+    version = "71178b6debd9f1b3bb00abfd865ca642e82e24c7";
     src = fetchFromGitHub {
       owner = "vim-skk";
       repo = "skkeleton";
-      rev = "e441c18f963c6b414aa1f6edcd6cc9917f8d6dc0";
+      rev = "71178b6debd9f1b3bb00abfd865ca642e82e24c7";
       fetchSubmodules = false;
-      sha256 = "sha256-eDVrZvrpiflq+M7Ppk9BFars222GhDacF630ktum+ww=";
+      sha256 = "sha256-833WpBi0X6MhblLda1cp6dFU2zu+TYBgimlsBX+3rQo=";
     };
-    date = "2025-10-24";
+    date = "2025-10-27";
   };
 }
