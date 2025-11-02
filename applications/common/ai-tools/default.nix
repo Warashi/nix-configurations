@@ -1,4 +1,15 @@
 { inputs, pkgs, ... }:
+let
+  agent-presets = [
+    "general"
+    "kiro"
+    "go"
+    "cargo"
+    "yarn"
+    "pre-commit"
+    "swift"
+  ];
+in
 {
   warashi.cage = {
     enable = true;
@@ -16,54 +27,30 @@
           command = "codex";
           presets = [
             "codex"
-
-            "general"
-            "kiro"
-            "go"
-            "cargo"
-            "yarn"
-            "pre-commit"
-          ];
+          ]
+          ++ agent-presets;
         }
         {
           command = "gemini";
           presets = [
             "gemini"
-
-            "general"
-            "kiro"
-            "go"
-            "cargo"
-            "yarn"
-            "pre-commit"
-          ];
+          ]
+          ++ agent-presets;
         }
         {
           command = "claude";
           presets = [
             "claude-code"
             "awscli" # for bedrock auth
-
-            "general"
-            "kiro"
-            "go"
-            "cargo"
-            "yarn"
-            "pre-commit"
-          ];
+          ]
+          ++ agent-presets;
         }
         {
           command = "codex";
           presets = [
             "codex"
-
-            "general"
-            "kiro"
-            "go"
-            "cargo"
-            "yarn"
-            "pre-commit"
-          ];
+          ]
+          ++ agent-presets;
         }
       ];
       presets = {
@@ -151,6 +138,14 @@
             "$HOME/.rustup"
             "$HOME/.cache/sccache"
             "$HOME/Library/Caches/sccache"
+          ];
+        };
+        swift = {
+          allow = [
+            "$HOME/.swiftpm"
+            "$HOME/Library/Developer/Xcode/DerivedData"
+            "$HOME/Library/Caches/org.swift.swiftpm"
+            "$HOME/Library/Caches/com.charcoaldesign.swiftformat"
           ];
         };
 
