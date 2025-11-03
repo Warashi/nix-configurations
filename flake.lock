@@ -1266,6 +1266,7 @@
         "sops-nix": "sops-nix",
         "tmux-mvr": "tmux-mvr",
         "treefmt-nix": "treefmt-nix",
+        "vhs-mcp": "vhs-mcp",
         "vscode-extensions": "vscode-extensions",
         "warashi-modules": "warashi-modules",
         "warashi-nur-packages": "warashi-nur-packages",
@@ -1435,6 +1436,35 @@
       "original": {
         "owner": "numtide",
         "repo": "treefmt-nix",
+        "type": "github"
+      }
+    },
+    "vhs-mcp": {
+      "inputs": {
+        "flake-parts": [
+          "flake-parts"
+        ],
+        "git-hooks": [
+          "git-hooks"
+        ],
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "treefmt-nix": [
+          "treefmt-nix"
+        ]
+      },
+      "locked": {
+        "lastModified": 1762172629,
+        "narHash": "sha256-cJyeFqo5Aavsr+wtRBqLhgnJzVT/DQ1m8LzUCgOGeo0=",
+        "owner": "Warashi",
+        "repo": "vhs-mcp",
+        "rev": "1a161d039a9664a6faf8a4c57d35574a228e0c94",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Warashi",
+        "repo": "vhs-mcp",
         "type": "github"
       }
     },

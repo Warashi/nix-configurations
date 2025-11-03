@@ -11,6 +11,10 @@ let
   ];
 in
 {
+  home.packages = [
+    inputs.vhs-mcp.packages.${pkgs.stdenv.hostPlatform.system}.vhs-mcp
+  ];
+
   warashi.cage = {
     enable = true;
     package = inputs.cage.packages.${pkgs.stdenv.hostPlatform.system}.default;

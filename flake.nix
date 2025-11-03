@@ -140,6 +140,15 @@
       url = "github:numtide/treefmt-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    vhs-mcp = {
+      url = "github:Warashi/vhs-mcp";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        flake-parts.follows = "flake-parts";
+        treefmt-nix.follows = "treefmt-nix";
+        git-hooks.follows = "git-hooks";
+      };
+    };
     vscode-extensions = {
       url = "github:nix-community/nix-vscode-extensions";
       inputs = {
