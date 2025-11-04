@@ -5,6 +5,7 @@ let
     "kiro"
     "go"
     "cargo"
+    "npm"
     "yarn"
     "pre-commit"
     "swift"
@@ -127,6 +128,15 @@ in
             "$HOME/.yarnrc"
             "$HOME/.cache/yarn"
             "$HOME/Library/Caches/yarn"
+          ];
+        };
+        npm = {
+          allow = [
+            "node_modules"
+            "$HOME/.npm"
+            "$HOME/.cache/npm"
+            "$HOME/.npmrc"
+            "$HOME/Library/Caches/npm"
           ];
         };
         go = {
