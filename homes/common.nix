@@ -10,14 +10,24 @@
     warashi.emacs.enable = true;
   };
 
-  warashi = {
-    services = {
-      muscat.package = inputs.muscat.packages.${pkgs.stdenv.hostPlatform.system}.default;
+  warashi =
+    let
+      muscat =
+        if pkgs.stdenv.isDarwin then
+          inputs.muscat.packages.${pkgs.stdenv.hostPlatform.system}.default.override {
+            useGolangDesign = true;
+          }
+        else
+          inputs.muscat.packages.${pkgs.stdenv.hostPlatform.system}.derault;
+    in
+    {
+      services = {
+        muscat.package = muscat;
+      };
+      programs = {
+        muscat.package = muscat;
+      };
     };
-    programs = {
-      muscat.package = inputs.muscat.packages.${pkgs.stdenv.hostPlatform.system}.default;
-    };
-  };
 
   catppuccin = {
     enable = true;
