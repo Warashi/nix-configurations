@@ -55,7 +55,5 @@ set-option -g visual-bell off
 # gitmux
 set -agF status-right "#{@catppuccin_status_gitmux}"
 
-# editprompt
-bind -n M-q run-shell 'tmux split-window -v -l 20 \
-  -c "#{pane_current_path}" \
-  "editprompt --editor nvim --always-copy --target-pane #{pane_id}"'
+# OSC 52 clipboard
+set-option -s set-clipboard on
