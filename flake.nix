@@ -58,6 +58,12 @@
         nixpkgs.follows = "nixpkgs";
       };
     };
+    git-mile = {
+      url = "github:Warashi/git-mile";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+      };
+    };
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
