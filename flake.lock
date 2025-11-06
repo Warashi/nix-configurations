@@ -475,11 +475,11 @@
         "rust-overlay": "rust-overlay"
       },
       "locked": {
-        "lastModified": 1762347509,
-        "narHash": "sha256-4ve+7iDi8+Yw36HMGr2BNHtKO64Y+xGq37zFoe+YN6w=",
+        "lastModified": 1762401031,
+        "narHash": "sha256-jAaZ7wLpsQ866CDKXQtUyz4fMEmD0RNuypBPkM0aIO0=",
         "owner": "Warashi",
         "repo": "git-mile",
-        "rev": "89526a2200ea55247d3d81aa8b2d0f44cca04761",
+        "rev": "1301326a68373cb0c5228be043511b698c208c51",
         "type": "github"
       },
       "original": {
