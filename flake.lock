@@ -450,6 +450,9 @@
     },
     "git-mile": {
       "inputs": {
+        "devshell": [
+          "devshell"
+        ],
         "flake-parts": [
           "flake-parts"
         ],
@@ -465,11 +468,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1762404169,
-        "narHash": "sha256-gZwzX2/+A3/Q8m3job/jmyhpUN9SzUoPazDHS0SxAT0=",
+        "lastModified": 1762406226,
+        "narHash": "sha256-pEL89jzvCW3v1zgRbXdq+JsliWF/HfKOoTXGSX8TZC4=",
         "owner": "Warashi",
         "repo": "git-mile",
-        "rev": "c823e1fd56175d2131e7e53d646a953105a6d59f",
+        "rev": "c1e399dff39f6245ebcdb0c63f64a12af576edaf",
         "type": "github"
       },
       "original": {

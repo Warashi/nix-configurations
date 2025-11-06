@@ -61,10 +61,11 @@
     git-mile = {
       url = "github:Warashi/git-mile";
       inputs = {
-        nixpkgs.follows = "nixpkgs";
+        devshell.follows = "devshell";
         flake-parts.follows = "flake-parts";
-        treefmt-nix.follows = "treefmt-nix";
         git-hooks.follows = "git-hooks";
+        nixpkgs.follows = "nixpkgs";
+        treefmt-nix.follows = "treefmt-nix";
       };
     };
     home-manager = {
