@@ -18,7 +18,7 @@
             useGolangDesign = true;
           }
         else
-          inputs.muscat.packages.${pkgs.stdenv.hostPlatform.system}.derault;
+          inputs.muscat.packages.${pkgs.stdenv.hostPlatform.system}.default;
     in
     {
       services = {
