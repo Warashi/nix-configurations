@@ -1510,11 +1510,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1762557741,
-        "narHash": "sha256-UI1bwIx7m1ltAW0rp/fn5FXc7J2R9Gpe5RrKwD1fEj0=",
+        "lastModified": 1762560555,
+        "narHash": "sha256-illMJhnISfitDj95qN7Inf1zbcgpMxB1jIr5EHk/BBE=",
         "owner": "Warashi",
         "repo": "vhs-mcp",
-        "rev": "d989827fd5d91a22a7ad58b020c791e6332af0e3",
+        "rev": "fcec34f5d521396a666d81b26bba1e27a7ba6498",
         "type": "github"
       },
       "original": {

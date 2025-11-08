@@ -174,6 +174,8 @@ in
         vhs-mcp = {
           allow = [
             "/dev"
+            "$HOME/.cache/vhs-mcp"
+            "$HOME/Library/Caches/vhs-mcp"
           ];
         };
         pre-commit = {
