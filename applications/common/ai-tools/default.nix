@@ -109,6 +109,14 @@ in
             "."
             "/dev"
             "$HOME/.gemini"
+            {
+              path = ".gemini";
+              eval-symlinks = true;
+            }
+            {
+              path = "GEMINI.md";
+              eval-symlinks = true;
+            }
           ];
           allow-keychain = true;
           allow-git = true;
