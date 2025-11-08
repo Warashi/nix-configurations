@@ -9,6 +9,7 @@ let
     "yarn"
     "pre-commit"
     "swift"
+    "vhs-mcp"
   ];
 in
 {
@@ -168,6 +169,11 @@ in
         awscli = {
           allow = [
             "$HOME/.aws"
+          ];
+        };
+        vhs-mcp = {
+          allow = [
+            "/dev"
           ];
         };
         pre-commit = {
