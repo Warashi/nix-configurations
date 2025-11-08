@@ -117,6 +117,14 @@ in
           allow = [
             "."
             "$HOME/.codex"
+            {
+              path = ".codex";
+              eval-symlinks = true;
+            }
+            {
+              path = "AGENTS.md";
+              eval-symlinks = true;
+            }
           ];
           allow-keychain = true;
           allow-git = true;
