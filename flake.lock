@@ -468,11 +468,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1762406226,
-        "narHash": "sha256-pEL89jzvCW3v1zgRbXdq+JsliWF/HfKOoTXGSX8TZC4=",
+        "lastModified": 1762560044,
+        "narHash": "sha256-bGJA8tojkp6zQ6ZXzV5fJzVUNtDwcK5nDkoD8NXr1Go=",
         "owner": "Warashi",
         "repo": "git-mile",
-        "rev": "c1e399dff39f6245ebcdb0c63f64a12af576edaf",
+        "rev": "84330d384ab67affa56b15d2d45b97597af8f173",
         "type": "github"
       },
       "original": {
@@ -1510,11 +1510,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1762172629,
-        "narHash": "sha256-cJyeFqo5Aavsr+wtRBqLhgnJzVT/DQ1m8LzUCgOGeo0=",
+        "lastModified": 1762557741,
+        "narHash": "sha256-UI1bwIx7m1ltAW0rp/fn5FXc7J2R9Gpe5RrKwD1fEj0=",
         "owner": "Warashi",
         "repo": "vhs-mcp",
-        "rev": "1a161d039a9664a6faf8a4c57d35574a228e0c94",
+        "rev": "d989827fd5d91a22a7ad58b020c791e6332af0e3",
         "type": "github"
       },
       "original": {
