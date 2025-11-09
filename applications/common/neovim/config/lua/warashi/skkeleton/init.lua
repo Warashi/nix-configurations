@@ -1,6 +1,5 @@
 local function skkeleton_initialize()
 	vim.fn["skkeleton#config"]({
-		showCandidatesCount = 1,
 		globalDictionaries = { "@skk_jisyo_l@" },
 	})
 end
