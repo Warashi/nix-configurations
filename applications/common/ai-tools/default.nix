@@ -1,4 +1,9 @@
-{ inputs, pkgs, ... }:
+{
+  config,
+  inputs,
+  pkgs,
+  ...
+}:
 let
   agent-presets = [
     "general"
@@ -13,9 +18,16 @@ let
   ];
 in
 {
-  home.packages = [
-    inputs.vhs-mcp.packages.${pkgs.stdenv.hostPlatform.system}.vhs-mcp
-  ];
+  home = {
+    packages = [
+      inputs.vhs-mcp.packages.${pkgs.stdenv.hostPlatform.system}.vhs-mcp
+    ];
+    file = {
+      ".codex/AGENTS.md".source = ./AGENTS.md;
+      ".claude/CLAUDE.md".source = ./AGENTS.md;
+      ".gemini/GEMINI.md".source = ./AGENTS.md;
+    };
+  };
 
   warashi.cage = {
     enable = true;
