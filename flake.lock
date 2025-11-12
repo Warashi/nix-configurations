@@ -468,11 +468,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1762664645,
-        "narHash": "sha256-vRirG724LeaWvelIZugX6VdbilszXe1akc7/kvSYV8s=",
+        "lastModified": 1762906440,
+        "narHash": "sha256-M6GX0s2/HTfrOfaa4sZXm7ermhGvi/Vj634eIe4zBes=",
         "owner": "Warashi",
         "repo": "git-mile",
-        "rev": "1a86626eeeb7ce0fcfc29977e7a1cc2fab8055b9",
+        "rev": "1852fc7151f20c1ec19c7bfb49ebf65dc3c5ae78",
         "type": "github"
       },
       "original": {
