@@ -24,6 +24,7 @@
       "ghostty"
       "google-chrome"
       "google-drive"
+      "icon-composer"
       "karabiner-elements"
       "lm-studio"
       "logi-options+"
