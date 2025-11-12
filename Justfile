@@ -31,14 +31,14 @@ switch-for HOST:
   just {{ if os() == "macos" { "_darwin-rebuild-switch-for" } else { "_nixos-rebuild-switch-for" } }} {{HOST}}
 
 _darwin-rebuild-for HOST:
-  {{nix}} build --impure --keep-going --no-link --show-trace --system {{system}} \
+  {{nix}} build --keep-going --no-link --show-trace --system {{system}} \
     .#darwinConfigurations.{{HOST}}.system
 
 _darwin-rebuild-switch-for HOST:
   sudo darwin-rebuild switch --flake .#{{HOST}}
 
 _nixos-rebuild-for HOST:
-  {{nix}} build --impure --keep-going --no-link --show-trace --system {{system}} \
+  {{nix}} build --keep-going --no-link --show-trace --system {{system}} \
     .#nixosConfigurations.{{HOST}}.config.system.build.toplevel
 
 _nixos-rebuild-switch-for HOST:

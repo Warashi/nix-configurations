@@ -42,7 +42,7 @@ for host in $HOSTS; do
 
   if [ "$SYSTEM" = "$TARGET_SYSTEM" ]; then
     echo "Building for current system: $host"
-    nix build --impure --keep-going --no-link --show-trace .#${TARGET}.${host}.${TARGET_ATTR}
+    nix build --keep-going --no-link --show-trace .#${TARGET}.${host}.${TARGET_ATTR}
     if [ $? -ne 0 ]; then
       echo "Build failed for host: $host"
       exit 1
