@@ -8,5 +8,8 @@
     automerge: true,
     timezone: "Asia/Tokyo",
     nix: { enabled: true },
-    lockFileMaintenance: { enabled: true },
+    lockFileMaintenance: {
+        enabled: true,
+        extends: [ "schedule:daily" ],
+    },
 }
