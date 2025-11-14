@@ -135,15 +135,15 @@
   };
   ddc-vim = {
     pname = "ddc-vim";
-    version = "4f553b7f4e968971461820d05d3ff1601f9d7ab4";
+    version = "ef527ad60b199b11d022a648a24ab6d424227943";
     src = fetchFromGitHub {
       owner = "Shougo";
       repo = "ddc.vim";
-      rev = "4f553b7f4e968971461820d05d3ff1601f9d7ab4";
+      rev = "ef527ad60b199b11d022a648a24ab6d424227943";
       fetchSubmodules = false;
-      sha256 = "sha256-3WGlkMTesV60DEPdnTFVW1sLf3NaNK3tRM6C2EJm4pw=";
+      sha256 = "sha256-Gp6xenZrXPl2UZ1W5yFvolWUW/rWzxGyVDY8lVcA0WA=";
     };
-    date = "2025-10-12";
+    date = "2025-11-16";
   };
   denops-vim = {
     pname = "denops-vim";
@@ -159,39 +159,39 @@
   };
   nvim-aibo = {
     pname = "nvim-aibo";
-    version = "9710213fee987964dd3f649a3bb3ea85d4896440";
+    version = "4f491ead2f39968da7755250fc97335d6ee6455d";
     src = fetchFromGitHub {
       owner = "lambdalisue";
       repo = "nvim-aibo";
-      rev = "9710213fee987964dd3f649a3bb3ea85d4896440";
+      rev = "4f491ead2f39968da7755250fc97335d6ee6455d";
       fetchSubmodules = false;
-      sha256 = "sha256-eA+WKisTdZgb5hsrWd3aIUaVNS/AN13GTqHIGh2Dzn8=";
+      sha256 = "sha256-qJFxpIMaFWtdhTmnleW+dfcFNyOX0qd2axO3QjTkwfQ=";
     };
-    date = "2025-10-23";
+    date = "2025-11-12";
   };
   nvim-lspconfig = {
     pname = "nvim-lspconfig";
-    version = "a89bfcfd0e44f898341ac8a80ba83ccf6218bef3";
+    version = "781e4bdf427d0fb17ceef2ee4db172a29825fd73";
     src = fetchFromGitHub {
       owner = "neovim";
       repo = "nvim-lspconfig";
-      rev = "a89bfcfd0e44f898341ac8a80ba83ccf6218bef3";
+      rev = "781e4bdf427d0fb17ceef2ee4db172a29825fd73";
       fetchSubmodules = false;
-      sha256 = "sha256-ZRxIfoWC+F/fVGKTRacGvotEfXq9fClcY2B57n5cZdU=";
+      sha256 = "sha256-cIsNInCeKH4Ilci3AEhDoaLOzMtkYnp3hgaOdNoGmQE=";
     };
-    date = "2025-11-01";
+    date = "2025-11-16";
   };
   pum-vim = {
     pname = "pum-vim";
-    version = "08734d52b03c354151dda3bb75a37a0ee39bbe7e";
+    version = "fed31b9f117e4c10332c30108152a935496bc3b5";
     src = fetchFromGitHub {
       owner = "Shougo";
       repo = "pum.vim";
-      rev = "08734d52b03c354151dda3bb75a37a0ee39bbe7e";
+      rev = "fed31b9f117e4c10332c30108152a935496bc3b5";
       fetchSubmodules = false;
-      sha256 = "sha256-WuSq5+0Tj0VgmdSYNxnswU1gNG2lSdoePNuVuiNkIOY=";
+      sha256 = "sha256-hOUvq4hXlj7fxaJ/8ng3vEH2t0NrnWKuCqr7TwfD28c=";
     };
-    date = "2025-10-16";
+    date = "2025-11-10";
   };
   skk-dict = {
     pname = "skk-dict";
