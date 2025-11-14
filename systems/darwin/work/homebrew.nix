@@ -10,6 +10,7 @@
       "domzilla-caffeine"
       "ghostty"
       "google-chrome"
+      "iterm2"
       "karabiner-elements"
       "microsoft-edge"
       "raycast"
