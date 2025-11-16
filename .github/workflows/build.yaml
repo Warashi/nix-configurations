@@ -22,6 +22,7 @@ jobs:
         with:
           nix_conf: |
             max-jobs = 1
+            sandbox = ${{ startsWith(matrix.os, 'macos-') && 'true' || 'relaxed' }}
       - name: Setup cachix
         uses: cachix/cachix-action@0fc020193b5a1fa3ac4575aa3a7d3aa6a35435ad # v16
         with:
