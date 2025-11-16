@@ -3,7 +3,7 @@
 - 細かい作業単位でテストを実行してください。
 - 細かい作業単位で変更を git commit してください
 - git commit message は conventional commit に従ってください
-- git add は細かいファイルやhunk単位で行ってください
+- git diff および git apply を使って細かい単位で変更を stage してください
 - .warashi はユーザーの設定で git ignore されています
 - git add --force は禁止です
 - git-mile の task を実施する際には、実施前と完了後に task
