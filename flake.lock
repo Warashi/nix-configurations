@@ -468,11 +468,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1762906440,
-        "narHash": "sha256-M6GX0s2/HTfrOfaa4sZXm7ermhGvi/Vj634eIe4zBes=",
+        "lastModified": 1763210799,
+        "narHash": "sha256-uPDPQhzISD27Hom3hX9kpzgYTWCNrJiNNuLRP7U5FPs=",
         "owner": "Warashi",
         "repo": "git-mile",
-        "rev": "1852fc7151f20c1ec19c7bfb49ebf65dc3c5ae78",
+        "rev": "dcef2a7d36f7760eb0c35f03f1ebcd43c36dce87",
         "type": "github"
       },
       "original": {
@@ -955,11 +955,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1763130179,
-        "narHash": "sha256-hcCj5AtMDirIDexA+9u5/r5Lzxkr7hXpxDokdZlTQUA=",
+        "lastModified": 1763262901,
+        "narHash": "sha256-/tgqIEjgIyQTYTs1xoh2TC2b5u+c4eJPQ0fXTgh0sj0=",
         "owner": "numtide",
         "repo": "nix-ai-tools",
-        "rev": "3de525217885be44da10f253a36c474d43f4933e",
+        "rev": "2a63ed7adec4a1c5e73e3bcf2ea068b432c5b33c",
         "type": "github"
       },
       "original": {
