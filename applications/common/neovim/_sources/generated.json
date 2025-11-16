@@ -376,5 +376,47 @@
             "type": "github"
         },
         "version": "71178b6debd9f1b3bb00abfd865ca642e82e24c7"
+    },
+    "skkeleton-henkan-highlight": {
+        "cargoLocks": null,
+        "date": "2025-11-02",
+        "extract": null,
+        "name": "skkeleton-henkan-highlight",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "NI57721",
+            "repo": "skkeleton-henkan-highlight",
+            "rev": "3f8d6d6d20a2397827138dbde7fa531bb487d849",
+            "sha256": "sha256-K5quESFM+5NZstbRgIIsfpXzBtnGJOQBF0SJiDi18jc=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "3f8d6d6d20a2397827138dbde7fa531bb487d849"
+    },
+    "skkeleton-state-popup": {
+        "cargoLocks": null,
+        "date": "2025-11-05",
+        "extract": null,
+        "name": "skkeleton-state-popup",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "NI57721",
+            "repo": "skkeleton-state-popup",
+            "rev": "2a72e33c47cc8762517d479c28f0deedde8b6794",
+            "sha256": "sha256-Zamd5GlFHpPrSiWVx3xK5EeUU8ZoEQf82yoBjQ7ypaM=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "2a72e33c47cc8762517d479c28f0deedde8b6794"
     }
 }

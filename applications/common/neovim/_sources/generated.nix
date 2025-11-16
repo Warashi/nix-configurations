@@ -217,4 +217,28 @@
     };
     date = "2025-10-27";
   };
+  skkeleton-henkan-highlight = {
+    pname = "skkeleton-henkan-highlight";
+    version = "3f8d6d6d20a2397827138dbde7fa531bb487d849";
+    src = fetchFromGitHub {
+      owner = "NI57721";
+      repo = "skkeleton-henkan-highlight";
+      rev = "3f8d6d6d20a2397827138dbde7fa531bb487d849";
+      fetchSubmodules = false;
+      sha256 = "sha256-K5quESFM+5NZstbRgIIsfpXzBtnGJOQBF0SJiDi18jc=";
+    };
+    date = "2025-11-02";
+  };
+  skkeleton-state-popup = {
+    pname = "skkeleton-state-popup";
+    version = "2a72e33c47cc8762517d479c28f0deedde8b6794";
+    src = fetchFromGitHub {
+      owner = "NI57721";
+      repo = "skkeleton-state-popup";
+      rev = "2a72e33c47cc8762517d479c28f0deedde8b6794";
+      fetchSubmodules = false;
+      sha256 = "sha256-Zamd5GlFHpPrSiWVx3xK5EeUU8ZoEQf82yoBjQ7ypaM=";
+    };
+    date = "2025-11-05";
+  };
 }

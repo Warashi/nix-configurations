@@ -14,6 +14,14 @@ fetch.github = "lambdalisue/nvim-aibo"
 src.git = "https://github.com/vim-skk/skkeleton.git"
 fetch.github = "vim-skk/skkeleton"
 
+[skkeleton-state-popup]
+src.git = "https://github.com/NI57721/skkeleton-state-popup.git"
+fetch.github = "NI57721/skkeleton-state-popup"
+
+[skkeleton-henkan-highlight]
+src.git = "https://github.com/NI57721/skkeleton-henkan-highlight.git"
+fetch.github = "NI57721/skkeleton-henkan-highlight"
+
 [skk-dict]
 src.git = "https://github.com/skk-dev/dict.git"
 fetch.github = "skk-dev/dict"
