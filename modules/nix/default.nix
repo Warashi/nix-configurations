@@ -40,7 +40,7 @@ in
             "@wheel"
           ]
           ++ optional pkgs.stdenv.isDarwin "@admin";
-          sandbox = if pkgs.stdenv.isDarwin then false else true;
+          sandbox = if pkgs.stdenv.isDarwin then "relaxed" else true;
           warn-dirty = false;
         };
 
