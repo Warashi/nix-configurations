@@ -46,7 +46,7 @@ for d in ".warashi" ".cursor" ".claude" ".kiro"; do
 done
 
 # 特定のファイルが存在する場合にはシンボリックリンクを作成する
-for f in "shell.nix" "CLAUDE.md" ".mcp.json" ".cursorignore"; do
+for f in "shell.nix" "AGENTS.md" "GEMINI.md" "CLAUDE.md" ".mcp.json" ".cursorignore"; do
   if [ -f "$f" ] && [ ! -e "$TARGET/$f" ]; then
     ln -s "$(pwd)/$f" "$TARGET/$f"
   fi
