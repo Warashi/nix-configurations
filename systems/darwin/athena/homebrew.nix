@@ -32,6 +32,7 @@
       "raycast"
       "slack"
       "tailscale-app"
+      "timemator"
       "visual-studio-code"
       "zoom"
       # keep-sorted end
