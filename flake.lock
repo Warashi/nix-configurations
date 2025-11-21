@@ -1567,11 +1567,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1763332062,
-        "narHash": "sha256-eNhgVljPOaqoqqfkKlc85h93WKMPVDLfs5lXe0/XTdg=",
+        "lastModified": 1763674321,
+        "narHash": "sha256-e1fV/HSr5ALkbm0+mRyP9N/CRuu0wvJuypcP5UMAkr4=",
         "owner": "Warashi",
         "repo": "nix-modules",
-        "rev": "1c968c09e86f408ea1dd0adf73fa96267d4c8cca",
+        "rev": "1f70da2fb5d35edcb23a231e9b95c3ed1475df57",
         "type": "github"
       },
       "original": {
