@@ -12,6 +12,7 @@
       "google-chrome"
       "iterm2"
       "karabiner-elements"
+      "logi-options+"
       "microsoft-edge"
       "raycast"
       "slack"
