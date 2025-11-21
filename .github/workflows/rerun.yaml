@@ -1,0 +1,25 @@
+name: Rerun failed workflow
+
+on:
+  workflow_run:
+    workflows: ["Build"]
+    types:
+      - completed
+
+jobs:
+  rerun_workflow:
+    runs-on: ubuntu-slim
+    # workflowが失敗しており、尚且つこのworkflowの実行回数が5回以下のときのみ以下を実行
+    if: ${{ github.event.workflow_run.conclusion == 'failure' && github.event.workflow_run.run_attempt < 5 }}
+    steps:
+      - name: Create GitHub App Token
+        id: app-token
+        uses: actions/create-github-app-token@67018539274d69449ef7c02e8e71183d1719ab42 # v2.1.4
+        with:
+          app-id: ${{ vars.AUTO_RERUN_APP_ID }}
+          private-key: ${{ secrets.AUTO_RERUN_APP_PRIVATE_KEY }}
+      - name: Rerun workflow
+        run: |
+          gh run --repo ${{ github.repository }} rerun ${{ github.event.workflow_run.id }} --failed
+        env:
+          GH_TOKEN: ${{ steps.app-token.outputs.token }}
