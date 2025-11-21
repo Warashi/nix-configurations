@@ -3,7 +3,6 @@
     extends: [
         "config:best-practices",
         "schedule:daily",
-        'schedule:automergeDaily',
     ],
     automerge: true,
     timezone: "Asia/Tokyo",
