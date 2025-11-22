@@ -17,6 +17,7 @@
     masApps = {
       DaisyDisk = 411643860;
       Pastebot = 1179623856;
+      Xcode = 497799835;
     };
     onActivation = {
       cleanup = "zap";
