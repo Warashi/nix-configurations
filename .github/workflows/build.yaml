@@ -14,7 +14,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-24.04, ubuntu-24.04-arm, macos-15]
+        os: [ubuntu-24.04, ubuntu-24.04-arm, macos-26]
     runs-on: ${{ matrix.os }}
     steps:
       - name: Install nix
@@ -28,7 +28,7 @@ jobs:
         with:
           name: warashi
           extraPullNames: nix-community
-          authToken: "${{ secrets.CACHIX_AUTH_TOKEN }}"
-          skipPush: ${{ github.event_name == 'pull_request' }}
+          authToken: ${{ secrets.CACHIX_AUTH_TOKEN }}
+          skipPush: false # PR でも push して、 main にマージされたときにキャッシュが使えるようにする
       - uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3 # v6.0.0
       - run: sh ./.github/workflows/build-all.sh
