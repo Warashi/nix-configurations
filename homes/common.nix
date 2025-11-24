@@ -76,6 +76,7 @@
 
   imports = [
     inputs.catppuccin.homeModules.catppuccin
+    inputs.paneru.homeModules.paneru
     inputs.sops-nix.homeManagerModules.sops
     inputs.warashi-modules.homeModules.default
 

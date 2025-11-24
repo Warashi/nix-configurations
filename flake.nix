@@ -133,6 +133,10 @@
       url = "github:nvim-treesitter/nvim-treesitter/main";
       flake = false;
     };
+    paneru = {
+      url = "github:karinushka/paneru";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     sops-nix = {
       url = "github:Mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";
