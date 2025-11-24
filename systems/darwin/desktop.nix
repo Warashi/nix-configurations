@@ -10,8 +10,8 @@
   };
 
   services.warashi = {
-    aerospace.enable = true;
-    sketchybar.enable = true;
+    aerospace.enable = false;
+    sketchybar.enable = false;
     jankyborders.enable = true;
   };
 }
