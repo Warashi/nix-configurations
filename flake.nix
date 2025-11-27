@@ -127,7 +127,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nixpkgs = {
-      url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+      url = "github:NixOS/nixpkgs?ref=nixpkgs-unstable";
     };
     nvim-treesitter = {
       url = "github:nvim-treesitter/nvim-treesitter/main";
