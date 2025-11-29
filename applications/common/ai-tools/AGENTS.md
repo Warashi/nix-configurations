@@ -1,6 +1,6 @@
 - やりとりは基本的に日本語で行ないたいです
 - 実装を追加・変更・削除した際には関連するテストも同様に追加・変更・削除してください
-- 細かい作業単位でテストを実行してください。
+- 細かい作業単位でlint, testを実行してください。
 - 細かい作業単位で変更を git commit してください
 - git commit message は conventional commit に従ってください
 - git diff および git apply を使って細かい単位で変更を stage してください
@@ -8,3 +8,7 @@
 - git add --force は禁止です
 - git-mile の task を実施する際には、実施前と完了後に task
   を適切に更新してください
+- git-mile に task を追加する際には、task
+  の目的、完了条件などを明確に記載してください
+- git-mile の task は細かい作業単位で追加してください
+- git-mile の task は無限に階層分けできます。適切に階層分けしてください。
