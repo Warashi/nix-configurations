@@ -283,6 +283,7 @@
                 # keep-sorted start block=yes
                 deno = {
                   excludes = [
+                    "**/*.md" # exclude markdown files
                     "**/facter.json" # nix-factor managed files
                     "**/secrets/*.yaml" # sops managed files
                     "**/_sources/generated.json" # nvfetcher generatee sources
