@@ -10,3 +10,4 @@
 - git-mile に task を追加する際には、task の目的、完了条件などを明確に記載してください
 - git-mile の task は細かい作業単位で追加してください
 - git-mile の task は無限に階層分けできます。適切に階層分けしてください。
+- git-mile の操作は MCP tools を使用してください
