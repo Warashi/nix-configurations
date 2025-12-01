@@ -1,12 +1,16 @@
 require("aibo").setup({
+	prompt = {
+		no_default_mappings = true,
+	},
+	console = {
+		no_default_mappings = true,
+	},
 	tools = {
 		claude = {
 			no_default_mappings = true,
-			on_attach = function(bufnr, info) end,
 		},
 		codex = {
 			no_default_mappings = true,
-			on_attach = function(bufnr, info) end,
 		},
 	},
 })
