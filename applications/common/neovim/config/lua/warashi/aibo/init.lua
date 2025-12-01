@@ -2,6 +2,7 @@ function on_attach_console(bufnr, info)
 	local opts = { buffer = bufnr, nowait = true, silent = true }
 	vim.keymap.set("n", "<C-c>", "<Plug>(aibo-send)<Esc>", opts)
 	vim.keymap.set("n", "<C-l>", "<Plug>(aibo-send)<C-l>", opts)
+	vim.keymap.set("n", "<CR>", "<Plug>(aibo-send)<CR>", opts)
 	vim.keymap.set("n", "<C-n>", "<Plug>(aibo-send)<C-n>", opts)
 	vim.keymap.set("n", "<C-p>", "<Plug>(aibo-send)<C-p>", opts)
 	vim.keymap.set("n", "<Down>", "<Plug>(aibo-send)<Down>", opts)
@@ -34,12 +35,13 @@ function on_attach_console_codex(bufnr, _info)
 end
 
 require("aibo").setup({
-	submit_key = "<CR><CR>", -- paste snippets 扱いになるともう一度 Enter を押す必要がある
 	prompt = {
 		no_default_mappings = true,
+		on_attach = on_attach_prompt,
 	},
 	console = {
 		no_default_mappings = true,
+		on_attach = on_attach_console,
 	},
 	tools = {
 		claude = {
