@@ -61,6 +61,18 @@
     };
     date = "2025-09-02";
   };
+  ddc-filter-sorter_lsp_kind = {
+    pname = "ddc-filter-sorter_lsp_kind";
+    version = "2d082e521f6e0f8d452ad737145315606eaec532";
+    src = fetchFromGitHub {
+      owner = "Shougo";
+      repo = "ddc-filter-sorter_lsp_kind";
+      rev = "2d082e521f6e0f8d452ad737145315606eaec532";
+      fetchSubmodules = false;
+      sha256 = "sha256-ejTiozAzDdDi68KujdiUgaTZtuHnseqd+IhTzchK5Mw=";
+    };
+    date = "2025-09-08";
+  };
   ddc-filter-sorter_rank = {
     pname = "ddc-filter-sorter_rank";
     version = "eed3cb33b3ae3f9128257fcfb95e0511d1b13891";
@@ -171,15 +183,15 @@
   };
   nvim-lspconfig = {
     pname = "nvim-lspconfig";
-    version = "781e4bdf427d0fb17ceef2ee4db172a29825fd73";
+    version = "effe4bf2e1afb881ea67291c648b68dd3dfc927a";
     src = fetchFromGitHub {
       owner = "neovim";
       repo = "nvim-lspconfig";
-      rev = "781e4bdf427d0fb17ceef2ee4db172a29825fd73";
+      rev = "effe4bf2e1afb881ea67291c648b68dd3dfc927a";
       fetchSubmodules = false;
-      sha256 = "sha256-cIsNInCeKH4Ilci3AEhDoaLOzMtkYnp3hgaOdNoGmQE=";
+      sha256 = "sha256-IpVDEOr//Jy+r3Z5Qo8nxDa3fNO+BTBKzAmbqvxtCQE=";
     };
-    date = "2025-11-16";
+    date = "2025-11-29";
   };
   pum-vim = {
     pname = "pum-vim";

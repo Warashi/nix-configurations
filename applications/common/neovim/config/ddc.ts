@@ -51,6 +51,9 @@ export class Config extends BaseConfig {
           mark: "lsp",
           forceCompletionPattern: String.raw`\.\w*|::\w*|->\w*`,
           dup: "force",
+          sorters: [
+            "sorter_lsp_kind",
+          ],
         },
         skkeleton: {
           mark: "skk",

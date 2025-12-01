@@ -74,6 +74,10 @@ fetch.github = "Shougo/ddc-filter-sorter_rank"
 src.git = "https://github.com/Shougo/ddc-filter-sorter_head.git"
 fetch.github = "Shougo/ddc-filter-sorter_head"
 
+[ddc-filter-sorter_lsp_kind]
+src.git = "https://github.com/Shougo/ddc-filter-sorter_lsp_kind.git"
+fetch.github = "Shougo/ddc-filter-sorter_lsp_kind"
+
 [ddc-filter-converter_remove_overlap]
 src.git = "https://github.com/Shougo/ddc-filter-converter_remove_overlap.git"
 fetch.github = "Shougo/ddc-filter-converter_remove_overlap"
