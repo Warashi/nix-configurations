@@ -26,6 +26,14 @@ fetch.github = "NI57721/skkeleton-henkan-highlight"
 src.git = "https://github.com/skk-dev/dict.git"
 fetch.github = "skk-dev/dict"
 
+[denops-signature_help]
+src.git = "https://github.com/matsui54/denops-signature_help.git"
+fetch.github = "matsui54/denops-signature_help"
+
+[denops-popup-preview-vim]
+src.git = "https://github.com/matsui54/denops-popup-preview.vim.git"
+fetch.github = "matsui54/denops-popup-preview.vim"
+
 [pum-vim]
 src.git = "https://github.com/Shougo/pum.vim.git"
 fetch.github = "Shougo/pum.vim"

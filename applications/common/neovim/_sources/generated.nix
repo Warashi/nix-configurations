@@ -157,6 +157,30 @@
     };
     date = "2025-11-16";
   };
+  denops-popup-preview-vim = {
+    pname = "denops-popup-preview-vim";
+    version = "6ba396dfb6321b2d5a0f6782823d6e588089e596";
+    src = fetchFromGitHub {
+      owner = "matsui54";
+      repo = "denops-popup-preview.vim";
+      rev = "6ba396dfb6321b2d5a0f6782823d6e588089e596";
+      fetchSubmodules = false;
+      sha256 = "sha256-L3Gr+BfszlFHvmxA8M8+jJ73akQzetkX/RoLVsEB4hE=";
+    };
+    date = "2025-08-11";
+  };
+  denops-signature_help = {
+    pname = "denops-signature_help";
+    version = "53cdd50c4f3d2bb45d66af3402f008cbeaa1cfe3";
+    src = fetchFromGitHub {
+      owner = "matsui54";
+      repo = "denops-signature_help";
+      rev = "53cdd50c4f3d2bb45d66af3402f008cbeaa1cfe3";
+      fetchSubmodules = false;
+      sha256 = "sha256-WFk96DOXdkcgIzehMrIyIZBcE0sPGTbBHzazmN3SZQ0=";
+    };
+    date = "2025-08-15";
+  };
   denops-vim = {
     pname = "denops-vim";
     version = "5cfca39988a36e42d81b925264fc846077a727e3";
