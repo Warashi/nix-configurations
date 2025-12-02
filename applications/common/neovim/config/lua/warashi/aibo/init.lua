@@ -8,9 +8,9 @@ function on_attach_console(bufnr, info)
 	vim.keymap.set("n", "<Down>", "<Plug>(aibo-send)<Down>", opts)
 	vim.keymap.set("n", "<Up>", "<Plug>(aibo-send)<Up>", opts)
 
-	if info.tool == "claude" then
+	if info.cmd == "claude" then
 		on_attach_console_claude(bufnr, info)
-	elseif info.tool == "codex" then
+	elseif info.cmd == "codex" then
 		on_attach_console_codex(bufnr, info)
 	end
 end
@@ -21,10 +21,10 @@ end
 
 function on_attach_console_claude(bufnr, _info)
 	local opts = { buffer = bufnr, nowait = true, silent = true }
-	vim.keymap.set({ "n", "i" }, "<Tab>", "<Plug>(aibo-send)<Tab>", opts)
-	vim.keymap.set({ "n", "i" }, "<S-Tab>", "<Plug>(aibo-send)<S-Tab>", opts)
-	vim.keymap.set({ "n", "i" }, "<C-o>", "<Plug>(aibo-send)<C-o>", opts)
-	vim.keymap.set({ "n", "i" }, "<C-t>", "<Plug>(aibo-send)<C-t>", opts)
+	vim.keymap.set("n", "<Tab>", "<Plug>(aibo-send)<Tab>", opts)
+	vim.keymap.set("n", "<S-Tab>", "<Plug>(aibo-send)<S-Tab>", opts)
+	vim.keymap.set("n", "<C-o>", "<Plug>(aibo-send)<C-o>", opts)
+	vim.keymap.set("n", "<C-t>", "<Plug>(aibo-send)<C-t>", opts)
 end
 
 function on_attach_console_codex(bufnr, _info)
