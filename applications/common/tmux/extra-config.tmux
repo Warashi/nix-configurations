@@ -52,8 +52,5 @@ bind -r C-l select-pane -R
 set-option -g bell-action any
 set-option -g visual-bell off
 
-# gitmux
-set -agF status-right "#{@catppuccin_status_gitmux}"
-
 # OSC 52 clipboard
 set-option -s set-clipboard on
