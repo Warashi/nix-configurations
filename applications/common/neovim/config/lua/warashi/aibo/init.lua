@@ -29,9 +29,7 @@ end
 
 function on_attach_console_codex(bufnr, _info)
 	local opts = { buffer = bufnr, nowait = true, silent = true }
-	vim.keymap.set({ "n", "i" }, "<C-t>", "<Plug>(aibo-send)<C-t>", opts)
-	vim.keymap.set({ "n", "i" }, "<C-u>", "<Plug>(aibo-send)<PageUp>", opts)
-	vim.keymap.set({ "n", "i" }, "<C-d>", "<Plug>(aibo-send)<PageDown>", opts)
+	vim.keymap.set("n", "<C-t>", "<Plug>(aibo-send)<C-t>", opts)
 end
 
 require("aibo").setup({
