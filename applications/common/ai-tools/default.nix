@@ -37,6 +37,7 @@ in
       claude-code
       codex
       gemini-cli
+      spec-kit
     ];
 
     config = {
