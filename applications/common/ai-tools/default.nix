@@ -174,6 +174,8 @@ in
             "$HOME/go"
             "$HOME/.cache/go-build"
             "$HOME/Library/Caches/go-build"
+            "$HOME/.cache/golangci-lint"
+            "$HOME/Library/Caches/golangci-lint"
           ];
         };
         cargo = {
