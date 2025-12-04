@@ -37,13 +37,13 @@ switch-for HOST:
   just {{ if os() == "macos" { "_darwin-rebuild-switch-for" } else { "_nixos-rebuild-switch-for" } }} {{HOST}}
 
 _darwin-rebuild-for HOST:
-  {{nix}} build --keep-going --no-link --show-trace --system {{system}} .#darwinConfigurations.{{HOST}}.system
+  nix run nix-darwin/master#darwin-rebuild -- build --flake .#{{HOST}}
 
 _darwin-rebuild-switch-for HOST:
   sudo darwin-rebuild switch --flake .#{{HOST}}
 
 _nixos-rebuild-for HOST:
-  {{nix}} build --keep-going --no-link --show-trace --system {{system}} .#nixosConfigurations.{{HOST}}.config.system.build.toplevel
+  nix run nixpkgs#nixos-rebuild -- build --flake .#{{HOST}}
 
 _nixos-rebuild-switch-for HOST:
   sudo nixos-rebuild switch --flake .#{{HOST}}
