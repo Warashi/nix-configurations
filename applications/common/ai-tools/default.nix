@@ -21,6 +21,7 @@ in
   home = {
     packages = [
       inputs.vhs-mcp.packages.${pkgs.stdenv.hostPlatform.system}.vhs-mcp
+      inputs.nix-ai-tools.packages.${pkgs.stdenv.hostPlatform.system}.spec-kit
     ];
     file = {
       ".codex/AGENTS.md".source = ./AGENTS.md;
@@ -37,7 +38,6 @@ in
       claude-code
       codex
       gemini-cli
-      spec-kit
     ];
 
     config = {
