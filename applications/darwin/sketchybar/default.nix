@@ -18,7 +18,14 @@ in
   config = mkIf cfg.enable {
     services.sketchybar = {
       enable = true;
-      config = pkgs.callPackage ./configs { };
+      config = pkgs.callPackage ./configs {
+        callPackage = lib.callPackageWith (
+          pkgs
+          // {
+            notch-height = pkgs.callPackage ./notch-height { };
+          }
+        );
+      };
     };
   };
 }
