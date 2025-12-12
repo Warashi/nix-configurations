@@ -105,6 +105,8 @@ in
             "$HOME/.claude.json.backup"
             "$HOME/.claude.json.lock"
             "$HOME/.claude.lock"
+            "$HOME/.cache/claude-cli-nodejs"
+            "$HOME/Library/Caches/claude-cli-nodejs"
             {
               path = ".claude";
               eval-symlinks = true;
