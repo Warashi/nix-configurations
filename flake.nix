@@ -72,6 +72,13 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    llm-agents = {
+      url = "github:numtide/llm-agents.nix";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        treefmt-nix.follows = "treefmt-nix";
+      };
+    };
     mac-app-util = {
       url = "github:hraban/mac-app-util";
       inputs = {
@@ -105,13 +112,6 @@
     neovim-src = {
       url = "github:neovim/neovim";
       flake = false;
-    };
-    nix-ai-tools = {
-      url = "github:numtide/nix-ai-tools";
-      inputs = {
-        nixpkgs.follows = "nixpkgs";
-        treefmt-nix.follows = "treefmt-nix";
-      };
     };
     nix-flatpak = {
       url = "github:gmodena/nix-flatpak/latest";

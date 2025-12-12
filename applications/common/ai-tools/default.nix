@@ -21,7 +21,7 @@ in
   home = {
     packages = [
       inputs.vhs-mcp.packages.${pkgs.stdenv.hostPlatform.system}.vhs-mcp
-      inputs.nix-ai-tools.packages.${pkgs.stdenv.hostPlatform.system}.spec-kit
+      inputs.llm-agents.packages.${pkgs.stdenv.hostPlatform.system}.spec-kit
     ];
     file = {
       ".codex/AGENTS.md".source = ./AGENTS.md;
@@ -34,7 +34,7 @@ in
     enable = true;
     package = inputs.cage.packages.${pkgs.stdenv.hostPlatform.system}.default;
 
-    wrappedPackages = with inputs.nix-ai-tools.packages.${pkgs.stdenv.hostPlatform.system}; [
+    wrappedPackages = with inputs.llm-agents.packages.${pkgs.stdenv.hostPlatform.system}; [
       claude-code
       codex
       gemini-cli
