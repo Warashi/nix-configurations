@@ -6,5 +6,6 @@ require("warashi.aibo")
 require("warashi.ddc")
 require("warashi.lsp")
 require("warashi.skkeleton")
+require("warashi.terminal")
 
 vim.cmd.colorscheme("retrobox")
