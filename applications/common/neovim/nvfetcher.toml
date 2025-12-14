@@ -6,10 +6,24 @@ fetch.github = "neovim/nvim-lspconfig"
 src.git = "https://github.com/vim-denops/denops.vim.git"
 fetch.github = "vim-denops/denops.vim"
 
+[vim-guise]
+src.git = "https://github.com/lambdalisue/vim-guise.git"
+fetch.github = "lambdalisue/vim-guise"
+
 [nvim-aibo]
 src.git = "https://github.com/lambdalisue/nvim-aibo.git"
 fetch.github = "lambdalisue/nvim-aibo"
 
+# denops plugins for signature help and popup preview
+[denops-signature_help]
+src.git = "https://github.com/matsui54/denops-signature_help.git"
+fetch.github = "matsui54/denops-signature_help"
+
+[denops-popup-preview-vim]
+src.git = "https://github.com/matsui54/denops-popup-preview.vim.git"
+fetch.github = "matsui54/denops-popup-preview.vim"
+
+# skkeleton and related plugins
 [skkeleton]
 src.git = "https://github.com/vim-skk/skkeleton.git"
 fetch.github = "vim-skk/skkeleton"
@@ -26,14 +40,7 @@ fetch.github = "NI57721/skkeleton-henkan-highlight"
 src.git = "https://github.com/skk-dev/dict.git"
 fetch.github = "skk-dev/dict"
 
-[denops-signature_help]
-src.git = "https://github.com/matsui54/denops-signature_help.git"
-fetch.github = "matsui54/denops-signature_help"
-
-[denops-popup-preview-vim]
-src.git = "https://github.com/matsui54/denops-popup-preview.vim.git"
-fetch.github = "matsui54/denops-popup-preview.vim"
-
+# ddc.vim and related plugins
 [pum-vim]
 src.git = "https://github.com/Shougo/pum.vim.git"
 fetch.github = "Shougo/pum.vim"
