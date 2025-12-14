@@ -7,6 +7,4 @@ require("warashi.ddc")
 require("warashi.lsp")
 require("warashi.skkeleton")
 
-vim.cmd([[
-  colorscheme retrobox
-]])
+vim.cmd.colorscheme("retrobox")
