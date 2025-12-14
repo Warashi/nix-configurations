@@ -10,6 +10,10 @@ fetch.github = "vim-denops/denops.vim"
 src.git = "https://github.com/lambdalisue/vim-guise.git"
 fetch.github = "lambdalisue/vim-guise"
 
+[vim-gin]
+src.git = "https://github.com/lambdalisue/vim-gin.git"
+fetch.github = "lambdalisue/vim-gin"
+
 [nvim-aibo]
 src.git = "https://github.com/lambdalisue/nvim-aibo.git"
 fetch.github = "lambdalisue/nvim-aibo"

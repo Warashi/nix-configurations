@@ -277,6 +277,18 @@
     };
     date = "2025-11-05";
   };
+  vim-gin = {
+    pname = "vim-gin";
+    version = "bed53aff3f23ff3252f1a06e975be08eb7ac0be5";
+    src = fetchFromGitHub {
+      owner = "lambdalisue";
+      repo = "vim-gin";
+      rev = "bed53aff3f23ff3252f1a06e975be08eb7ac0be5";
+      fetchSubmodules = false;
+      sha256 = "sha256-5LjxpZw6/jP4WuZsNB3ZWKhBsGYhXmWcwM2/X6gS91w=";
+    };
+    date = "2025-12-02";
+  };
   vim-guise = {
     pname = "vim-guise";
     version = "12e311bd48304ce3f724fdb9a9776816b845a9ba";
