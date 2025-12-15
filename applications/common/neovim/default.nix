@@ -19,7 +19,7 @@ let
       # keep-sorted end
     ];
     text = ''
-      	exec nvim "$@"
+      exec nvim "$@"
     '';
   };
   replaced-vars = {
