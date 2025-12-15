@@ -1,4 +1,5 @@
 {
+  inputs,
   pkgs,
   lib,
   ...
@@ -8,12 +9,13 @@ let
   neovim-with-deps = pkgs.writeShellApplication {
     name = "nvim";
     runtimeInputs = with pkgs; [
+      inputs.neovim-nightly-overlay.packages.${stdenv.hostPlatform.system}.default
+
       # keep-sorted start
       copilot-language-server
       deno
       emmylua-ls
       gopls
-      neovim
       # keep-sorted end
     ];
     text = ''

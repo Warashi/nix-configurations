@@ -10,7 +10,6 @@ in
   nixpkgs = {
     config.allowUnfree = true;
     overlays = [
-      inputs.neovim-nightly-overlay.overlays.default
       inputs.emacs-overlay.overlays.default
     ];
   };
