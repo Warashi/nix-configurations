@@ -16,6 +16,7 @@ let
       deno
       emmylua-ls
       gopls
+      rust-analyzer
       # keep-sorted end
     ];
     text = ''
