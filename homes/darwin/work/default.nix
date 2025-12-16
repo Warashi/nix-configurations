@@ -7,5 +7,11 @@ in
 
   home-manager.users.${username} = {
     imports = [ ../desktop ];
+
+    programs.git = {
+      ignores = [
+        "*.csv"
+      ];
+    };
   };
 }
