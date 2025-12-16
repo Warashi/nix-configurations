@@ -57,10 +57,8 @@ in
   sops.secrets = lib.mkForce { };
 
   users = {
-    mutableUsers = lib.mkForce true;
     users.${username} = {
       home = lib.mkForce "/home/${username}.linux";
-      hashedPasswordFile = lib.mkForce null;
     };
   };
 }
