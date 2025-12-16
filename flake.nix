@@ -241,6 +241,10 @@
         workbench = {
           system = "aarch64-linux";
         };
+        # lima vm
+        lima = {
+          system = "aarch64-linux";
+        };
         # macbook for work
         work = {
           system = "aarch64-darwin";
@@ -312,6 +316,7 @@
                 age
                 just
                 nix-fast-build
+                nix-output-monitor
                 node2nix
                 sops
                 ssh-to-age

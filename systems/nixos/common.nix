@@ -63,7 +63,8 @@
       isNormalUser = true;
       linger = true;
       autoSubUidGidRange = true;
-      hashedPasswordFile = config.sops.secrets.login-password.path;
+      hashedPasswordFile =
+        if config.sops.secrets ? login-password then config.sops.secrets.login-password.path else null;
       extraGroups = [
         "wheel"
         "networkmanager"
