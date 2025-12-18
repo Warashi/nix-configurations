@@ -40,7 +40,7 @@ _darwin-rebuild-for HOST:
   {{nix}} build --accept-flake-config --keep-going --no-link --show-trace --system {{system}} .#darwinConfigurations.{{HOST}}.system
 
 _darwin-rebuild-switch-for HOST:
-  sudo darwin-rebuild switch --accept-flake-config --flake .#{{HOST}}
+  sudo darwin-rebuild switch --flake .#{{HOST}}
 
 _nixos-rebuild-for HOST:
   {{nix}} build --accept-flake-config --keep-going --no-link --show-trace --system {{system}} .#nixosConfigurations.{{HOST}}.config.system.build.toplevel
