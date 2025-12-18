@@ -14,7 +14,10 @@ in
       font-size = 13;
       font-family = "Moralerspace Radon";
       shell-integration = "none";
+      working-directory = "home";
+      window-inherit-working-directory = false;
       macos-option-as-alt = true;
+      macos-titlebar-style = "hidden";
       keybind = [
         "shift+enter=text:\\n"
       ];
