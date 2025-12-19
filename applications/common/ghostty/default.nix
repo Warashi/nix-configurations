@@ -11,7 +11,7 @@ in
     clearDefaultKeybinds = false;
     settings = {
       theme = "catppuccin-frappe";
-      font-size = 13;
+      font-size = 11;
       font-family = "Moralerspace Radon";
       shell-integration = "none";
       working-directory = "home";
