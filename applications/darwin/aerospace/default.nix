@@ -117,8 +117,8 @@ in
             right = 5;
             bottom = 5;
             top = [
-              { monitor.built-in = 10; }
-              40
+              { monitor.built-in = 5; }
+              45
             ];
           };
         };
