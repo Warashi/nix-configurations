@@ -26,17 +26,14 @@ bind C-c new-window
 bind C-t move-window -t 0
 
 # h, v で画面分割
-bind h split-window -h -c "#{pane_current_path}"
-bind v split-window -v -c "#{pane_current_path}"
+bind v split-window -h -c "#{pane_current_path}"
+bind s split-window -v -c "#{pane_current_path}"
 
 # H, V で pane 再配置
-bind H run-shell "tmux-mvr"
-bind V select-layout main-horizontal
+bind C-v select-layout main-vertical-mirrored
+bind C-s select-layout main-horizontal
 set-option -g main-pane-height "50%"
 set-option -g main-pane-width "50%"
-
-# Enter キーで main-vertical-right
-bind Enter run-shell "tmux-mvr"
 
 # C-o, M-o で分割した画面をRotate
 bind -r C-o rotate-window -D
