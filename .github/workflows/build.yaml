@@ -21,7 +21,7 @@ jobs:
         uses: nixbuild/nix-quick-install-action@2c9db80fb984ceb1bcaa77cdda3fdf8cfba92035 # v34
         with:
           nix_conf: |
-            max-jobs = 1
+            auto-optimise-store = ${{ startsWith(matrix.os, 'macos-') && 'false' || 'true' }}
             sandbox = ${{ startsWith(matrix.os, 'macos-') && 'relaxed' || 'true' }}
       - name: Setup cachix
         uses: cachix/cachix-action@0fc020193b5a1fa3ac4575aa3a7d3aa6a35435ad # v16
@@ -32,3 +32,6 @@ jobs:
           skipPush: false # PR でも push して、 main にマージされたときにキャッシュが使えるようにする
       - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
       - run: sh ./.github/workflows/build-all.sh
+      - name: Check disk usage
+        if: always()
+        run: df -h
