@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 OS=$(uname -s)
 ARCH=$(uname -m)
@@ -29,26 +29,19 @@ fi
 
 echo "Building for OS: $OS, Architecture: $ARCH, Target: $TARGET, Target System: $TARGET_SYSTEM"
 
-HOSTS=$(nix eval .#"${TARGET}" --apply builtins.attrNames --json | jq -r '.[]')
+HOSTS=$(nix eval ".#${TARGET}" --apply builtins.attrNames --json | jq -r '.[]')
 if [ -z "$HOSTS" ]; then
   echo "No hosts found for $TARGET."
   exit 0
 fi
 
-for host in $HOSTS; do
-  echo "Building host: $host"
-  SYSTEM=$(nix eval .#${TARGET}.${host}.pkgs.stdenv.system --json | jq -r '.')
-  echo "Detected system: $SYSTEM"
+BUILD_TARGETS=(".#devShells.${TARGET_SYSTEM}.default ")
 
+for host in $HOSTS; do
+  SYSTEM=$(nix eval ".#${TARGET}.${host}.pkgs.stdenv.system" --json | jq -r '.')
   if [ "$SYSTEM" = "$TARGET_SYSTEM" ]; then
-    echo "Building for current system: $host"
-    nix build --keep-going --no-link --show-trace .#${TARGET}.${host}.${TARGET_ATTR}
-    if [ $? -ne 0 ]; then
-      echo "Build failed for host: $host"
-      exit 1
-    fi
-  else
-    echo "Skipping host: $host (not current system)"
+    BUILD_TARGETS+=(".#${TARGET}.${host}.${TARGET_ATTR}")
   fi
-  echo "Build completed for host: $host"
 done
+
+nix build --keep-going --no-link --show-trace --eval-system "${TARGET_SYSTEM}" --print-out-paths ${BUILD_TARGETS[@]}
