@@ -8,6 +8,7 @@
   programs = {
     home-manager.enable = true;
     warashi.emacs.enable = true;
+    man.enable = false; # mandb コマンドがなぜか CI こけるため
   };
 
   warashi =
