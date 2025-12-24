@@ -7,6 +7,7 @@
     casks = [
       # keep-sorted start
       "1password"
+      "alfred"
       "domzilla-caffeine"
       "ghostty"
       "google-chrome"
