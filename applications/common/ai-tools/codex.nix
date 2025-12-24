@@ -27,7 +27,7 @@ in
     activation = {
       warashi-codex-config-merger = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
         run mv ${config.home.homeDirectory}/.codex/config.toml ${config.home.homeDirectory}/.codex/config.backup.toml
-        run ${lib.getExe merger} toml ${config.home.homeDirectory}/.codex/config.toml ${config.home.homeDirectory}/.codex/config.backup.toml ${config-overrides}
+        run ${lib.getExe merger} ${config.home.homeDirectory}/.codex/config.toml ${config.home.homeDirectory}/.codex/config.backup.toml ${config-overrides}
       '';
     };
   };
