@@ -5,12 +5,8 @@ export class Config extends BaseConfig {
     args.contextBuilder.patchGlobal({
       ui: "pum",
       autoCompleteEvents: [
-        "CmdlineEnter",
-        "CmdlineChanged",
         "InsertEnter",
         "TextChangedI",
-        "TextChangedP",
-        "TextChangedT",
       ],
       sources: [
         "lsp",
