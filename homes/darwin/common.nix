@@ -35,6 +35,11 @@ in
         ];
       };
 
+      targets.darwin = {
+        copyApps.enable = true;
+        linkApps.enable = false;
+      };
+
       programs.nix.target.user = true;
     };
 
