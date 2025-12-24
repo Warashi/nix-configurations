@@ -7,7 +7,17 @@
 }:
 let
   merger = pkgs.callPackage ./merger { };
-  config-overrides = (pkgs.formats.toml { }).generate "codex-config-overrides.toml" { };
+  config-overrides = (pkgs.formats.toml { }).generate "codex-config-overrides.toml" {
+    mcp_servers = {
+      git-mile = {
+        command = "git";
+        args = [
+          "mile"
+          "mcp"
+        ];
+      };
+    };
+  };
 in
 {
   home = {
