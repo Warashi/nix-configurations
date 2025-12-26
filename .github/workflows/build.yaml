@@ -17,10 +17,10 @@ jobs:
         os: [ubuntu-24.04, ubuntu-24.04-arm, macos-26]
     runs-on: ${{ matrix.os }}
     steps:
-      - name: Install nix
-        uses: nixbuild/nix-quick-install-action@2c9db80fb984ceb1bcaa77cdda3fdf8cfba92035 # v34
+      - name: Install Nix
+        uses: cachix/install-nix-action@4e002c8ec80594ecd40e759629461e26c8abed15 # v31.9.0
         with:
-          nix_conf: |
+          extra_nix_config: |
             auto-optimise-store = ${{ startsWith(matrix.os, 'macos-') && 'false' || 'true' }}
             sandbox = ${{ startsWith(matrix.os, 'macos-') && 'relaxed' || 'true' }}
       - name: Setup cachix
