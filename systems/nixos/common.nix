@@ -21,8 +21,6 @@
     ];
   };
 
-  documentation.man.enable = false; # CI で mandb がこけるので無効化
-
   catppuccin = {
     enable = true;
     accent = "blue";
