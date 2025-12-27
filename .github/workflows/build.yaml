@@ -21,6 +21,7 @@ jobs:
         uses: cachix/install-nix-action@4e002c8ec80594ecd40e759629461e26c8abed15 # v31.9.0
         with:
           extra_nix_config: |
+            accept-flake-config = true
             auto-optimise-store = ${{ startsWith(matrix.os, 'macos-') && 'false' || 'true' }}
             sandbox = ${{ startsWith(matrix.os, 'macos-') && 'relaxed' || 'true' }}
       - name: Setup cachix
