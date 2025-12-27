@@ -44,4 +44,4 @@ for host in $HOSTS; do
   fi
 done
 
-nix build --keep-going --no-link --show-trace --eval-system "${TARGET_SYSTEM}" --print-out-paths ${BUILD_TARGETS[@]}
+nix build --accept-flake-config --keep-going --no-link --show-trace --eval-system "${TARGET_SYSTEM}" --print-out-paths ${BUILD_TARGETS[@]}
