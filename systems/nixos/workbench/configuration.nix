@@ -8,8 +8,6 @@
   };
 
   networking.hostName = "workbench";
-
-  # Enable networking
-  networking.networkmanager.enable = true;
-  systemd.network.wait-online.enable = false; # to avoid corruption between networkmanager and systemd-networkd
+  networking.useNetworkd = true;
+  systemd.network.enable = true;
 }
