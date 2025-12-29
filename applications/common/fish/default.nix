@@ -23,6 +23,9 @@ in
       end
 
       # SSH_AUTH_SOCK
+      if test -S $SSH_AUTH_SOCK && not test -e $HOME/.ssh/ssh_auth_sock
+        ln -s $SSH_AUTH_SOCK $HOME/.ssh/ssh_auth_sock
+      end
       if test -S $HOME/.ssh/ssh_auth_sock
         set -x SSH_AUTH_SOCK $HOME/.ssh/ssh_auth_sock
       end
