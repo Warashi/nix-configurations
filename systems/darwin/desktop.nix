@@ -9,6 +9,10 @@
     watchIdAuth = true;
   };
 
+  programs.warashi = {
+    arto.enable = true;
+  };
+
   services.warashi = {
     aerospace.enable = true;
     paneru.enable = false;

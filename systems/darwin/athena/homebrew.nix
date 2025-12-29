@@ -36,13 +36,6 @@
       "visual-studio-code"
       "zoom"
       # keep-sorted end
-
-      {
-        name = "lambdalisue/arto/arto";
-        args = {
-          no_quarantine = true;
-        };
-      }
     ];
     masApps = {
       # keep-sorted start
