@@ -8,11 +8,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1767057944,
-        "narHash": "sha256-HAK6fXxB+EK1rNBLKQbZiQxg7o1Vaxw5RNCGb3Zl67E=",
+        "lastModified": 1767058792,
+        "narHash": "sha256-nzeEIvgWseoKZ2Ep8nssNYAO0kmtOfhsIvo9Dz5cb68=",
         "owner": "Warashi",
         "repo": "agent-skills-nix",
-        "rev": "4b413250ccd2f4f1be8d1b6d806f38c320254805",
+        "rev": "9875c71fc1700e839b5510b7a88238f190610b7a",
         "type": "github"
       },
       "original": {
