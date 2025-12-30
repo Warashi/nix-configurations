@@ -19,8 +19,6 @@ in
       imports = [
         ../common.nix
         ../../modules/nix
-
-        # inputs.mac-app-util.homeManagerModules.default
       ];
 
       home = rec {

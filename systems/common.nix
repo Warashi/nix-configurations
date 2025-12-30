@@ -7,7 +7,7 @@
   ...
 }:
 let
-  inherit (inputs) emacs-overlay vscode-extensions;
+  inherit (inputs) emacs-overlay;
   inherit (specialArgs) username;
 in
 {

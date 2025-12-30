@@ -42,7 +42,6 @@
     };
     packages = [
       pkgs.gitmux
-      # inputs.tmux-mvr.packages.${pkgs.stdenv.hostPlatform.system}.default
     ];
   };
 }

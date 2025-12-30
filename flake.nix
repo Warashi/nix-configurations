@@ -84,13 +84,6 @@
         treefmt-nix.follows = "treefmt-nix";
       };
     };
-    mac-app-util = {
-      url = "github:hraban/mac-app-util";
-      inputs = {
-        nixpkgs.follows = "nixpkgs";
-        treefmt-nix.follows = "treefmt-nix";
-      };
-    };
     mcp-servers-nix = {
       url = "github:natsukium/mcp-servers-nix";
       inputs = {
@@ -132,11 +125,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nixpkgs = {
-      url = "github:NixOS/nixpkgs?ref=nixpkgs-unstable";
-    };
-    nvim-treesitter = {
-      url = "github:nvim-treesitter/nvim-treesitter/main";
-      flake = false;
+      url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     };
     paneru = {
       url = "github:karinushka/paneru";
@@ -145,15 +134,6 @@
     sops-nix = {
       url = "github:Mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";
-    };
-    tmux-mvr = {
-      url = "github:Warashi/tmux-mvr";
-      inputs = {
-        nixpkgs.follows = "nixpkgs";
-        flake-parts.follows = "flake-parts";
-        treefmt-nix.follows = "treefmt-nix";
-        git-hooks.follows = "git-hooks";
-      };
     };
     treefmt-nix = {
       url = "github:numtide/treefmt-nix";
@@ -166,12 +146,6 @@
         flake-parts.follows = "flake-parts";
         treefmt-nix.follows = "treefmt-nix";
         git-hooks.follows = "git-hooks";
-      };
-    };
-    vscode-extensions = {
-      url = "github:nix-community/nix-vscode-extensions";
-      inputs = {
-        nixpkgs.follows = "nixpkgs";
       };
     };
     warashi-modules = {
