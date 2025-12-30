@@ -75,10 +75,13 @@
   xdg.enable = true;
 
   imports = [
+    # keep-sorted start
+    inputs.agent-skills.homeManagerModules.default
     inputs.catppuccin.homeModules.catppuccin
     inputs.paneru.homeModules.paneru
     inputs.sops-nix.homeManagerModules.sops
     inputs.warashi-modules.homeModules.default
+    # keep-sorted end
 
     ../modules/home-manager
 

@@ -3,6 +3,12 @@
 
   inputs = {
     # keep-sorted start block=yes
+    agent-skills = {
+      url = "github:Warashi/agent-skills-nix/using-local-path";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+      };
+    };
     arto = {
       url = "github:arto-app/Arto";
       inputs = {

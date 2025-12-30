@@ -1,5 +1,27 @@
 {
   "nodes": {
+    "agent-skills": {
+      "inputs": {
+        "home-manager": "home-manager",
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1767057944,
+        "narHash": "sha256-HAK6fXxB+EK1rNBLKQbZiQxg7o1Vaxw5RNCGb3Zl67E=",
+        "owner": "Warashi",
+        "repo": "agent-skills-nix",
+        "rev": "4b413250ccd2f4f1be8d1b6d806f38c320254805",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Warashi",
+        "ref": "using-local-path",
+        "repo": "agent-skills-nix",
+        "type": "github"
+      }
+    },
     "aquamarine": {
       "inputs": {
         "hyprutils": [
@@ -510,6 +532,27 @@
       }
     },
     "home-manager": {
+      "inputs": {
+        "nixpkgs": [
+          "agent-skills",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1766387499,
+        "narHash": "sha256-AjK3/UKDzeXFeYNLVBaJ3+HLE9he1g5UrlNd4/BM3eA=",
+        "owner": "nix-community",
+        "repo": "home-manager",
+        "rev": "527ad07e6625302b648ed3b28c34b62a79bd103e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "home-manager",
+        "type": "github"
+      }
+    },
+    "home-manager_2": {
       "inputs": {
         "nixpkgs": [
           "nixpkgs"
@@ -1247,6 +1290,7 @@
     },
     "root": {
       "inputs": {
+        "agent-skills": "agent-skills",
         "arto": "arto",
         "cage": "cage",
         "catppuccin": "catppuccin",
@@ -1259,7 +1303,7 @@
         "gh-secrets-manager": "gh-secrets-manager",
         "git-hooks": "git-hooks",
         "git-mile": "git-mile",
-        "home-manager": "home-manager",
+        "home-manager": "home-manager_2",
         "llm-agents": "llm-agents",
         "mcp-servers-nix": "mcp-servers-nix",
         "muscat": "muscat",
