@@ -1,0 +1,3 @@
+[anthropics-skills]
+src.git = "https://github.com/anthropics/skills.git"
+fetch.github = "anthropics/skills"
