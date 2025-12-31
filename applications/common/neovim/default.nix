@@ -40,7 +40,10 @@ let
             ts = pkgs.vimPlugins.nvim-treesitter;
           in
           [ ts ] ++ ts.withAllGrammars.dependencies
-        );
+        )
+        ++ [
+          (pkgs.callPackage ./moonbit-treesitter-grammar.nix { })
+        ];
       postBuild = ''
         rm -f $out/deno.json $out/deno.jsonc
       '';

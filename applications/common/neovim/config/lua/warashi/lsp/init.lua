@@ -3,6 +3,7 @@ vim.lsp.enable("copilot")
 vim.lsp.enable("denols")
 vim.lsp.enable("emmylua_ls")
 vim.lsp.enable("gopls")
+vim.lsp.enable("moonbit")
 vim.lsp.enable("rust_analyzer")
 vim.lsp.enable("sourcekit")
 -- keep-sorted end
