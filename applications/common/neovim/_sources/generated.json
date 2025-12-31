@@ -335,27 +335,6 @@
         },
         "version": "5cfca39988a36e42d81b925264fc846077a727e3"
     },
-    "moonbit": {
-        "cargoLocks": null,
-        "date": "2025-07-09",
-        "extract": null,
-        "name": "moonbit",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "owner": "moonbit-community",
-            "repo": "moonbit.nvim",
-            "rev": "f49215a47f8c9928894358b204e4813e127ba08e",
-            "sha256": "sha256-ZhM0vnNzn8JP5KUblBCC9hQBC9bmGfDGEEKfPkFMBzQ=",
-            "sparseCheckout": [],
-            "type": "github"
-        },
-        "version": "f49215a47f8c9928894358b204e4813e127ba08e"
-    },
     "nvim-aibo": {
         "cargoLocks": null,
         "date": "2025-12-18",
@@ -379,7 +358,7 @@
     },
     "nvim-lspconfig": {
         "cargoLocks": null,
-        "date": "2025-12-30",
+        "date": "2025-12-25",
         "extract": null,
         "name": "nvim-lspconfig",
         "passthru": null,
@@ -391,12 +370,12 @@
             "name": null,
             "owner": "neovim",
             "repo": "nvim-lspconfig",
-            "rev": "41ceb6bba3a40128b7841f5b7f5a9dae7201e823",
-            "sha256": "sha256-qD7cSyGmAJO13nxEZYEr2FMsccJ/21LAw8L93BBTwk0=",
+            "rev": "d696e36d5792daf828f8c8e8d4b9aa90c1a10c2a",
+            "sha256": "sha256-R9SjpxYawdrwfXy6XBumy249P3MSWS77yXtdM/oY6GI=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "41ceb6bba3a40128b7841f5b7f5a9dae7201e823"
+        "version": "d696e36d5792daf828f8c8e8d4b9aa90c1a10c2a"
     },
     "pum-vim": {
         "cargoLocks": null,

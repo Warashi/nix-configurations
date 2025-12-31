@@ -193,18 +193,6 @@
     };
     date = "2025-10-26";
   };
-  moonbit = {
-    pname = "moonbit";
-    version = "f49215a47f8c9928894358b204e4813e127ba08e";
-    src = fetchFromGitHub {
-      owner = "moonbit-community";
-      repo = "moonbit.nvim";
-      rev = "f49215a47f8c9928894358b204e4813e127ba08e";
-      fetchSubmodules = false;
-      sha256 = "sha256-ZhM0vnNzn8JP5KUblBCC9hQBC9bmGfDGEEKfPkFMBzQ=";
-    };
-    date = "2025-07-09";
-  };
   nvim-aibo = {
     pname = "nvim-aibo";
     version = "ede45dca805afab44941046088dacc031086d6b2";
@@ -219,15 +207,15 @@
   };
   nvim-lspconfig = {
     pname = "nvim-lspconfig";
-    version = "41ceb6bba3a40128b7841f5b7f5a9dae7201e823";
+    version = "d696e36d5792daf828f8c8e8d4b9aa90c1a10c2a";
     src = fetchFromGitHub {
       owner = "neovim";
       repo = "nvim-lspconfig";
-      rev = "41ceb6bba3a40128b7841f5b7f5a9dae7201e823";
+      rev = "d696e36d5792daf828f8c8e8d4b9aa90c1a10c2a";
       fetchSubmodules = false;
-      sha256 = "sha256-qD7cSyGmAJO13nxEZYEr2FMsccJ/21LAw8L93BBTwk0=";
+      sha256 = "sha256-R9SjpxYawdrwfXy6XBumy249P3MSWS77yXtdM/oY6GI=";
     };
-    date = "2025-12-30";
+    date = "2025-12-25";
   };
   pum-vim = {
     pname = "pum-vim";

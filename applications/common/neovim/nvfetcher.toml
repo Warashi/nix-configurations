@@ -2,10 +2,6 @@
 src.git = "https://github.com/neovim/nvim-lspconfig.git"
 fetch.github = "neovim/nvim-lspconfig"
 
-[moonbit]
-src.git = "https://github.com/moonbit-community/moonbit.nvim"
-fetch.github = "moonbit-community/moonbit.nvim"
-
 [denops-vim]
 src.git = "https://github.com/vim-denops/denops.vim.git"
 fetch.github = "vim-denops/denops.vim"
