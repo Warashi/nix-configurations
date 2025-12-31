@@ -1,3 +1,7 @@
+[catppuccin]
+src.git = "https://github.com/catppuccin/nvim.git"
+fetch.github = "catppuccin/nvim"
+
 [nvim-lspconfig]
 src.git = "https://github.com/neovim/nvim-lspconfig.git"
 fetch.github = "neovim/nvim-lspconfig"

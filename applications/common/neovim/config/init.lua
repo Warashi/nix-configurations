@@ -12,4 +12,4 @@ require("warashi.terminal")
 require("warashi.treesitter")
 -- keep-sorted end
 
-vim.cmd.colorscheme("retrobox")
+vim.cmd.colorscheme("catppuccin-frappe")
