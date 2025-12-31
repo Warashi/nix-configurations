@@ -29,6 +29,7 @@ in
         ];
         sessionPath = [
           "${homeDirectory}/.mint/bin"
+          "${homeDirectory}/.moon/bin"
           "/opt/homebrew/bin"
         ];
       };
