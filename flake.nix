@@ -4,7 +4,7 @@
   inputs = {
     # keep-sorted start block=yes
     agent-skills = {
-      url = "github:Warashi/agent-skills-nix/using-local-path";
+      url = "github:Kyure-A/agent-skills-nix";
       inputs = {
         nixpkgs.follows = "nixpkgs";
       };

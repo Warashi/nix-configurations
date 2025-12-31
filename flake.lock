@@ -8,16 +8,15 @@
         ]
       },
       "locked": {
-        "lastModified": 1767058792,
+        "lastModified": 1767105052,
         "narHash": "sha256-nzeEIvgWseoKZ2Ep8nssNYAO0kmtOfhsIvo9Dz5cb68=",
-        "owner": "Warashi",
+        "owner": "Kyure-A",
         "repo": "agent-skills-nix",
-        "rev": "9875c71fc1700e839b5510b7a88238f190610b7a",
+        "rev": "318e2dd549f57ab1f506abd38f39ce4fc81b673e",
         "type": "github"
       },
       "original": {
-        "owner": "Warashi",
-        "ref": "using-local-path",
+        "owner": "Kyure-A",
         "repo": "agent-skills-nix",
         "type": "github"
       }
