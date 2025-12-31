@@ -22,7 +22,10 @@ in
     pkgs.fish
   ];
   programs.zsh.enable = true;
-  programs.fish.enable = true;
+  programs.fish = {
+    enable = true;
+    useBabelfish = true;
+  };
   users.users.${username}.shell = pkgs.fish;
 
   nix.gc = {
