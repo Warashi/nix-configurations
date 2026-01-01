@@ -35,13 +35,8 @@ let
         (lib.filter (x: x != null) (
           builtins.map (s: if s ? src then s.src else null) (lib.attrsets.attrValues sources)
         ))
-        ++ (
-          let
-            ts = pkgs.vimPlugins.nvim-treesitter;
-          in
-          [ ts ] ++ ts.withAllGrammars.dependencies
-        )
         ++ [
+          pkgs.vimPlugins.nvim-treesitter.withAllGrammars
           (pkgs.callPackage ./moonbit-treesitter-grammar.nix { })
         ];
       postBuild = ''
