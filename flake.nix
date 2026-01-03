@@ -174,8 +174,6 @@
       url = "github:xremap/nix-flake";
       inputs = {
         nixpkgs.follows = "nixpkgs";
-        home-manager.follows = "home-manager";
-        treefmt-nix.follows = "treefmt-nix";
       };
     };
     # keep-sorted end
