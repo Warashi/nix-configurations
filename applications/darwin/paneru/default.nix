@@ -20,6 +20,7 @@ let
       CFBundleShortVersionString = "0.1.0";
       CFBundlePackageType = "APPL";
       CFBundleInfoDictionaryVersion = "6.0";
+      LSUIElement = true;
     }
   );
   package = pkgs.runCommand "Paneru-app" { } ''
