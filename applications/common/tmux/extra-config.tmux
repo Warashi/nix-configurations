@@ -51,3 +51,6 @@ set-option -g visual-bell off
 
 # OSC 52 clipboard
 set-option -s set-clipboard on
+
+# extended keys
+set-option -s extended-keys on
