@@ -69,6 +69,10 @@ in
             swipe_gesture_fingers = 4;
           };
           windows = {
+            pip-ja = {
+              title = "ピクチャー.*(イン)?.*ピクチャー";
+              floating = true;
+            };
             pip = {
               title = "Picture.*(in)?.*[Pp]icture";
               floating = true;
