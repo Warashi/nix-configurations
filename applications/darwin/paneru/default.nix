@@ -13,7 +13,7 @@ in
 {
   options = with types; {
     services.warashi.paneru = {
-      enable = mkEnableOption "warashi's AeroSpace configs";
+      enable = mkEnableOption "warashi's paneru configs";
     };
   };
 
