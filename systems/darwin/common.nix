@@ -11,6 +11,7 @@ in
     config.allowUnfree = true;
     overlays = [
       inputs.emacs-overlay.overlays.default
+      inputs.nvim-treesitter-main.overlays.default
     ];
   };
 

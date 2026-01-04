@@ -38,12 +38,12 @@ let
         ++ (
           let
             ts = pkgs.vimPlugins.nvim-treesitter;
+            moonbit = pkgs.callPackage ./moonbit-treesitter-grammar.nix { };
           in
-          [ ts ] ++ ts.withAllGrammars.dependencies
-        )
-        ++ [
-          (pkgs.callPackage ./moonbit-treesitter-grammar.nix { })
-        ];
+          [
+            (ts.withPlugins (_: ts.allGrammars ++ [ moonbit ]))
+          ]
+        );
       postBuild = ''
         rm -f $out/deno.json $out/deno.jsonc
       '';

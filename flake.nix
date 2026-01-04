@@ -133,6 +133,12 @@
     nixpkgs = {
       url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     };
+    nvim-treesitter-main = {
+      url = "github:iofq/nvim-treesitter-main";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+      };
+    };
     paneru = {
       url = "github:karinushka/paneru";
       inputs.nixpkgs.follows = "nixpkgs";

@@ -28,15 +28,10 @@ let
         cp ${src}/queries/* "$out/queries/moonbit/"
       ''
   );
-  grammer = tree-sitter.buildGrammar {
+  grammar = tree-sitter.buildGrammar {
     inherit language version src;
+    passthru.name = "moonbit";
   };
-  grammarPlugin = neovimUtils.grammarToPlugin grammer;
+  grammarPlugin = neovimUtils.grammarToPlugin grammar;
 in
-symlinkJoin {
-  name = "nvim-treesitter-grammar-moonbit";
-  paths = [
-    grammarPlugin
-    queries
-  ];
-}
+grammar
