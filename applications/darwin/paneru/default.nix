@@ -67,7 +67,12 @@ in
               1.00
             ];
             swipe_gesture_fingers = 4;
-            animation_speed = 10000;
+          };
+          windows = {
+            pip = {
+              title = "Picture.*(in)?.*[Pp]icture";
+              floating = true;
+            };
           };
           bindings = {
             window_focus_west = "ctrl + shift + alt - h";
@@ -78,6 +83,7 @@ in
             window_swap_east = "cmd + ctrl + shift + alt - l";
             window_center = "ctrl + shift + alt - c";
             window_resize = "ctrl + shift + alt - r";
+            window_fullwidth = "ctrl + shift + alt - f";
             window_stack = "ctrl + shift + alt - [";
             window_unstack = "ctrl + alt + shift - ]";
             quit = "cmd + ctrl + shift + alt - q";
