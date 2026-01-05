@@ -34,4 +34,10 @@ let
   };
   grammarPlugin = neovimUtils.grammarToPlugin grammar;
 in
-grammar
+symlinkJoin {
+  name = "nvim-treesitter-grammar-moonbit";
+  paths = [
+    grammarPlugin
+    queries
+  ];
+}

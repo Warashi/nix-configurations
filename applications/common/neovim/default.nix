@@ -37,11 +37,12 @@ let
         ))
         ++ (
           let
-            ts = pkgs.vimPlugins.nvim-treesitter;
+            ts = pkgs.vimPlugins.nvim-treesitter.withAllGrammars;
             moonbit = pkgs.callPackage ./moonbit-treesitter-grammar.nix { };
           in
           [
-            (ts.withPlugins (_: ts.allGrammars ++ [ moonbit ]))
+            ts
+            moonbit
           ]
         );
       postBuild = ''
