@@ -6,7 +6,7 @@
 {
   programs.tmux = {
     enable = true;
-    shell = "${pkgs.fish}/bin/fish";
+    shell = "${pkgs.zsh}/bin/zsh";
     baseIndex = 1;
     clock24 = true;
     escapeTime = 0;
