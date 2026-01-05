@@ -37,6 +37,14 @@
         nixpkgs.follows = "nixpkgs";
       };
     };
+    direnv-instant = {
+      url = "github:Mic92/direnv-instant";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        flake-parts.follows = "flake-parts";
+        treefmt-nix.follows = "treefmt-nix";
+      };
+    };
     disko = {
       url = "github:nix-community/disko";
       inputs.nixpkgs.follows = "nixpkgs";

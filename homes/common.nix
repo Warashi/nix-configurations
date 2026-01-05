@@ -78,6 +78,7 @@
     # keep-sorted start
     inputs.agent-skills.homeManagerModules.default
     inputs.catppuccin.homeModules.catppuccin
+    inputs.direnv-instant.homeModules.direnv-instant
     inputs.paneru.homeModules.paneru
     inputs.sops-nix.homeManagerModules.sops
     inputs.warashi-modules.homeModules.default
