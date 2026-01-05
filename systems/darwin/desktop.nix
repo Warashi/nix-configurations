@@ -14,9 +14,9 @@
   };
 
   services.warashi = {
-    aerospace.enable = false;
-    paneru.enable = true;
-    sketchybar.enable = false;
+    aerospace.enable = true;
+    paneru.enable = false;
+    sketchybar.enable = true;
     jankyborders.enable = true;
   };
 }
