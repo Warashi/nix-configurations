@@ -29,11 +29,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1767544051,
-        "narHash": "sha256-z//ZbfpLJ+VgcP2rZxixQzRhdm4dqBfymqGo4eBYQ4g=",
+        "lastModified": 1767592847,
+        "narHash": "sha256-nVqbyo5sJQSNfb/WG+HW0YFzSMlq8j0pKzb6ABDGsWY=",
         "owner": "arto-app",
         "repo": "Arto",
-        "rev": "b9ddbb7ad466d4662cf0d8279cf9de39e5485562",
+        "rev": "bf088c7e244fde6f8ea46035c7e2a024a405b017",
         "type": "github"
       },
       "original": {
@@ -230,11 +230,11 @@
         "nixpkgs-stable": "nixpkgs-stable"
       },
       "locked": {
-        "lastModified": 1767543959,
-        "narHash": "sha256-D1YB8W7a3XMBRXojGnd5zOh78PFrlJ46IRjBds6nmAQ=",
+        "lastModified": 1767604843,
+        "narHash": "sha256-vXnZvO6OHrpdyI8mIA3Vxv4+ZeBZVjwmVtgNCVqGFvU=",
         "owner": "nix-community",
         "repo": "emacs-overlay",
-        "rev": "aa9df74e4342f86ac6a1f3f80516d7553639488b",
+        "rev": "0cbb2afaed5fa83165cbe0365f6583007a376407",
         "type": "github"
       },
       "original": {
@@ -282,11 +282,11 @@
         "nixpkgs-lib": "nixpkgs-lib"
       },
       "locked": {
-        "lastModified": 1765835352,
-        "narHash": "sha256-XswHlK/Qtjasvhd1nOa1e8MgZ8GS//jBoTqWtrS1Giw=",
+        "lastModified": 1767609335,
+        "narHash": "sha256-feveD98mQpptwrAEggBQKJTYbvwwglSbOv53uCfH9PY=",
         "owner": "hercules-ci",
         "repo": "flake-parts",
-        "rev": "a34fae9c08a15ad73f295041fec82323541400a9",
+        "rev": "250481aafeb741edfe23d29195671c19b36b6dca",
         "type": "github"
       },
       "original": {
@@ -464,11 +464,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1767525999,
-        "narHash": "sha256-1E9xlYlyl3EnUrwxoaJMTK7dFrC2llL/TJ+T4xIcXDY=",
+        "lastModified": 1767619743,
+        "narHash": "sha256-N0kK1JqxIjFl7hPAfhkW6C9AO7feYJUWLPyqJO2VuQQ=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "7d5927b63cea63deb655b3e8421ae17ebb9feac2",
+        "rev": "a65c04965c841eb01ba401f5162f12bc8d52014f",
         "type": "github"
       },
       "original": {
@@ -486,11 +486,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1767537002,
-        "narHash": "sha256-EePEPSGHB4V/2I0XnDuWMWxHfuvZU/px5xCXyqb8Vbk=",
+        "lastModified": 1767623721,
+        "narHash": "sha256-7OQT74OybKaaXAhglLpwD1ZWcdxfxc0SazPlw5TSVOw=",
         "owner": "numtide",
         "repo": "llm-agents.nix",
-        "rev": "1295ca9f0f7189e4732c35a8cc67de1efb266129",
+        "rev": "87b3e0a51f6b9a4817875483cc3de3d7b5f0e638",
         "type": "github"
       },
       "original": {
@@ -561,11 +561,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1767485114,
-        "narHash": "sha256-Y3Y+cTyUtlKNUAEw1v/g9K67Go/Hb6pRHJJ0CLs7r4w=",
+        "lastModified": 1767571560,
+        "narHash": "sha256-YVSqPQ9m7sr/SJRGW/lwJ0HsKIhmDryF/GdKiOF6/FA=",
         "owner": "nix-community",
         "repo": "neovim-nightly-overlay",
-        "rev": "f731eee3e59ad17361587898b55054644c18bd81",
+        "rev": "966191072e64eb98c74befc6a623798d3d20efc3",
         "type": "github"
       },
       "original": {
@@ -577,11 +577,11 @@
     "neovim-src": {
       "flake": false,
       "locked": {
-        "lastModified": 1767537340,
-        "narHash": "sha256-G4gfMQwtDbQDhrgUNY5ltj9yiktnDkJHWrRzf/A4vY4=",
+        "lastModified": 1767624729,
+        "narHash": "sha256-YHAdOHru1BVwtutPRmV/hTSTkd1Ivae21NUnJQnnws8=",
         "owner": "neovim",
         "repo": "neovim",
-        "rev": "f6ca9262b89c945883ae9bcf46035bfa1ea51bde",
+        "rev": "4d46d040c3215373f8cf64378d03d004e095d646",
         "type": "github"
       },
       "original": {
@@ -899,11 +899,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1766769098,
-        "narHash": "sha256-ABd7QD4cI+ek3S90AwRhnzw2Mlh4yTjnww1pgbzUYOI=",
+        "lastModified": 1767552938,
+        "narHash": "sha256-aBass9LlqVKl7FjRUBgRNYvBWlqPS8akLYyVFJT307k=",
         "owner": "karinushka",
         "repo": "paneru",
-        "rev": "7b1c403c89682d058713d322bb1efb7c5eaf2905",
+        "rev": "41efab18e4ae845046b0946f045878ea2b336e40",
         "type": "github"
       },
       "original": {
