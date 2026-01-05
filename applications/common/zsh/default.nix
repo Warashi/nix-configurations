@@ -31,6 +31,7 @@ in
       ${builtins.readFile ./scripts/tab-title.zsh}
       ${builtins.readFile ./scripts/vscode.zsh}
       ${lib.optionalString pkgs.stdenv.isDarwin (builtins.readFile ./scripts/darwin-ghostty.zsh)}
+      ${builtins.readFile ./scripts/local.zsh}
     '';
 
     plugins = with sources; [
