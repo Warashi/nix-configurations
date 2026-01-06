@@ -6,6 +6,7 @@ vim.lsp.enable("gopls")
 vim.lsp.enable("moonbit")
 vim.lsp.enable("rust_analyzer")
 vim.lsp.enable("sourcekit")
+vim.lsp.enable("tsp_server")
 -- keep-sorted end
 
 vim.fn["signature_help#enable"]()
