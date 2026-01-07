@@ -11,7 +11,9 @@
     casks = [
       # keep-sorted start
       "1password"
+      "alfred"
       "amazon-photos"
+      "antigravity"
       "chatgpt"
       "cloudflare-warp"
       "cryptomator"
