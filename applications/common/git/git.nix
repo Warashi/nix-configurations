@@ -39,10 +39,6 @@
       pull.ff = "only";
       init.defaultBranch = "main";
       fetch.prune = true;
-      ghq.root = [
-        "~/worktrees/"
-        "~/ghq/"
-      ];
       diff = {
         age = {
           textconv = "${pkgs.age}/bin/age -d -i ${config.xdg.configHome}/age/secret-key";
