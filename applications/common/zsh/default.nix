@@ -27,6 +27,7 @@ in
 
     initContent = ''
       ${builtins.readFile ./scripts/setopts.zsh}
+      ${builtins.readFile ./scripts/ssh-auth-sock.zsh}
       ${builtins.readFile ./scripts/edit-command-line.zsh}
       ${builtins.readFile ./scripts/tab-title.zsh}
       ${builtins.readFile ./scripts/vscode.zsh}
