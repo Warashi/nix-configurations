@@ -23,7 +23,6 @@ in
     package = inputs.cage.packages.${pkgs.stdenv.hostPlatform.system}.default;
 
     wrappedPackages = with inputs.llm-agents.packages.${pkgs.stdenv.hostPlatform.system}; [
-      claude-code
       codex
       gemini-cli
     ];

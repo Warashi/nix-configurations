@@ -11,8 +11,21 @@ let
     env = {
       ANTHROPIC_MODEL = "opusplan";
     };
+    sandbox = {
+      enabled = true;
+      allowUnsandboxedCommands = false;
+      excludedCommands = [ "ps" ];
+    };
     permissions = {
       defaultMode = "plan";
+      disableBypassPermissionsMode = "disable";
+      deny = [
+        "Read(**/.env**)"
+        "Write(**/.env**)"
+        "Edit(**/.env**)"
+        "Read(**/.aws/credentials)"
+        "Read(**/.ssh/**)"
+      ];
     };
     alwaysThinkingEnabled = true;
     enabledPlugins = {
@@ -25,6 +38,9 @@ in
     file = {
       ".claude/CLAUDE.md".source = ./AGENTS.md;
     };
+    packages = [
+      inputs.llm-agents.packages.${pkgs.stdenv.hostPlatform.system}.claude-code
+    ];
     activation = {
       warashi-claude-code-config-merger = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
         if [ -f ${config.home.homeDirectory}/.claude/settings.json ]; then
