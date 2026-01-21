@@ -19,6 +19,7 @@
       "cryptomator"
       "discord"
       "domzilla-caffeine"
+      "elecom-mouse-util"
       "font-biz-udgothic"
       "font-biz-udmincho"
       "font-biz-udpgothic"
