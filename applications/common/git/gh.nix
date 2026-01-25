@@ -29,7 +29,6 @@ in
     extensions = with pkgs; [
       gh-poi
       gh-dash
-      gh-copilot
       gh-mcp
 
       inputs.gh-secrets-manager.packages.${pkgs.stdenv.hostPlatform.system}.default
