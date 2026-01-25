@@ -128,6 +128,10 @@
     nix-flatpak = {
       url = "github:gmodena/nix-flatpak/latest";
     };
+    nix-index-database = {
+      url = "github:nix-community/nix-index-database";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     nixos-facter-modules = {
       url = "github:numtide/nixos-facter-modules";
     };

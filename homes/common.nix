@@ -79,6 +79,7 @@
     inputs.agent-skills.homeManagerModules.default
     inputs.catppuccin.homeModules.catppuccin
     inputs.direnv-instant.homeModules.direnv-instant
+    inputs.nix-index-database.homeModules.default
     inputs.paneru.homeModules.paneru
     inputs.sops-nix.homeManagerModules.sops
     inputs.warashi-modules.homeModules.default
