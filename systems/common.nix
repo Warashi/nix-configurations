@@ -26,7 +26,7 @@ in
     enable = true;
     useBabelfish = true;
   };
-  users.users.${username}.shell = pkgs.zsh;
+  users.users.${username}.shell = pkgs.fish;
 
   nix.gc = {
     automatic = true;

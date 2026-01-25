@@ -1,12 +1,13 @@
 {
   inputs,
   pkgs,
+  lib,
   ...
 }:
 {
   programs.tmux = {
     enable = true;
-    shell = "${pkgs.zsh}/bin/zsh";
+    shell = lib.getExe pkgs.fish;
     baseIndex = 1;
     clock24 = true;
     escapeTime = 0;

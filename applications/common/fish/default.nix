@@ -3,6 +3,9 @@ let
   sources = pkgs.callPackage ./_sources/generated.nix { };
 in
 {
+  home.packages = [
+    pkgs.babelfish
+  ];
   programs.fish = {
     enable = true;
     preferAbbrs = true;
