@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
   home.packages = [
-    pkgs.gitu
+    (pkgs.gitu.overrideAttrs { doCheck = false; })
   ];
 
   xdg.configFile = {
