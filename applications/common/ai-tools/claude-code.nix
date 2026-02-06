@@ -11,7 +11,7 @@ let
     alwaysThinkingEnabled = true;
     statusline = {
       type = "command";
-      command = ''${pkgs.getExe pkgs.jq} -r '"[\(.model.display_name)] 💰 \(.cost.total_cost_usd // 0) | ⏱️ \((.cost.total_duration_ms // 0) / 1000 / 60 | floor)m \((.cost.total_duration_ms // 0) / 1000 % 60 | floor)s"';'';
+      command = ''${lib.getExe pkgs.jq} -r '"[\(.model.display_name)] 💰 \(.cost.total_cost_usd // 0) | ⏱️ \((.cost.total_duration_ms // 0) / 1000 / 60 | floor)m \((.cost.total_duration_ms // 0) / 1000 % 60 | floor)s"';'';
     };
     enabledPlugins = {
       "gopls-lsp@claude-plugins-official" = true;
