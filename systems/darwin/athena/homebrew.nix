@@ -34,6 +34,7 @@
       "orion"
       "raycast"
       "slack"
+      "sony-ps-remote-play"
       "tailscale-app"
       "timemator"
       "visual-studio-code"
