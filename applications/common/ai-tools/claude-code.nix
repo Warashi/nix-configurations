@@ -9,7 +9,7 @@ let
   merger = pkgs.callPackage ./merger { };
   config-overrides = (pkgs.formats.json { }).generate "claude-settings-override.json" {
     alwaysThinkingEnabled = true;
-    statusline = {
+    statusLine = {
       type = "command";
       command = ''${lib.getExe pkgs.jq} -r '"[\(.model.display_name)] 💰 \(.cost.total_cost_usd // 0) | ⏱️ \((.cost.total_duration_ms // 0) / 1000 / 60 | floor)m \((.cost.total_duration_ms // 0) / 1000 % 60 | floor)s"';'';
     };
