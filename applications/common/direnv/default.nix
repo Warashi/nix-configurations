@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 {
   programs.direnv = {
     enable = true;
@@ -10,6 +10,17 @@
         runHook postInstall
       '';
     });
+    config = {
+      bash_path = lib.getExe pkgs.bashNonInteractive;
+      disable_stdin = true;
+      strict_env = true;
+      warn_timeout = 0;
+    };
+    stdlib = ''
+      direnv_layout_dir() {
+        echo /tmp/direnv/$(pwd | base64)
+      }
+    '';
   };
   programs.direnv-instant = {
     enable = true;
