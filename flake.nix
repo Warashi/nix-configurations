@@ -235,11 +235,6 @@
         athena = {
           system = "aarch64-darwin";
         };
-        # macOS workbench (m1 mac mini)
-        warashi = {
-          system = "aarch64-darwin";
-          username = "sawada";
-        };
         # remote workbench (OCI A1 Flex)
         workbench = {
           system = "aarch64-linux";

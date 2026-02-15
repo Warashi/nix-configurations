@@ -1,6 +1,5 @@
 keys:
   - &admin "age170d6z6qazdvz3jtj90p8wrgw8j2vjqqa55jq8mkegkzrf4ch343qhjdfwg"
-  - &warashi "age1fuedjsnapm4peln3ke9aq8rr3nvacke65gfhzqd8cg72qd7ntskq25yn2e"
   - &athena "age1w7xxgnxeuj37mdpq27wqhpf3td3rwnjtlcxgauvdyget8yfuuf3sax65tw"
   - &duna "age1l5uf3k2x5z0eprxhy5x7pvjt4pvtph6j4jct9sr6z07mupus3v3qjyu72w"
   - &workbench "age1xddge8ga0ra6fshfjtecfw00kexytlu0n6smj0yyjla4zd795g9qe6lfjr"
@@ -11,7 +10,6 @@ creation_rules:
     key_groups:
       - age:
           - *admin
-          - *warashi
           - *athena
           - *duna
           - *workbench
