@@ -30,7 +30,7 @@
       core = {
         precomposeunicode = true;
         untrackedCache = true;
-        fsmonitor = true;
+        fsmonitor = false; # fsmonitor は IPC を使うので、coding agent の sandbox では動かない
       };
       push.default = "simple";
       commit = {
