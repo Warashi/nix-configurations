@@ -18,7 +18,7 @@
     };
     stdlib = ''
       direnv_layout_dir() {
-        echo /tmp/direnv/$(pwd | base64)
+        echo /tmp/direnv/$(pwd | base64 -w 0)
       }
     '';
   };
