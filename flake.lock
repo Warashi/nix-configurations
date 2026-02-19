@@ -128,6 +128,21 @@
     },
     "crane_2": {
       "locked": {
+        "lastModified": 1771438068,
+        "narHash": "sha256-nGBbXvEZVe/egCPVPFcu89RFtd8Rf6J+4RFoVCFec0A=",
+        "owner": "ipetkov",
+        "repo": "crane",
+        "rev": "b5090e53e9d68c523a4bb9ad42b4737ee6747597",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ipetkov",
+        "repo": "crane",
+        "type": "github"
+      }
+    },
+    "crane_3": {
+      "locked": {
         "lastModified": 1766774972,
         "narHash": "sha256-8qxEFpj4dVmIuPn9j9z6NTbU+hrcGjBOvaxTzre5HmM=",
         "owner": "ipetkov",
@@ -426,6 +441,7 @@
     },
     "git-mile": {
       "inputs": {
+        "crane": "crane_2",
         "devshell": [
           "devshell"
         ],
@@ -444,11 +460,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1767823885,
-        "narHash": "sha256-vPsZekQc5HKz995hWwDuC1Iont74UpT5T+H1qi7YMRw=",
+        "lastModified": 1771532947,
+        "narHash": "sha256-+5/ryN0t5M2/qerAyH7ga9OmvK3NTSARm5AMiQL5lys=",
         "owner": "Warashi",
         "repo": "git-mile",
-        "rev": "b3ffb266330c8bbe6f439bd1988ce58ec506a3ba",
+        "rev": "cf20b2cff4af109e4b3054c70f878c2f59e79c8d",
         "type": "github"
       },
       "original": {
@@ -1022,11 +1038,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1762310305,
-        "narHash": "sha256-EW7xlGJnCW3mKujn/F8me52NXB4nBtabArsRNwehtHM=",
+        "lastModified": 1771470520,
+        "narHash": "sha256-PvytHcaYN5cPUll7FB70mXv1rRsIBRmu47fFfq3haxA=",
         "owner": "oxalica",
         "repo": "rust-overlay",
-        "rev": "4e8e5dfb8e649d3e05d9a173ce9a9cb0498e89c2",
+        "rev": "a1d4cc1f264c45d3745af0d2ca5e59d460e58777",
         "type": "github"
       },
       "original": {
@@ -1241,7 +1257,7 @@
     },
     "xremap-flake": {
       "inputs": {
-        "crane": "crane_2",
+        "crane": "crane_3",
         "flake-parts": "flake-parts_2",
         "nixpkgs": [
           "nixpkgs"
