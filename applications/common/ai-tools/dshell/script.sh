@@ -15,7 +15,7 @@ cleanup() {
 trap cleanup EXIT
 
 # 2. devcontainer.json の探索
-COMMON_OPTS=("--override-config" "$TMP_CONFIG" "--workspace-folder" "$TARGET_DIR")
+COMMON_OPTS=("--mount-workspace-git-root" "--override-config" "$TMP_CONFIG" "--workspace-folder" "$TARGET_DIR")
 if [ -f "$TARGET_DIR/.devcontainer/devcontainer.json" ]; then
   config-merger "$TMP_CONFIG" "$TARGET_DIR/.devcontainer/devcontainer.json" "$OVERRIDE_CONFIG"
 elif [ -f "$TARGET_DIR/.devcontainer.json" ]; then
@@ -33,7 +33,7 @@ U_EMAIL=$(git config --get user.email)
 GIT_ROOT=$(git -C "$TARGET_DIR" rev-parse --show-toplevel 2>/dev/null)
 GIT_COMMON_DIR=$(git -C "$TARGET_DIR" rev-parse --path-format=absolute --git-common-dir 2>/dev/null)
 
-MOUNT_ARGS=("--mount-workspace-git-root")
+MOUNT_ARGS=()
 [ -n "$GIT_COMMON_DIR" ] && [[ $GIT_COMMON_DIR != "$GIT_ROOT"* ]] && MOUNT_ARGS+=("--mount" "type=bind,source=$GIT_COMMON_DIR,target=$GIT_COMMON_DIR")
 
 # 3. 起動
