@@ -2,23 +2,26 @@
 TARGET_DIR=$(realpath "${1:-$(pwd)}")
 CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}"
 FALLBACK_CONFIG="$CONFIG_HOME/dshell/default/devcontainer.json"
+OVERRIDE_CONFIG="$CONFIG_HOME/dshell/override/devcontainer.json"
+TMP_CONFIG_DIR="$(mktemp -d)"
+TMP_CONFIG="$TMP_CONFIG_DIR/devcontainer.json"
 
 cleanup() {
   # クリーンアップ関数
   CONTAINER_ID=$(docker ps -q --filter "label=devcontainer.local_folder=$TARGET_DIR")
   [ -n "$CONTAINER_ID" ] && docker rm -f "$CONTAINER_ID"
+  rm -rf "$TMP_CONFIG_DIR"
 }
 trap cleanup EXIT
 
 # 2. devcontainer.json の探索
-COMMON_OPTS=()
+COMMON_OPTS=("--override-config" "$TMP_CONFIG" "--workspace-folder" "$TARGET_DIR")
 if [ -f "$TARGET_DIR/.devcontainer/devcontainer.json" ]; then
-  COMMON_OPTS=("--workspace-folder" "$TARGET_DIR")
+  config-merger "$TMP_CONFIG" "$TARGET_DIR/.devcontainer/devcontainer.json" "$OVERRIDE_CONFIG"
 elif [ -f "$TARGET_DIR/.devcontainer.json" ]; then
-  COMMON_OPTS=("--workspace-folder" "$TARGET_DIR")
+  config-merger "$TMP_CONFIG" "$TARGET_DIR/.devcontainer.json" "$OVERRIDE_CONFIG"
 elif [ -f "$FALLBACK_CONFIG" ]; then
-  echo "💡 プロジェクト設定がないため、共通設定を使用します: $FALLBACK_CONFIG"
-  COMMON_OPTS=("--config" "$FALLBACK_CONFIG" "--workspace-folder" "$TARGET_DIR")
+  config-merger "$TMP_CONFIG" "$FALLBACK_CONFIG" "$OVERRIDE_CONFIG"
 else
   echo "❌ エラー: devcontainer.json も $FALLBACK_CONFIG も見つかりません。"
   exit 1

@@ -1,10 +1,12 @@
 {
   pkgs,
+  merger,
   ...
 }:
 pkgs.writeShellApplication {
   name = "dshell";
   runtimeInputs = [
+    merger
     pkgs.coreutils
     pkgs.devcontainer
     pkgs.docker-client
