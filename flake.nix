@@ -194,6 +194,19 @@
         nixpkgs.follows = "nixpkgs";
       };
     };
+    zig-overlay = {
+      url = "github:mitchellh/zig-overlay";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+      };
+    };
+    zls = {
+      url = "github:zigtools/zls";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        zig-overlay.follows = "zig-overlay";
+      };
+    };
     # keep-sorted end
   };
 
