@@ -10,7 +10,7 @@ TMP_CONFIG="$TMP_CONFIG_DIR/devcontainer.json"
 cleanup() {
   # クリーンアップ関数
   CONTAINER_ID=$(docker ps -q --filter "label=devcontainer.local_folder=$TARGET_DIR")
-  [ -n "$CONTAINER_ID" ] && docker rm -f "$CONTAINER_ID"
+  [ -n "$CONTAINER_ID" ] && docker stop "$CONTAINER_ID" && docker rm "$CONTAINER_ID"
   rm -rf "$TMP_CONFIG_DIR"
 }
 trap cleanup EXIT
