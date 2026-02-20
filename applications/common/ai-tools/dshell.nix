@@ -13,6 +13,9 @@ let
     remoteUser = "vscode";
   };
   overrideConfig = (pkgs.formats.json { }).generate "dshell-settings-override.json" {
+    remoteEnv = {
+      CLAUDE_CONFIG_DIR = "/home/vscode/.claude";
+    };
     features = {
       # keep-sorted start block=yes
       "ghcr.io/devcontainers-extra/features/claude-code:1" = { };
