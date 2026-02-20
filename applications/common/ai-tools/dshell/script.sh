@@ -15,7 +15,6 @@ cleanup() {
 trap cleanup EXIT
 
 # 2. devcontainer.json の探索
-COMMON_OPTS=("--mount-workspace-git-root" "--override-config" "$TMP_CONFIG" "--workspace-folder" "$TARGET_DIR")
 if [ -f "$TARGET_DIR/.devcontainer/devcontainer.json" ]; then
   config-merger "$TMP_CONFIG" "$TARGET_DIR/.devcontainer/devcontainer.json" "$OVERRIDE_CONFIG"
 elif [ -f "$TARGET_DIR/.devcontainer.json" ]; then
@@ -31,10 +30,18 @@ fi
 U_NAME=$(git config --get user.name)
 U_EMAIL=$(git config --get user.email)
 GIT_ROOT=$(git -C "$TARGET_DIR" rev-parse --show-toplevel 2>/dev/null)
-GIT_COMMON_DIR=$(git -C "$TARGET_DIR" rev-parse --path-format=absolute --git-common-dir 2>/dev/null)
+GIT_COMMON_DIR="$(cd "$(git -C "$TARGET_DIR" rev-parse --path-format=absolute --git-common-dir 2>/dev/null)" && cd .. && pwd)"
+
+COMMON_OPTS=()
+COMMON_OPTS+=("--mount-workspace-git-root")
+COMMON_OPTS+=("--override-config" "$TMP_CONFIG")
+COMMON_OPTS+=("--workspace-folder" "$TARGET_DIR")
 
 MOUNT_ARGS=()
-[ -n "$GIT_COMMON_DIR" ] && [[ $GIT_COMMON_DIR != "$GIT_ROOT"* ]] && MOUNT_ARGS+=("--mount" "type=bind,source=$GIT_COMMON_DIR,target=$GIT_COMMON_DIR")
+MOUNT_ARGS+=("--mount" "type=bind,source=/nix,target=/nix")
+MOUNT_ARGS+=("--mount" "type=bind,source=$HOME/.config/git/ignore,target=/home/vscode/.config/git/ignore")
+MOUNT_ARGS+=("--mount" "type=bind,source=${CLAUDE_CONFIG_DIR:-$HOME/.claude},target=/home/vscode/.claude")
+[ -n "$GIT_COMMON_DIR" ] && [[ $GIT_COMMON_DIR != "$GIT_ROOT" ]] && MOUNT_ARGS+=("--mount" "type=bind,source=$GIT_COMMON_DIR,target=$GIT_COMMON_DIR")
 
 # 3. 起動
 devcontainer up "${COMMON_OPTS[@]}" "${MOUNT_ARGS[@]}"
