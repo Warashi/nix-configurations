@@ -3,6 +3,7 @@ TARGET_DIR=$(realpath "${1:-$(pwd)}")
 CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}"
 FALLBACK_CONFIG="$CONFIG_HOME/dshell/default/devcontainer.json"
 OVERRIDE_CONFIG="$CONFIG_HOME/dshell/override/devcontainer.json"
+LOCAL_OVERRIDE_CONFIG="$CONFIG_HOME/dshell/local-override/devcontainer.json"
 TMP_CONFIG_DIR="$(mktemp -d)"
 TMP_CONFIG="$TMP_CONFIG_DIR/devcontainer.json"
 
@@ -14,17 +15,27 @@ cleanup() {
 }
 trap cleanup EXIT
 
+MERGER_OPTS=("$TMP_CONFIG")
 # 2. devcontainer.json の探索
 if [ -f "$TARGET_DIR/.devcontainer/devcontainer.json" ]; then
-  config-merger "$TMP_CONFIG" "$TARGET_DIR/.devcontainer/devcontainer.json" "$OVERRIDE_CONFIG"
+  MERGER_OPTS+=("$TARGET_DIR/.devcontainer/devcontainer.json")
 elif [ -f "$TARGET_DIR/.devcontainer.json" ]; then
-  config-merger "$TMP_CONFIG" "$TARGET_DIR/.devcontainer.json" "$OVERRIDE_CONFIG"
+  MERGER_OPTS+=("$TARGET_DIR/.devcontainer.json")
 elif [ -f "$FALLBACK_CONFIG" ]; then
-  config-merger "$TMP_CONFIG" "$FALLBACK_CONFIG" "$OVERRIDE_CONFIG"
+  MERGER_OPTS+=("$FALLBACK_CONFIG")
 else
   echo "❌ エラー: devcontainer.json も $FALLBACK_CONFIG も見つかりません。"
   exit 1
 fi
+
+if [ -f "$OVERRIDE_CONFIG" ]; then
+  MERGER_OPTS+=("$OVERRIDE_CONFIG")
+fi
+if [ -f "$LOCAL_OVERRIDE_CONFIG" ]; then
+  MERGER_OPTS+=("$LOCAL_OVERRIDE_CONFIG")
+fi
+
+config-merger "${MERGER_OPTS[@]}"
 
 # 2. Git 情報などの取得
 U_NAME=$(git config --get user.name)
