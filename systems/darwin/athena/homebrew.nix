@@ -31,6 +31,7 @@
       "lm-studio"
       "logi-options+"
       "microsoft-edge"
+      "ollama-app"
       "orion"
       "raycast"
       "slack"
