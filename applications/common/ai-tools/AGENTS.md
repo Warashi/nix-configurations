@@ -3,12 +3,7 @@
 - 細かい作業単位でlint, testを実行して、この2つが通る状態を保ちつつ作業を進めてください
 - 細かい作業単位で変更を git commit してください
 - git commit message は conventional commit に従ってください
-- git diff および git apply を使って細かい単位で変更を stage してください
-- git add -p や git add --patch は禁止です。代わりに git diff および git apply を使用してください。
-- .warashi はユーザーの設定で git ignore されています
+- git add -p や git add --patch は禁止です。
 - git add --force は禁止です
-- git-mile の task を実施する際には、実施前と完了後に task を適切に更新してください
-- git-mile に task を追加する際には、task の目的、完了条件などを明確に記載してください
-- git-mile の task は細かい作業単位で追加してください
-- git-mile の task は無限に階層分けできます。適切に階層分けしてください。
-- git-mile の操作は MCP tools を使用してください
+- git add で複数のファイルを一度に追加するのは禁止です。
+- .warashi はユーザーの設定で git ignore されています
