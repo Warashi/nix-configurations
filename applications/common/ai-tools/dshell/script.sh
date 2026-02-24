@@ -62,4 +62,14 @@ devcontainer exec "${COMMON_OPTS[@]}" git config --global --add safe.directory '
 [ -n "$U_NAME" ] && devcontainer exec "${COMMON_OPTS[@]}" git config --global user.name "$U_NAME"
 [ -n "$U_EMAIL" ] && devcontainer exec "${COMMON_OPTS[@]}" git config --global user.email "$U_EMAIL"
 
-devcontainer exec "${COMMON_OPTS[@]}" /bin/bash
+# 5. gojq のインストール
+devcontainer exec "${COMMON_OPTS[@]}" sh -c 'command -v go >/dev/null && go install github.com/itchyny/gojq/cmd/gojq@latest || echo "go is not installed, skipping gojq installation"'
+
+# 6. 引数で指定されていない場合、デフォルトコマンドを設定
+COMMANDS=("$@")
+if [ ${#COMMANDS[@]} -eq 0 ]; then
+  COMMANDS=("/bin/zsh")
+fi
+
+# 7. コマンドの実行
+devcontainer exec "${COMMON_OPTS[@]}" "${COMMANDS[@]}"
