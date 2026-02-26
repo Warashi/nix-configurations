@@ -1,5 +1,5 @@
 # 1. パスの解決と XDG 設定ディレクトリの特定
-TARGET_DIR=$(realpath "${1:-$(pwd)}")
+TARGET_DIR=$(realpath "$(pwd)")
 CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}"
 FALLBACK_CONFIG="$CONFIG_HOME/dshell/default/devcontainer.json"
 OVERRIDE_CONFIG="$CONFIG_HOME/dshell/override/devcontainer.json"
