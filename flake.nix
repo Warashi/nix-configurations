@@ -306,7 +306,6 @@
                 };
                 nixfmt = {
                   excludes = [
-                    "**/node2nix/*.nix" # node2nix generated files
                     "**/_sources/generated.nix" # nvfetcher generatee sources
                   ];
                 };
@@ -328,7 +327,6 @@
                 just
                 nix-fast-build
                 nix-output-monitor
-                node2nix
                 sops
                 ssh-to-age
                 # keep-sorted end
