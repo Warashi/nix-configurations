@@ -26,10 +26,14 @@ in
     };
     activation = {
       warashi-codex-config-merger = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
-        if [ -f ${config.home.homeDirectory}/.codex/config.toml ]; then
-          run mv ${config.home.homeDirectory}/.codex/config.toml ${config.home.homeDirectory}/.codex/config.backup.toml
-          run ${lib.getExe merger} ${config.home.homeDirectory}/.codex/config.toml ${config.home.homeDirectory}/.codex/config.backup.toml ${config-overrides}
-        fi
+                if [ -f ${config.home.homeDirectory}/.codex/config.toml ]; then
+                  run cp ${config.home.homeDirectory}/.codex/config.toml ${config.home.homeDirectory}/.codex/config.backup.toml
+        	  if [ -f ${config.home.homeDirectory}/.codex/config.local.toml ]; then
+                    run ${lib.getExe merger} ${config.home.homeDirectory}/.codex/config.toml ${config.home.homeDirectory}/.codex/config.backup.toml ${config-overrides} ${config.home.homeDirectory}/.codex/config.local.toml
+        	  else
+        	    run ${lib.getExe merger} ${config.home.homeDirectory}/.codex/config.toml ${config.home.homeDirectory}/.codex/config.backup.toml ${config-overrides}
+        	  fi
+                fi
       '';
     };
   };

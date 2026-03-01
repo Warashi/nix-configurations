@@ -14,6 +14,7 @@ in
     users.${username} = {
       imports = [
         ../headless
+        ../../agent-env.nix
       ];
     };
   };

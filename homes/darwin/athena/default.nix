@@ -8,6 +8,7 @@ in
   home-manager.users.${username} = {
     imports = [
       ../desktop
+      ../../agent-env.nix
     ];
   };
 }

@@ -25,10 +25,14 @@ in
     };
     activation = {
       warashi-claude-code-config-merger = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
-        if [ -f ${config.home.homeDirectory}/.claude/settings.json ]; then
-          run mv ${config.home.homeDirectory}/.claude/settings.json ${config.home.homeDirectory}/.claude/settings.backup.json
-          run ${lib.getExe merger} ${config.home.homeDirectory}/.claude/settings.json ${config.home.homeDirectory}/.claude/settings.backup.json ${config-overrides}
-        fi
+                if [ -f ${config.home.homeDirectory}/.claude/settings.json ]; then
+                  run cp ${config.home.homeDirectory}/.claude/settings.json ${config.home.homeDirectory}/.claude/settings.backup.json
+        	  if [ -f ${config.home.homeDirectory}/.claude/settings.local.json ]; then
+                    run ${lib.getExe merger} ${config.home.homeDirectory}/.claude/settings.json ${config.home.homeDirectory}/.claude/settings.backup.json ${config-overrides} ${config.home.homeDirectory}/.claude/settings.local.json
+        	  else
+                    run ${lib.getExe merger} ${config.home.homeDirectory}/.claude/settings.json ${config.home.homeDirectory}/.claude/settings.backup.json ${config-overrides}
+        	  fi
+                fi
       '';
     };
   };
