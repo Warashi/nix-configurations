@@ -2,6 +2,7 @@
 {
   home.packages = with pkgs; [
     ast-grep
+    gfortran
   ];
   programs = {
     nix-index.enable = true;
