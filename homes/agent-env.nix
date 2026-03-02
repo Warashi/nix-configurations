@@ -1,7 +1,7 @@
 { pkgs, ... }:
 let
   agent-nane = "warashi-agent[bot]";
-  agent-email = "2977471+warashi-agent[bot]@users.noreply.github.com";
+  agent-email = "264713104+warashi-agent[bot]@users.noreply.github.com";
   agent-env = {
     GIT_AUTHOR_NAME = agent-nane;
     GIT_AUTHOR_EMAIL = agent-email;
