@@ -1,0 +1,45 @@
+name: Update Nix Flake Inputs
+
+on:
+  workflow_dispatch: {}
+
+permissions: {}
+
+jobs:
+  update-flake-inputs:
+    runs-on: ubuntu-slim
+    steps:
+      - name: Install Nix
+        uses: cachix/install-nix-action@19effe9fe722874e6d46dd7182e4b8b7a43c4a99 # v31.10.0
+        with:
+          extra_nix_config: |
+            accept-flake-config = true
+      - name: Create GitHub App Token
+        id: app-token
+        uses: actions/create-github-app-token@29824e69f54612133e76f7eaac726eef6c875baf # v2.2.1
+        with:
+          app-id: ${{ vars.NIX_UPDATER_APP_ID }}
+          private-key: ${{ secrets.NIX_UPDATER_APP_PRIVATE_KEY }}
+      - name: Checkout
+        uses: actions/checkout@v6.0.2
+        with:
+          token: ${{ steps.app-token.outputs.token }}
+      - name: Prepare git
+        run: |
+          git config user.name "warashi-nix-updater[bot]"
+          git config user.email "265781387+warashi-nix-updater[bot]@users.noreply.github.com"
+          git switch -c "update-flake-inputs-$(date +%s)"
+      - name: Update flake inputs
+        run: nix flake update
+      - name: Commit and create pull request
+        env:
+          GH_TOKEN: ${{ steps.app-token.outputs.token }}
+        run: |
+          git add .
+          if ! git diff --cached --quiet; then
+            git commit -m "Update flake inputs"
+            gh pr create --title "Update flake inputs" --body "This PR updates the flake inputs to their latest versions."
+            gh pr merge --auto
+          else
+            echo "No changes to commit"
+          fi
