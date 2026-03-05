@@ -2,6 +2,8 @@ name: Update Nix Flake Inputs
 
 on:
   workflow_dispatch: {}
+  schedule:
+    - cron: "0 16 * * *" # Every day at 16:00 UTC = 01:00 JST
 
 permissions: {}
 
