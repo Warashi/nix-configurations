@@ -28,4 +28,10 @@ in
   home.packages = [
     terminal-notifier
   ];
+
+  xdg.configFile = {
+    "muscat/config.json".source = (pkgs.formats.json { }).generate "muscat-config.json" {
+      Addr = "localhost:45000";
+    };
+  };
 }
