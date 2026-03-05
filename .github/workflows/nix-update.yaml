@@ -28,7 +28,7 @@ jobs:
         run: |
           git config user.name "warashi-nix-updater[bot]"
           git config user.email "265781387+warashi-nix-updater[bot]@users.noreply.github.com"
-          git switch -c "update-flake-inputs-$(date +%s)"
+          git switch -c "update-flake-inputs"
       - name: Update flake inputs
         run: nix flake update
       - name: Commit and create pull request
@@ -38,9 +38,8 @@ jobs:
           git add .
           if ! git diff --cached --quiet; then
             git commit -m "Update flake inputs"
-            git push origin HEAD
-            gh pr create --title "Update flake inputs" --body "This PR updates the flake inputs to their latest versions."
-            gh pr merge --auto --merge
+            git push --force origin HEAD
+            gh pr create --title "Update flake inputs" --body "This PR updates the flake inputs to their latest versions." && gh pr merge --auto --merge || echo "PR is already open"
           else
             echo "No changes to commit"
           fi
