@@ -1,3 +1,7 @@
 [anthropics-skills]
 src.git = "https://github.com/anthropics/skills.git"
 fetch.github = "anthropics/skills"
+
+[leanprover-skills]
+src.git = "https://github.com/leanprover/skills.git"
+fetch.github = "leanprover/skills"

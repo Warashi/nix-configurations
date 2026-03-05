@@ -1,7 +1,7 @@
 {
     "anthropics-skills": {
-        "cargoLocks": null,
-        "date": "2025-12-20",
+        "cargoLock": null,
+        "date": "2026-03-04",
         "extract": null,
         "name": "anthropics-skills",
         "passthru": null,
@@ -13,11 +13,32 @@
             "name": null,
             "owner": "anthropics",
             "repo": "skills",
-            "rev": "69c0b1a0674149f27b61b2635f935524b6add202",
-            "sha256": "sha256-pllFZoWRdtLliz/5pLWks0V9nKFMzeWoRcmFgu2UWi8=",
+            "rev": "7029232b9212482c0476da354b83364bd28fab2f",
+            "sha256": "sha256-rQXOcZk0nF9ZqYK0CUelGoY4oj/gYZgcdh1qUdwvx2k=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "69c0b1a0674149f27b61b2635f935524b6add202"
+        "version": "7029232b9212482c0476da354b83364bd28fab2f"
+    },
+    "leanprover-skills": {
+        "cargoLock": null,
+        "date": "2026-02-21",
+        "extract": null,
+        "name": "leanprover-skills",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "leanprover",
+            "repo": "skills",
+            "rev": "7d3da0282e7b724b07620e45cf212f2e05e19334",
+            "sha256": "sha256-wMGIyEwwM+R5B6pGtP/jsaA8KN2CDCE2SbNZ4b+REgk=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "7d3da0282e7b724b07620e45cf212f2e05e19334"
     }
 }

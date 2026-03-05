@@ -6,17 +6,26 @@ in
   programs.agent-skills = {
     enable = true;
     sources = {
+      # keep-sorted start block=yes
       anthropics = {
         path = sources.anthropics-skills.src;
+        subdir = "skills";
+      };
+      leanprover = {
+        path = sources.leanprover-skills.src;
         subdir = "skills";
       };
       warashi = {
         path = ./skills;
       };
+      # keep-sorted end
     };
     skills = {
       enable = [
+        # keep-sorted start
+        "lean-proof"
         "skill-creator"
+        # keep-sorted end
       ];
       enableAll = [
         "warashi"
