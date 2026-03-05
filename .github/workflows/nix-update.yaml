@@ -40,7 +40,7 @@ jobs:
             git commit -m "Update flake inputs"
             git push origin HEAD
             gh pr create --title "Update flake inputs" --body "This PR updates the flake inputs to their latest versions."
-            gh pr merge --auto
+            gh pr merge --auto --merge
           else
             echo "No changes to commit"
           fi
