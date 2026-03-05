@@ -3,6 +3,7 @@
   home.packages = with pkgs; [
     ast-grep
     gfortran
+    lean4
   ];
   programs = {
     nix-index.enable = true;
