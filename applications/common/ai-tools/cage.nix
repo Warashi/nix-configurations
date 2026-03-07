@@ -7,14 +7,15 @@
 let
   agent-presets = [
     "general"
-    "kiro"
-    "go"
     "cargo"
+    "go"
+    "kiro"
+    "nix"
     "npm"
-    "yarn"
     "pre-commit"
     "swift"
     "vhs-mcp"
+    "yarn"
   ];
 in
 {
@@ -142,6 +143,12 @@ in
         };
 
         # language-specific
+        nix = {
+          allow = [
+            "$HOME/.cache/nix"
+            "$HOME/Library/Caches/nix"
+          ];
+        };
         yarn = {
           allow = [
             "node_modules"
