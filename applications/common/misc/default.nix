@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
   home.packages = with pkgs; [
-    ast-grep
+    # ast-grep
     gfortran
     lean4
   ];
