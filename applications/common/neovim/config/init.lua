@@ -7,6 +7,7 @@ vim.opt.termguicolors = true
 require("warashi.aibo")
 require("warashi.ddc")
 require("warashi.lsp")
+require("warashi.promptpane")
 require("warashi.skkeleton")
 require("warashi.terminal")
 require("warashi.treesitter")

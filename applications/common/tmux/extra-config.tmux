@@ -54,3 +54,9 @@ set-option -s set-clipboard on
 
 # extended keys
 set-option -s extended-keys on
+
+# promptpane
+bind -n M-q run-shell \
+	'tmux split-window -v -l 20 \
+		-c "#{pane_current_path}" \
+		"nvim promptpane://tmux/#{pane_id}"'
