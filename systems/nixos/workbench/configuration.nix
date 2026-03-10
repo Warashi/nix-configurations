@@ -10,4 +10,8 @@
   networking.hostName = "workbench";
   networking.useNetworkd = true;
   systemd.network.enable = true;
+  security.pam = {
+    rssh.enable = true;
+    services.sudo.rssh = true;
+  };
 }
