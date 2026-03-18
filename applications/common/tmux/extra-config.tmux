@@ -55,6 +55,9 @@ set-option -s set-clipboard on
 # extended keys
 set-option -s extended-keys on
 
+# allow-passthrough
+set-option -g allow-passthrough on
+
 # promptpane
 bind -n M-q run-shell \
 	'tmux split-window -v -l 20 \
