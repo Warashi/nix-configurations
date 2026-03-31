@@ -2,9 +2,10 @@
 {
   services.tailscale = {
     enable = true;
-    useRoutingFeatures = "server";
+    useRoutingFeatures = "both";
     extraUpFlags = [
       "--ssh"
+      "--accept-routes"
     ];
     authKeyFile = config.sops.secrets.tailscale-authkey.path;
   };
