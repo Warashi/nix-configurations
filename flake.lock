@@ -990,62 +990,6 @@
         "type": "github"
       }
     },
-    "nvim-treesitter": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1774077453,
-        "narHash": "sha256-SIZNnj4LDOqTNnw00q4sS94e6YIlPSq4JtTZudRVCjo=",
-        "owner": "nvim-treesitter",
-        "repo": "nvim-treesitter",
-        "rev": "e5f65e31a5ec0e8526b2311ff8c7aaea4a581c82",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nvim-treesitter",
-        "ref": "main",
-        "repo": "nvim-treesitter",
-        "type": "github"
-      }
-    },
-    "nvim-treesitter-main": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ],
-        "nvim-treesitter": "nvim-treesitter",
-        "nvim-treesitter-textobjects": "nvim-treesitter-textobjects"
-      },
-      "locked": {
-        "lastModified": 1774479007,
-        "narHash": "sha256-nK42FNXTU40MjA0yfmGf5H8QWdipzN8jmP6GGFhNXz8=",
-        "owner": "iofq",
-        "repo": "nvim-treesitter-main",
-        "rev": "2f07ee38bd28287561251c909b89f001652274fe",
-        "type": "github"
-      },
-      "original": {
-        "owner": "iofq",
-        "repo": "nvim-treesitter-main",
-        "type": "github"
-      }
-    },
-    "nvim-treesitter-textobjects": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1774087849,
-        "narHash": "sha256-H1tIn3XYJtLF1JvlUJvLtTScMdV/NHDFq+KZjBV4q1c=",
-        "owner": "nvim-treesitter",
-        "repo": "nvim-treesitter-textobjects",
-        "rev": "93d60a475f0b08a8eceb99255863977d3a25f310",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nvim-treesitter",
-        "ref": "main",
-        "repo": "nvim-treesitter-textobjects",
-        "type": "github"
-      }
-    },
     "paneru": {
       "inputs": {
         "nixpkgs": [
@@ -1094,7 +1038,6 @@
         "nixos-hardware": "nixos-hardware",
         "nixos-lima": "nixos-lima",
         "nixpkgs": "nixpkgs_4",
-        "nvim-treesitter-main": "nvim-treesitter-main",
         "paneru": "paneru",
         "sops-nix": "sops-nix",
         "treefmt-nix": "treefmt-nix",
