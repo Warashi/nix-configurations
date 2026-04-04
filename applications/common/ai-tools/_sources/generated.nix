@@ -8,15 +8,15 @@
 {
   anthropics-skills = {
     pname = "anthropics-skills";
-    version = "7029232b9212482c0476da354b83364bd28fab2f";
+    version = "98669c11ca63e9c81c11501e1437e5c47b556621";
     src = fetchFromGitHub {
       owner = "anthropics";
       repo = "skills";
-      rev = "7029232b9212482c0476da354b83364bd28fab2f";
+      rev = "98669c11ca63e9c81c11501e1437e5c47b556621";
       fetchSubmodules = false;
-      sha256 = "sha256-rQXOcZk0nF9ZqYK0CUelGoY4oj/gYZgcdh1qUdwvx2k=";
+      sha256 = "sha256-w//9LB1OVG9jlllY+VDse7Js0dn5x6Ys2vPuQACKsTM=";
     };
-    date = "2026-03-04";
+    date = "2026-03-25";
   };
   leanprover-skills = {
     pname = "leanprover-skills";

@@ -1,7 +1,7 @@
 {
     "Warashi-denovo-abbrev": {
-        "cargoLocks": null,
-        "date": "2023-09-19",
+        "cargoLock": null,
+        "date": "2026-01-21",
         "extract": null,
         "name": "Warashi-denovo-abbrev",
         "passthru": null,
@@ -13,15 +13,15 @@
             "name": null,
             "owner": "Warashi",
             "repo": "denovo-abbrev",
-            "rev": "20cff921d2fa9690ee7c83883529cd1928ac1850",
-            "sha256": "sha256-W3wlEmN5uVGizbF5sAueuFR0CQz5NVGqpyJJtAOOXIo=",
+            "rev": "44825bc4378c9021b9cfc1af8ebc929020c849f0",
+            "sha256": "sha256-SGWFasNZEEMif4/3Sao5hyUrbGy/XTwTudi291bZJ6I=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "20cff921d2fa9690ee7c83883529cd1928ac1850"
+        "version": "44825bc4378c9021b9cfc1af8ebc929020c849f0"
     },
     "Warashi-denovo-complete": {
-        "cargoLocks": null,
+        "cargoLock": null,
         "date": "2024-02-23",
         "extract": null,
         "name": "Warashi-denovo-complete",
@@ -42,7 +42,7 @@
         "version": "b822fd0ae0ddd7e787de74f8f1630733730e3ea3"
     },
     "Warashi-denovo-fzf": {
-        "cargoLocks": null,
+        "cargoLock": null,
         "date": "2023-07-02",
         "extract": null,
         "name": "Warashi-denovo-fzf",
@@ -63,7 +63,7 @@
         "version": "5d9d2d681cd30bb233373a3969f790e34fe94db7"
     },
     "Warashi-denovo-rootmake": {
-        "cargoLocks": null,
+        "cargoLock": null,
         "date": "2025-05-31",
         "extract": null,
         "name": "Warashi-denovo-rootmake",
@@ -84,8 +84,8 @@
         "version": "9e4bf7c051cc99e4ada185959966f12bcdf47db3"
     },
     "Warashi-denovo-zsh": {
-        "cargoLocks": null,
-        "date": "2025-01-26",
+        "cargoLock": null,
+        "date": "2026-01-22",
         "extract": null,
         "name": "Warashi-denovo-zsh",
         "passthru": null,
@@ -97,16 +97,16 @@
             "name": null,
             "owner": "Warashi",
             "repo": "denovo.zsh",
-            "rev": "bd71f344ab5450a9b33b7ddb65dc4b8bda2310b5",
-            "sha256": "sha256-F3c+7OQDLbr56FX5GC+b6oVLpp8R7xHoh0MQkxf25xw=",
+            "rev": "ae2b578143ed722331671150a2b035fa61ce1aec",
+            "sha256": "sha256-KMmojp5sMAxfvIdsOP7RGJ9t1rKtP9EsvKUqR+F6EeQ=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "bd71f344ab5450a9b33b7ddb65dc4b8bda2310b5"
+        "version": "ae2b578143ed722331671150a2b035fa61ce1aec"
     },
     "trystan2k-zsh-tab-title": {
-        "cargoLocks": null,
-        "date": "2024-05-29",
+        "cargoLock": null,
+        "date": "2026-03-29",
         "extract": null,
         "name": "trystan2k-zsh-tab-title",
         "passthru": null,
@@ -118,11 +118,11 @@
             "name": null,
             "owner": "trystan2k",
             "repo": "zsh-tab-title",
-            "rev": "9c36ac968fe675edcc181a41b0b8959024a8b6c1",
-            "sha256": "sha256-ZEhbQ+yIfCz+vmua7XYBQ4kSVgwoNR8Y4zJyKNypsz0=",
+            "rev": "dfd469b704638dd596aba5695f1723a7c233fe4b",
+            "sha256": "sha256-2mgK9fXRyiWWjy6TewqUmAZHaef+NEkCE4D0acNJ1jo=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "9c36ac968fe675edcc181a41b0b8959024a8b6c1"
+        "version": "dfd469b704638dd596aba5695f1723a7c233fe4b"
     }
 }

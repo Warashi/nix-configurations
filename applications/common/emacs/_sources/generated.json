@@ -1,6 +1,6 @@
 {
     "emacs-term-title": {
-        "cargoLocks": null,
+        "cargoLock": null,
         "date": "2022-01-05",
         "extract": null,
         "name": "emacs-term-title",
