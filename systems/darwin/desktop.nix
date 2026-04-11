@@ -10,7 +10,7 @@
   };
 
   programs.warashi = {
-    arto.enable = false;
+    arto.enable = true;
   };
 
   services.warashi = {
