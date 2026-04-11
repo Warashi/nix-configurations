@@ -11,9 +11,6 @@
     };
     arto = {
       url = "github:arto-app/Arto";
-      inputs = {
-        nixpkgs.follows = "nixpkgs";
-      };
     };
     cage = {
       url = "github:Warashi/cage";
