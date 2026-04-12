@@ -13,18 +13,11 @@ let
     remoteUser = "vscode";
   };
   overrideConfig = (pkgs.formats.json { }).generate "dshell-settings-override.json" {
-    remoteEnv = {
-      CLAUDE_CONFIG_DIR = "/home/vscode/.claude";
-    };
     features = {
       # keep-sorted start block=yes
-      "ghcr.io/devcontainers-extra/features/claude-code:1" = { };
       "ghcr.io/devcontainers/features/common-utils:2" = {
         "configureZshAsDefaultShell" = true;
       };
-      "ghcr.io/devcontainers/features/docker-in-docker:2" = { };
-      "ghcr.io/devcontainers/features/go:1" = { };
-      "ghcr.io/rails/devcontainer/features/mysql-client:1" = { };
       # keep-sorted end
     };
   };

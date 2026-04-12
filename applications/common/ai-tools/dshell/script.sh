@@ -49,9 +49,6 @@ COMMON_OPTS+=("--override-config" "$TMP_CONFIG")
 COMMON_OPTS+=("--workspace-folder" "$TARGET_DIR")
 
 MOUNT_ARGS=()
-MOUNT_ARGS+=("--mount" "type=bind,source=/nix,target=/nix")
-MOUNT_ARGS+=("--mount" "type=bind,source=$HOME/.config/git/ignore,target=/home/vscode/.config/git/ignore")
-MOUNT_ARGS+=("--mount" "type=bind,source=${CLAUDE_CONFIG_DIR:-$HOME/.claude},target=/home/vscode/.claude")
 [ -n "$GIT_COMMON_DIR" ] && [[ $GIT_COMMON_DIR != "$GIT_ROOT" ]] && MOUNT_ARGS+=("--mount" "type=bind,source=$GIT_COMMON_DIR,target=$GIT_COMMON_DIR")
 
 # 3. 起動
@@ -62,14 +59,11 @@ devcontainer exec "${COMMON_OPTS[@]}" git config --global --add safe.directory '
 [ -n "$U_NAME" ] && devcontainer exec "${COMMON_OPTS[@]}" git config --global user.name "$U_NAME"
 [ -n "$U_EMAIL" ] && devcontainer exec "${COMMON_OPTS[@]}" git config --global user.email "$U_EMAIL"
 
-# 5. gojq のインストール
-devcontainer exec "${COMMON_OPTS[@]}" sh -c 'command -v go >/dev/null && go install github.com/itchyny/gojq/cmd/gojq@latest || echo "go is not installed, skipping gojq installation"'
-
-# 6. 引数で指定されていない場合、デフォルトコマンドを設定
+# 5. 引数で指定されていない場合、デフォルトコマンドを設定
 COMMANDS=("$@")
 if [ ${#COMMANDS[@]} -eq 0 ]; then
-  COMMANDS=("/bin/zsh")
+  COMMANDS=("/bin/zsh" "--login")
 fi
 
-# 7. コマンドの実行
+# 6. コマンドの実行
 devcontainer exec "${COMMON_OPTS[@]}" "${COMMANDS[@]}"
