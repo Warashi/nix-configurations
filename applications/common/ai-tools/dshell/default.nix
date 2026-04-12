@@ -10,6 +10,7 @@ pkgs.writeShellApplication {
     pkgs.coreutils
     pkgs.devcontainer
     pkgs.docker-client
+    pkgs.docker-credential-helpers
     pkgs.git
   ];
   inheritPath = false;
