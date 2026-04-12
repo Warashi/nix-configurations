@@ -41,8 +41,6 @@
     defaultLocale = "en_US.UTF-8";
   };
 
-  programs.ssh.startAgent = true;
-
   virtualisation.docker = {
     enable = true;
   };

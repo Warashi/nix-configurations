@@ -12,6 +12,20 @@
   systemd.network.enable = true;
   security.pam = {
     rssh.enable = true;
-    services.sudo.rssh = true;
+    services = {
+      sudo = {
+        rssh = true;
+      };
+      sshd = {
+        enableGnomeKeyring = true;
+      };
+    };
+  };
+  services = {
+    gnome = {
+      gnome-keyring = {
+        enable = true;
+      };
+    };
   };
 }
