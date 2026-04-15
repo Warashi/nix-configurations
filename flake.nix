@@ -52,9 +52,6 @@
         nixpkgs.follows = "nixpkgs";
       };
     };
-    fcitx5-hazkey = {
-      url = "github:Warashi/nix-fcitx5-hazkey";
-    };
     flake-parts = {
       url = "github:hercules-ci/flake-parts";
     };
@@ -122,9 +119,6 @@
       url = "github:neovim/neovim";
       flake = false;
     };
-    nix-flatpak = {
-      url = "github:gmodena/nix-flatpak/latest";
-    };
     nix-index-database = {
       url = "github:nix-community/nix-index-database";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -177,25 +171,6 @@
       url = "github:Warashi/nur-packages";
       inputs = {
         nixpkgs.follows = "nixpkgs";
-      };
-    };
-    xremap-flake = {
-      url = "github:xremap/nix-flake";
-      inputs = {
-        nixpkgs.follows = "nixpkgs";
-      };
-    };
-    zig-overlay = {
-      url = "github:mitchellh/zig-overlay";
-      inputs = {
-        nixpkgs.follows = "nixpkgs";
-      };
-    };
-    zls = {
-      url = "github:zigtools/zls";
-      inputs = {
-        nixpkgs.follows = "nixpkgs";
-        # zig-overlay.follows = "zig-overlay";
       };
     };
     # keep-sorted end
