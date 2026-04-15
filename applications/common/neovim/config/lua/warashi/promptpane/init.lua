@@ -26,9 +26,10 @@ vim.api.nvim_create_autocmd("BufWriteCmd", {
 			return
 		end
 
-		-- バッファの内容を取得し、単一の文字列（末尾改行付き）に結合
+		-- バッファの内容を取得し、単一の文字列（末尾改行なし）に結合。
+		-- この時、改行は ESC[13;3u にすることで M-Enter 相当にし、最後に ESC[13u をつけることで Enter 相当も一気に送る。
 		local lines = vim.api.nvim_buf_get_lines(buf, 0, -1, false)
-		local payload = table.concat(lines, "\n") .. "\n"
+		local payload = table.concat(lines, "\x1B[13;3u") .. "\x1B[13u"
 
 		-- シェルを経由せず、直接tmuxプロセスにバイト列として引数を渡す（結合・複雑性の極小化）
 		-- 1. まず、テキストを完全に安全なリテラル（-l）として送信する
@@ -47,29 +48,13 @@ vim.api.nvim_create_autocmd("BufWriteCmd", {
 		if obj_text.code ~= 0 then
 			local err_msg = obj_text.stderr and obj_text.stderr:gsub("%s+$", "") or "Unknown Error"
 			vim.notify("[PromptPane] 送信失敗: " .. err_msg, vim.log.levels.ERROR)
-			return -- 失敗した場合はEnterを叩かずに中断
+			return
 		end
 
-		-- 2. 送信成功後、独立したコマンドとしてEnterキーを送信（実行の自動化）
-		local obj_enter = vim.system({
-			"tmux",
-			"send-keys",
-			"-t",
-			pane_id,
-			"Enter",
-		}, { text = true }):wait()
-
-		if obj_enter.code == 0 then
-			-- 送信成功: バッファをクリアし、未編集状態に戻す（Editing状態への回帰）
-			-- ※Undoツリーは維持されるため、`u` で直前のプロンプトを復元可能
-			vim.api.nvim_buf_set_lines(buf, 0, -1, false, { "" })
-			vim.api.nvim_set_option_value("modified", false, { buf = buf })
-			vim.notify(
-				"[PromptPane] 完了: Pane " .. pane_id .. " へ送信・実行しました",
-				vim.log.levels.INFO
-			)
-		else
-			vim.notify("[PromptPane] Enterキーの送信に失敗しました", vim.log.levels.ERROR)
-		end
+		-- 送信成功: バッファをクリアし、未編集状態に戻す（Editing状態への回帰）
+		-- ※Undoツリーは維持されるため、`u` で直前のプロンプトを復元可能
+		vim.api.nvim_buf_set_lines(buf, 0, -1, false, { "" })
+		vim.api.nvim_set_option_value("modified", false, { buf = buf })
+		vim.notify("[PromptPane] 完了: Pane " .. pane_id .. " へ送信・実行しました", vim.log.levels.INFO)
 	end,
 })
