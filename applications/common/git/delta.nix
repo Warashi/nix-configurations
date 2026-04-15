@@ -11,14 +11,6 @@ let
 in
 {
   programs = {
-    git.iniContent = {
-      core.pager = lib.mkForce "${delta} --pager='${ov} --quit-if-one-screen'";
-      pager = {
-        show = "${delta} --pager='${ov} --quit-if-one-screen --header 3'";
-        diff = "${delta} --features ov-diff";
-        log = "${delta} --features ov-log";
-      };
-    };
     delta = {
       enable = true;
       enableGitIntegration = true;
