@@ -17,7 +17,6 @@ in
       };
       mattpocock = {
         path = sources.mattpocock-skills.src;
-        subdir = "skills";
       };
       warashi = {
         path = ./skills;
