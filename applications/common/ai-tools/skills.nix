@@ -32,6 +32,10 @@ in
       ];
     };
     targets = {
+      gemini = {
+        dest = ".gemini/skills";
+        structure = "link";
+      };
       codex = {
         dest = ".codex/skills";
         structure = "copy-tree";
