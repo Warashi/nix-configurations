@@ -1,7 +1,7 @@
 {
     "anthropics-skills": {
         "cargoLock": null,
-        "date": "2026-03-25",
+        "date": "2026-04-16",
         "extract": null,
         "name": "anthropics-skills",
         "passthru": null,
@@ -13,12 +13,12 @@
             "name": null,
             "owner": "anthropics",
             "repo": "skills",
-            "rev": "98669c11ca63e9c81c11501e1437e5c47b556621",
-            "sha256": "sha256-w//9LB1OVG9jlllY+VDse7Js0dn5x6Ys2vPuQACKsTM=",
+            "rev": "2c7ec5e78b8e5d43ea02e90bb8826f6b9f147b0c",
+            "sha256": "sha256-BMgH43diojdUrGC6ivk87eEm2W1yWNuh2fpR9JpbUnE=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "98669c11ca63e9c81c11501e1437e5c47b556621"
+        "version": "2c7ec5e78b8e5d43ea02e90bb8826f6b9f147b0c"
     },
     "leanprover-skills": {
         "cargoLock": null,
@@ -40,5 +40,26 @@
             "type": "github"
         },
         "version": "7d3da0282e7b724b07620e45cf212f2e05e19334"
+    },
+    "mattpocock-skills": {
+        "cargoLock": null,
+        "date": "2026-04-17",
+        "extract": null,
+        "name": "mattpocock-skills",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "mattpocock",
+            "repo": "skills",
+            "rev": "8868f54212dfcf450b665d2e2a5bf521ada64c3e",
+            "sha256": "sha256-LF+V0Qb3f6fmlBTIEHZw6H7RYzCrHIHZgolpNbww6Q4=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "8868f54212dfcf450b665d2e2a5bf521ada64c3e"
     }
 }

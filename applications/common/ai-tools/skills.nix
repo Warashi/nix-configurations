@@ -15,6 +15,10 @@ in
         path = sources.leanprover-skills.src;
         subdir = "skills";
       };
+      mattpocock = {
+        path = sources.mattpocock-skills.src;
+        subdir = "skills";
+      };
       warashi = {
         path = ./skills;
       };
@@ -23,6 +27,7 @@ in
     skills = {
       enable = [
         # keep-sorted start
+        "grill-me"
         "lean-proof"
         "skill-creator"
         # keep-sorted end

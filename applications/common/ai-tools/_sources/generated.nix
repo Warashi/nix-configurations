@@ -8,15 +8,15 @@
 {
   anthropics-skills = {
     pname = "anthropics-skills";
-    version = "98669c11ca63e9c81c11501e1437e5c47b556621";
+    version = "2c7ec5e78b8e5d43ea02e90bb8826f6b9f147b0c";
     src = fetchFromGitHub {
       owner = "anthropics";
       repo = "skills";
-      rev = "98669c11ca63e9c81c11501e1437e5c47b556621";
+      rev = "2c7ec5e78b8e5d43ea02e90bb8826f6b9f147b0c";
       fetchSubmodules = false;
-      sha256 = "sha256-w//9LB1OVG9jlllY+VDse7Js0dn5x6Ys2vPuQACKsTM=";
+      sha256 = "sha256-BMgH43diojdUrGC6ivk87eEm2W1yWNuh2fpR9JpbUnE=";
     };
-    date = "2026-03-25";
+    date = "2026-04-16";
   };
   leanprover-skills = {
     pname = "leanprover-skills";
@@ -29,5 +29,17 @@
       sha256 = "sha256-wMGIyEwwM+R5B6pGtP/jsaA8KN2CDCE2SbNZ4b+REgk=";
     };
     date = "2026-02-21";
+  };
+  mattpocock-skills = {
+    pname = "mattpocock-skills";
+    version = "8868f54212dfcf450b665d2e2a5bf521ada64c3e";
+    src = fetchFromGitHub {
+      owner = "mattpocock";
+      repo = "skills";
+      rev = "8868f54212dfcf450b665d2e2a5bf521ada64c3e";
+      fetchSubmodules = false;
+      sha256 = "sha256-LF+V0Qb3f6fmlBTIEHZw6H7RYzCrHIHZgolpNbww6Q4=";
+    };
+    date = "2026-04-17";
   };
 }
